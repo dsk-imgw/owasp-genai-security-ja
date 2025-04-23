@@ -1,6 +1,9 @@
-# OWASP GenAI Read Teaming Guide (Japanese)
+# OWASP GenAI Security (Japanese)
 
-OWASP が発行した生成 AI セキュリティに関するホワイトペーパー/ガイドである [GenAI Red Teaming Guide](https://genai.owasp.org/resource/genai-red-teaming-guide/) を勝手に（＝非公式）日本語にしてみたものです。参考までにどうぞ・・・
+OWASP が発行した生成 AI セキュリティに関するホワイトペーパー/ガイドを勝手に（＝非公式）日本語にしてみたものです。参考までにどうぞ・・・
 
-<s>現状、本文は完了、付録は一部完了という感じです。</s>
+- [GenAI Red Teaming Guide](https://genai.owasp.org/resource/genai-red-teaming-guide/)
+  - genai-red-teaming-guide ディレクトリ配下
+- [Agentic AI – Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)
+  - agentic-ai-threat-and-mitigations ディレクトリ配下
 
