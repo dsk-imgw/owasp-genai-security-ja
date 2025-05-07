@@ -74,7 +74,7 @@ OpenAI の研究者である Lilian Wang 氏は、[2023 年に LLM ベースの�
 
 <div align="center">
 
-![Fig01.jpg](../_resources/Fig01.jpg)
+![Fig01.jpg](_resources/Fig01.jpg)
 
 </div>
 
@@ -85,7 +85,7 @@ LLM アプリケーションは、OWASP Top 10 for LLM に記載されている�
 
 <div align="center">
 
-![Fig02.jpg](../_resources/Fig02.jpg)
+![Fig02.jpg](_resources/Fig02.jpg)
 
 </div>
 
@@ -109,7 +109,7 @@ LLM アプリケーションは、OWASP Top 10 for LLM に記載されている�
 
 <div align="center">
 
-![Fig02.jpg](../_resources/Fig02-1.jpg)
+![Fig02.jpg](_resources/Fig02-1.jpg)
 
 </div>
 
@@ -132,7 +132,7 @@ LLM アプリケーションは、OWASP Top 10 for LLM に記載されている�
 
 <div align="center">
 
-![Fig03.jpg](../_resources/Fig03.jpg)
+![Fig03.jpg](_resources/Fig03.jpg)
 
 </div>
 
@@ -235,7 +235,7 @@ RAG 関連のセキュリティ上の懸念は **LLM の基本的な問題**で�
 
 <div align="center">
 
-![Fig04.jpg](../_resources/Fig04.jpg)
+![Fig04.jpg](_resources/Fig04.jpg)
 </div>
 
 - **脅威モデルの詳細**
