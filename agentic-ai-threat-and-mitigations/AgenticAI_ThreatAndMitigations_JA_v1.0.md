@@ -93,7 +93,7 @@ LLM アプリケーションは、OWASP Top 10 for LLM に記載されている�
 
 - 近日公開予定の OWASP Agentic AI Landscape では、利用可能なフレームワークとツールについて、より詳細なガイドを提供します。
 - 人気のエージェント フレームワークの簡単な比較については、[「LangChain と LangGraph：関数とツールの呼び出し機能の比較」]()を参照してください。
-- これらの人気フレームワークを使用して作成された LLM エージェントの例は、OWASP ASI GitHub リポジトリ（https://github.com/OWASP/www-project-top-10-for-large-language-modelapplications/tree/main/initiatives/agent_security_initiative ）で確認できます。これらは意図的に脆弱なエージェントですが、脆弱性を示すだけでなく、エージェントの動作を示すこともできます。
+- これらの人気フレームワークを使用して作成された LLM エージェントの例は、OWASP ASI GitHub リポジトリ（https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/tree/main/initiatives/agent_security_initiative ）で確認できます。これらは意図的に脆弱なエージェントですが、脆弱性を示すだけでなく、エージェントの動作を示すこともできます。
 
 自律性と主体性は、エージェントのオーケストレーションのスタイルによっても異なります。これには、ハードコードされたものから、コードまたは有限状態マシン ワークフロー (LangFlow) による制約付きのもの、そして完全に会話型のもの（決定は完全に対話とモデル推論に依存します）までが含まれます。
 
