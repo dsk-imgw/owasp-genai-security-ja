@@ -6,4 +6,5 @@ OWASP が発行した生成 AI セキュリティに関するホワイトペー�
   - genai-red-teaming-guide ディレクトリ配下
 - [Agentic AI – Threats and Mitigations](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/) ... エージェント型 AI（AI エージェント）の脅威と軽減策に関するガイダンス v1.0
   - agentic-ai-threat-and-mitigations ディレクトリ配下
-
+- [A Guide To Preparing and Responding To Deepfake Events](https://genai.owasp.org/resource/guide-for-preparing-and-responding-to-deepfake-events/) ... ディープフェイクへの準備と対応に関するガイド v1.0
+  - a-guide-to-preparing-and-responding-to-deepfake-events ディレクトリ配下（作成中）
