@@ -69,14 +69,14 @@ ${toc}
 
 <div align="center">
 
-![Fig-01.png](../_resources/Fig-01.png)
+![Fig-01.png](_resources/Fig-01.png)
 
 *この調査は、Onfido が FIDO アライアンスと共同で作成した 2024 年版アイデンティティ詐欺レポートの調査結果も反映しています。*
 </div>
 
 <div align="center">
 
-![Fig-02.png](../_resources/Fig-02.png)
+![Fig-02.png](_resources/Fig-02.png)
 
 </div>
 
@@ -186,7 +186,7 @@ ${toc}
 
 <div align="center">
 	
-![Fig-03.png](../_resources/Fig-03.png)
+![Fig-03.png](_resources/Fig-03.png)
 
 </div>
 
