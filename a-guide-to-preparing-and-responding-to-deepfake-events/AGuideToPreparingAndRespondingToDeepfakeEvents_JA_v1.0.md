@@ -23,10 +23,10 @@ ${toc}
 
 基本的なセキュリティ原則を適用することで、進化するディープフェイクを活用した脅威に耐性のあるガイドを提供することを目指しています。このガイドで推奨されている主要な戦略は次のとおりです。
 
-- 偽造品を視覚的または聴覚的に検知するのではなく、プロセスの遵守に重点を置く。
-- 強力な財務管理と検証手順を導入・維持する。
-- 異常な要求に対する認識と懐疑的な姿勢を育む文化を醸成する。
-- インシデント対応計画を策定し、定期的に更新する。
+- 偽造品を視覚的または聴覚的に検知するのではなく、プロセスの遵守に重点を置きます。
+- 強力な財務管理と検証手順を導入・維持します。
+- 異常な要求に対する認識と懐疑的な姿勢を育む文化を醸成します。
+- インシデント対応計画を策定し、定期的に更新します。
 
 このガイドの最初のセクションは「適用範囲」で、主要な定義と対象読者を概説しています。このガイドは、攻撃者の意図に基づいて 4 つの異なるシナリオ（金融詐欺、就職面接詐欺、ソーシャル エンジニアリング、誤情報／偽情報／悪意のある情報）を区別し、NIST SP 800-61 rev.3 に基づくインシデント対応における以下の 4 つの段階に関するガイダンスを提供しています。
 
@@ -277,7 +277,7 @@ ${toc}
 		- 攻撃者は、標的を絞る際に利用可能な被害者のアイデンティティを収集する可能性があります。アイデンティティには、従業員名、連絡先、部署名、事業内容、関係性、発表内容、役割と責任など、さまざまな詳細が含まれる可能性があります。
 金融詐欺を引き起こすディープフェイク インシデントでは、攻撃者は通常、2 つのペルソナを引き出し、両方の情報を収集します。つまり、1 人は取引を指示する絶対的な権限を持つ人物で、もう 1 人は実行権限を持つ人物であり、後者が被害に遭うのが一般的です。被害者は、中間管理職や金融取引の実行または承認権限を持つ個人であることが多いです。
 攻撃者は、オンラインやその他のアクセス可能なデータ セット（ソーシャルメディア、被害者所有のウェブサイトの検索など）を通じて公開される情報など、さまざまな方法でこの情報を収集する可能性があります。
-- 手法：被害者のアーティファクト収集
+- 手法：被害者のアーティファクトの収集
 	- 戦術：偵察
 	- 関連する ATT&CK TTP：
 		- T1593.001 - 公開ウェブサイト／ドメインの検索：ソーシャル メディア検索
@@ -360,11 +360,144 @@ ${toc}
 
 #### 一般的な TTP
 
+- 手法：被害者情報の収集
+	- 戦術：偵察
+	- 関連する MITRE ATT&CK/ATLAS TTP：
+		- 「なりすましによる詐欺による金銭取得」のセクションを参照
+		- T1592：被害者ホスト情報の収集
+		- T1590：被害者ネットワーク情報の収集
+		- T1597：クローズド ソースの検索
+	- 説明：
+		- 「なりすましによる詐欺による金銭取得のセクションの手順を参照。さらに、攻撃者はヘルプデスクに関する情報や、使用する可能性のあるペルソナの秘密の質問への回答を収集する可能性があります。また、エンドポイントのオペレーティング システム、内部ネットワーク情報、アプリケーション情報など、被害者の環境に関する情報も収集されるため、攻撃者は実行指示を出しやすくなります。
+		- 被害者は、上級管理職になりすました人物が乗っ取ったヘルプデスクの場合もあれば、上司になりすました人物に乗っ取られた従業員である場合考えられます。
+手法：被害者のアーティファクトの収集
+	- 詳細は「なりすまし詐欺による金銭取得」を参照。
+- 手法：ディープフェイクモデルを開発する
+	- 詳細は「なりすまし詐欺による金銭取得」を参照。
+- 手法：被害者への接触の開始
+	- 戦術：初期アクセス
+	- 関連する MITRE ATT&CK/ATLAS TTP：
+		- AML.T0052 / T1566 フィッシング
+		- T1585.001：アカウントの確立：ソーシャル メディア アカウント
+	- 説明：
+		- 「なりすまし詐欺による金銭主億」セクションの手順を参照。さらに、攻撃者は組織内のさまざまなサービス デスクに接続し、偽造された音声や動画を使用してエージェントを誘導し、悪意のある行為を行わせる可能性があります。例：ディープフェイクのコンテンツをプロフィール写真に合成し、人間による検証を通過させることも選択肢の1つです。その他のケースでは、非標準のチャネルを使用して、偽造コンテンツが、特権を持つ従業員に有害な行為をさせようとする上司を装うために使用される可能性があります。
+- 手法：社内の技術情報の収集
+	- 戦術：探索
+	- 関連する MITRE ATT&CK/ATLAS TTP：
+		- T1087：アカウントの探索
+		- T1217：ブラウザ情報の探索
+		- T1652：デバイス ドライバの探索
+		- T1057：プロセスの探索
+		- T1012：レジストリ クエリ
+		- T1518：ソフトウェアの発見
+		- T1082：システム情報の探索
+		- T1614：システムのロケーションの探索
+		- T1016：システムのネットワーク構成の探索
+		- T1049：システムのネットワーク接続の探索
+	- 説明：
+		- 攻撃者は、最初の接触を利用して、被害者が使用しているシステムについてさらに詳しく調べ、さらにエクスプロイトを作成し、システムへの最初のアクセスを取得する可能性があります。多くの場合、情報は偽の音声やビデオ、被害者への質問、または被害者に特定のコマンドを実行させることによって収集されます。セッションを長く維持できないため、攻撃者は、この段階では、ネットワークのラテラル ムーブメントのための検出などの複雑なタスクの実行を制限する可能性があります。
+- 手法：被害者のシステムへの初期アクセス
+	- 戦術：初期アクセス
+	- 関連する MITRE ATT&CK/ATLAS TTP：
+		- T1189：ドライブ バイ攻撃
+		- T1133：外部リモート サービス
+		- T1200：ハードウェアの追加
+		- T1566：フィッシング
+		- T1091：リムーバブル メディアを介した複製
+		- T1078：有効なアカウント
+	- 説明：
+		- 攻撃者は収集した情報に基づいてエクスプロイトを使用し、ディープフェイク技術を用いて被害者にシステム内でエクスプロイトを実行させることで、システムへの継続的なリモート アクセスを実現する可能性があります。攻撃手法としては、悪意のある添付ファイルを公式または個人のメールアドレスに送信したり、ユーザーを騙して悪意のあるリンクをクリックさせ、ドライブ バイ攻撃の手法を用いたり、あるいはユーザーに事前に送付された悪意のあるハードウェアやメディア デバイスを接続させたりすることが考えられます。
+
+注：今後、攻撃者は、企業向けにリストされている通常の ATT&CK TTP を用いて攻撃サイクルを進展させる可能性があります。
+
 ### 封じ込め、根絶、復旧
 
+1. <u>なりすまし被害に遭った従業員に連絡を取り</u>、最近のヘルプデスク リクエストをすべて確認し、無効なリクエストを特定します。
+2. <u>なりすまし被害に遭った従業員に、多要素認証（MFA）に登録されているデバイスを確認するよう依頼します</u>。身元不明のデバイスが登録されている場合は、モバイル デバイス管理（MDM）または MFA 管理システムから削除する前に、フォレンジック調査のためにそのデバイスのすべての詳細情報を保存します。
+3. <u>同様の権限またはアクセス権限を持つ他の従業員が標的にされていないか、積極的に調査します</u>。同様の期間内のヘルプデスクの通話記録とチケットをレビューし、時間、部署、地域、リクエストの種類に基づいて、異常な傾向やクラスターがないか確認します。
+4. <u>標的の OSINT/ソーシャル メディアのレビューを実施します。これにより、レビューすべき追加情報を特定し、キャンペーンのタイムラインを作成するのに役立ちます。</u>調査を行う際には、なりすまし犯が共有した詳細情報の完全なリストを、調査対象に含めるようにします。これには、ニックネーム、通称、役職、部署、直属の上司、従業員 ID など、脅威アクターの潜在的な偵察情報源の特定に役立つ情報が含まれる場合があります。少なくとも、ビジネス インテリジェンスやセールス リードのための OSINT 情報源を含める必要があります。例えば、以下の情報です。
+	- [LinkedIn](https://www.linkedin.com/)（プロフィール、最近の投稿とコメント、対象者が組織内で誰と繋がっているか、役職と部署がどのように参照されているかを確認）
+	- [Rocketreach.co](https://rocketreach.co/)
+	- [Lusha.com](https://www.lusha.com/)
+	- [Uplead.com](https://www.uplead.com/)
+	- [DNB.com](https://www.dnb.com/)
+	- [Apollo.io](https://apollo.io/)
 
+	その他、ソーシャル メディア サイトやメンションを発見するのに役立つ無料の OSINT ツールも活用できます。例えば、以下のツールです。
+
+	- [grep.app(https://grep.app/)
+	- [OSINT Framework](https://osintframework.com/)
+	- [IntelligenceX](https://intelx.io/)
+	- [Social Searcher](https://www.social-searcher.com/)
+	- [The Harvester](https://github.com/laramies/theHarvester)
+
+	OSINT 演習の目的は、以下のとおりです。
+
+	- 脅威アクターがソーシャル エンジニアリングの詳細をどこで入手しているかを把握します。
+	- 組織内でソーシャル エンジニアリングの標的となり得る他の標的を特定し、さらなる脅威ハンティングを行います。
+	- 従業員に関する漏洩情報に関連する認証プロセスをレビューし、脆弱性を特定します。例えば、従業員 ID が GitHub で公開されている場合、認証には使用してはなりません。
+5. <u>標的の認証情報が、最近のデータ漏洩や侵害</u>（スティーラー ログ、[haveibeenpwned](https://haveibeenpwned.com/) など）<u>に含まれていたかどうかを判定します</u>。スティーラー ログが見つかった場合は、スティーラー ログのエントリ全体（これには、高度なソーシャル エンジニアリングの機会を提供する可能性のある自動入力情報やチャレンジ質問への回答を含みます）をレビューします。なりすましの従業員に発見事項を通知し、これらの情報を使用してパスワード リセットを実行する可能性のある非企業アカウントを保護できるようにします。
+6. <u>提供された身分証明書を、合成 ID の可能性がないかをレビューします</u>。発見事項があれば、なりすましの被害を受けた従業員に通知します。
+7. <u>恐喝、脅迫、嫌がらせ</u>、またはなりすまし犯による認証やソーシャル エンジニアリングの継続につながる可能性のある機密情報の<u>開示がないか、アカウントをレビューします</u>。
 
 ### インシデント後の活動
 
+1. 従業員意識向上トレーニング用の<u>ディープフェイク シミュレーションを次回作成する際には、同じ情報源を参照することを検討します</u>。
+2. インシデント後のレビューを実施し、セキュリティ管理と対応手順の<u>改善点を特定します</u>。
+
+## 就職面接詐欺
 
 
+## 誤情報／偽情報／悪意のある情報
+
+
+# まとめ
+
+このガイドで述べてきたように、ディープフェイク技術を取り巻く状況は急速に進化しています。ディープフェイクの生成と検出はどちらも驚異的なペースで進歩しており、サイバーセキュリティの専門家や組織にとって、常に変化し続ける課題となっています。これらの技術がどのように発展していくかを確実に予測することは不可能ですが、本書で提供されるガイダンスは、長期的な視点に立って作成されています。
+
+OWASP のアプローチは、技術の進歩に関わらず、今後も重要であり続ける可能性が高い基本原則とベスト プラクティスに焦点を当てています。批判的思考、堅牢な認証プロセス、そして多層的なセキュリティ管理を重視することで、OWASP は、ディープフェイク技術の将来の発展に適応できるフレームワークの構築を目指しました。
+
+ガイダンスの主要な側面は以下のとおりです。
+
+- 偽造物の視覚的または聴覚的な検出ではなく、プロセスの遵守に重点を置きます
+- 強力な財務管理と検証手順を導入・維持します。
+- 通常とは異なる要求に対する認識と懐疑的な姿勢を育みます。
+- インシデント対応計画を策定し、定期的に更新します。
+
+これらの要素は、進化する脅威に対して耐性を持つように設計されています。これらは、時代遅れになる可能性のある特定の技術的ソリューションに頼るのではなく、基本的なセキュリティ原則と人間の警戒心に基づいています。
+
+ディープフェイク技術が進化し続ける中、組織は最新の動向を常に把握しておくことが不可欠です。しかし、このガイドで概説されている戦略を実践することで、組織は現在だけでなく将来においても、ディープフェイク関連の脅威から身を守るための強固な基盤を構築することができます。
+
+ディープフェイクに対する最も効果的な防御は、最新の検出技術を導入することだけではありません。偽造物がどれほど本物らしく見えても、欺瞞が困難な環境を構築することです。これらの永続的な原則に重点を置くことで、組織は進化するディープフェイクの脅威に対してレジリエンスを維持できます。
+
+# 参考情報
+
+- If a cybersecurity firm can fall for the latest AI workplace scam, so can you: 10 steps to protect your business. Fisher Phillips. (2024, August 1). https://www.fisherphillips.com/en/news-insights/latest-ai-workplace-scam-10-steps-to-protectyour-business.html
+- Bateman, J. (2020, June 8). Deepfakes and Synthetic Media in the financial system: Assessing threat scenarios. Carnegie Endowment for International Peace. https://carnegieendowment.org/2020/07/08/deepfakes-and-synthetic-media-in-financial-system-assessing-threat-scenarios-pub-82237
+- Brooks, T., G., P., Heatley, J., J, J., Kim, S., M, S., Parks, S., Reardon, M., Rohrbacher, H., Sahin, B., S, S., S, J., T, O., & V, R. (2022). Increasing Threat of Deepfake Identities. Department of Homeland Security.
+- Chen, H., & Magramo, K. (2024, February 4). Finance worker pays out $25 million after video call with Deepfake “chief financial officer.” CNN. https://www.cnn.com/2024/02/04/asia/deepfake-cfo-scam-hong-kong-intl-hnk/index.html
+- Chickowski, E. (2023, December 8). Criminals use deepfake videos to interview for remote work. Dark Reading. https://www.darkreading.com/cyberattacks-data-breaches/criminals-deepfake-video-interview-remote-work
+- Ciancaglini , V., & Sancho, D. (2024, May 8). Back to the hype: An update on how cybercriminals are using genai. Trend Micro. https://www.trendmicro.com/vinfo/gb/security/news/cybercrime-and-digital-threats/back-to-the-hype-an-update-on-how-cybercriminals-are-using-genai
+- Cox, J. (2023, February 23). How I broke into a bank account with an AI-generated voice. VICE. https://www.vice.com/en/article/dy7axa/how-i-broke-into-a-bank-account-with-an-ai-generatedvoice
+- Deloitte. (2024, March). How to safeguard against the menace of deepfake ... https://www2.deloitte.com/content/dam/Deloitte/in/Documents/risk/in-ra-safeguarding-againstdeepfake-technology-noexp.pdf
+- DOD. (2023, September 12). Contextualizing Deepfake Threats to Organizations. https://media.defense.gov/2023/Sep/12/2003298925/-1/-1/0/CSI-DEEPFAKE-THREATS.PDF
+- EIN Presswire (2024, April 2). It only takes 35 seconds to create a deepfake video/photo-deepfake tools study by humanorai.io. KGET 17. https://www.kget.com/business/press-releases/ein-presswire/700218667/it-only-takes-35-seconds-to-create-a-deepfake-video-photo-deepfake-tools-study-by-humanorai-io/
+- Francey, E. (2024, July 8). CEO fraud turbocharged by deepfake. Breacher.ai. https://breacher.ai/uncategorized/ceo-fraud/
+- GAO. (2024, March 11). Science & Tech spotlight: Combating deepfakes. Science & Tech Spotlight: Combating Deepfakes. https://www.gao.gov/products/gao-24-107292
+- Gesser, A., Bannigan, M., Ford, C. S., Gressel, A., & Caravello, S. M. (2023, January 24). Responding to malicious corporate deepfakes. Debevoise Data Blog. https://www.debevoisedatablog.com/2023/01/24/responding-to-malicious-corporate-deepfakes/
+- Gesser, A., Gressel, A., Roberts, M. R., Goldstein, C., & Rubinstein, E. (2022, April 27). The value of Ai incident response plans and tabletop exercises. Debevoise Data Blog. https://www.debevoisedatablog.com/2022/04/27/the-value-of-airps-and-ai-tabletops/
+- How to defend your company against Deepfake Scams. Coro Cybersecurity. (2024, February 20). https://www.coro.net/blog/how-to-defend-your-company-against-deepfake-scams
+- Hughes, A. (2023, August 26). Ai: Why the next call from your family could be a deepfake scammer. BBC Science Focus Magazine. https://www.sciencefocus.com/future-technology/ai-deepfake-scam-calls
+- Krietzberg, I. (2023, May 22). S&P sheds $500 billion from fake Pentagon Explosion. The Street. https://www.thestreet.com/technology/s-p-sheds-500-billion-from-fake-pentagon-explosion
+- Köbis, N. C., Doležalová, B., & Soraperra, I. (2021). Fooled twice: People cannot detect deepfakes but think they can. iScience, 24(11), 103364. https://doi.org/10.1016/j.isci.2021.103364
+- Marchal, N., & Xu, R. (2024, August 2). Mapping the misuse of Generative AI. Google DeepMind. https://deepmind.google/discover/blog/mapping-the-misuse-of-generative-ai/
+- McFarland, A. (2024, August 1). 5 best deepfake detector tools & techniques (August 2024). Unite.AI. https://www.unite.ai/best-deepfake-detector-tools-and-techniques/
+- Nelson, A., Rekhi, S., Souppaya, M., & Scarfone, K. (2024). Incident response recommendations and considerations for Cybersecurity Risk Management: National Institute of Standards. https://doi.org/10.6028/nist.sp.800-61r3.ipd
+- NISOS. (2023). (rep.). Investigation: Probable DPRK Online Personas Used to Fraudulently Obtain Remote Employment at U.S. Companies . NISOS. https://6068438.fs1.hubspotusercontent-na1.net/hubfs/6068438/dprk-it-worker-scam.pdf
+- Onfido. (2024, April 22). Identity fraud insights report 2024. https://onfido.com/landing/identity-fraud-report/
+- Reuters. (2024, April 10). Beware of deepfake of CEO recommending stocks, says India’s National Stock Exchange. https://www.reuters.com/technology/cybersecurity/beware-deepfake-ceo-recommending-stocks-says-indias-national-stock-exchange-2024-04-10/
+- Rowles, R. (2023, September 12). Amygdala hijacking and social engineering. Security Through Education. https://www.social-engineer.org/social-engineering/amygdala-hijacking-and-social-engineering/
+- Sullivan, J. (2020, July 20). Identify fraud with remote hiring – could your new-hire be an impersonator?. Dr John Sullivan. https://drjohnsullivan.com/articles/identify-fraud-with-remote-hiring-could-your-new-hire-be-animpersonator/
+- Tummalapenta, S. (2024, July 29). How a new wave of deepfake-driven cyber crime targets businesses. Security Intelligence. https://securityintelligence.com/posts/new-wave-deepfake-cybercrime/
+- VandeHei, J., & Allen, M. (2023, November 8). Behind the curtain: What ai architects fear most (in 2024). Axios. https://www.axios.com/2023/11/08/ai-fears-deepfake-misinformation
+- NSA, FBI & CISA (2023, September 12). Cybersecurity Information Sheet on Deepfake Threats. CISA. https://www.cisa.gov/news-events/alerts/2023/09/12/sa-fbi-and-cisa-release-cybersecurity-information-sheet-deepfake-threats
