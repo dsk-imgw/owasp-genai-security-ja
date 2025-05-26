@@ -425,7 +425,7 @@ ${toc}
 
 	その他、ソーシャル メディア サイトやメンションを発見するのに役立つ無料の OSINT ツールも活用できます。例えば、以下のツールです。
 
-	- [grep.app(https://grep.app/)
+	- [grep.app](https://grep.app/)
 	- [OSINT Framework](https://osintframework.com/)
 	- [IntelligenceX](https://intelx.io/)
 	- [Social Searcher](https://www.social-searcher.com/)
