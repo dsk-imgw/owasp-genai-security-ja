@@ -8,3 +8,5 @@ OWASP が発行した生成 AI セキュリティに関するホワイトペー�
   - agentic-ai-threat-and-mitigations ディレクトリ配下
 - [A Guide To Preparing and Responding To Deepfake Events](https://genai.owasp.org/resource/guide-for-preparing-and-responding-to-deepfake-events/) ... ディープフェイクへの準備と対応に関するガイド v1.0
   - a-guide-to-preparing-and-responding-to-deepfake-events ディレクトリ配下
+- [AIMA - AI Maturity Assessment]() ... AI 成熟度モデル評価（2025/6/2 時点で DRAFT 版）
+  - ai-maturity-assessment ディレクトリ配下（Excel ファイルの "Scores" シートは独自に制作）
