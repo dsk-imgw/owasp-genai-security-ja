@@ -16,3 +16,4 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
 - [Artificial Intelligence Vulnerability Scoring System (AIVSS)](https://github.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system) ... AI の脆弱性によるリスクを定量化するためのフレームワーク。CVSS の AI 版という感じ。
 - [OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://github.com/OWASP/AISVS) ... AI セキュリティの検証基準（検証要件）。ASVS (Application Security Verification Standard) の AI 版という感じ。ASVS と同じく、要件（＝何を検証するか？）のみ記載され、検証方法（＝どうやって検証するか）は記載されていません。
 - [OWASP AI Testing Guide](https://github.com/OWASP/www-project-ai-testing-guide/) ... AI セキュリティのテスト方法をまとめたもの。WSTG (Web Security Testing Guide) の AI 版という感じ。なお、AISVS 要件とのリンクがない（AISVS 要件との対応関係が未定義な）ため、リンクさせたい場合はご自身で対応する必要があります。
+- [MITRE ATLAS](https://atlas.mitre.org/) ... MITRE ATT&CK の AI システム向け版という感じ。一応、適宜更新状況は追っていて、[必要に応じて日本語化中](https://github.com/dsk-imgw/mitre-atlas-ja)。
