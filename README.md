@@ -1,6 +1,6 @@
 # OWASP GenAI Security (Japanese)
 
-OWASP が発行した生成 AI セキュリティに関するホワイト ペーパー/ガイドを勝手に（＝非公式）日本語にしてみたものです。参考までにどうぞ・・・。それぞれに Markdown ファイルと PDF ファイルがありますが、Markdown では網掛けや斜字等がうまく表現されないので、その辺を気にするのであれば PDF 版をご確認ください。
+OWASP が発行した生成 AI セキュリティに関するホワイト ペーパー/ガイドを勝手に（＝非公式）日本語にしてみたものです。参考までにどうぞ・・・。Markdown ファイルと PDF ファイルがあるものがありますが、Markdown では網掛けや斜字等がうまく表現されないので、その辺を気にするのであれば PDF 版をご確認ください。
 
 - [【原典へのリンク】 GenAI Red Teaming Guide](https://genai.owasp.org/resource/genai-red-teaming-guide/) ... 生成 AI に対するレッド チーミングに関するガイド v1.0
   - [genai-red-teaming-guide](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/genai-red-teaming-guide) ディレクトリ配下
