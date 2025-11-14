@@ -4,7 +4,7 @@ ${toc}
 
 ------------------------------------------------------
 
-# サードパーティ製 MCP サーバーのセキュアな使用に関する実践ガイド
+# サード パーティ製 MCP サーバーのセキュアな使用に関する実践ガイド
 
 ### 第 1.0 版
 ### 2025 年 10 月 23 日
@@ -14,32 +14,28 @@ ${toc}
 
 # ライセンスおよび用途
 
-This document is licensed under Creative Commons, CC BY-SA 4.0.
+本書は、Creative Commons, CC BY-SA 4.0 に基づいてライセンスされています。
 
-You are free to:
-Share — copy and redistribute the material in any medium or format for any purpose, even commercially.
-Adapt — remix, transform, and build upon the material for any purpose, even commercially.
+以下の行為は自由に行うことができます。
 
-The licensor cannot revoke these freedoms as long as you follow the license terms.
-Under the following terms:
-Attribution — You must give appropriate credit, provide a link to the license, and indicate if changes were
-made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you
-or your use.
-ShareAlike — If you remix, transform, or build upon the material, you must distribute your contributions under
-the same license as the original.
-No additional restrictions — You may not apply legal terms or technological measures that legally restrict
-others from doing anything the license permits.
+- 共有 — あらゆる媒体または形式で、商用目的を含むあらゆる目的で、資料を複製および再配布すること。
+- 改変 — あらゆる目的で、商用目的を含むあらゆる目的で、資料をリミックス、変更、および加工すること。
 
-Link to full license text: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+以下のライセンス条項を遵守している限り、ライセンサーはこれらの自由を取り消すことはできません。
 
-The information provided in this document does not, and is not intended to constitute legal advice. All
-information is for general informational purposes only.
-This document contains links to other third-party websites. Such links are only for convenience and OWASP
-does not recommend or endorse the contents of the third-party sites.
+- 表示 — 適切なクレジットを付与し、ライセンスへのリンクを提供し、変更があった場合はその旨を記載する必要があります。これらの行為は、合理的な方法であればどのような方法で行っても構いませんが、ライセンサーがあなたまたはあなたの使用を支持していると示唆するような方法は禁止されています。
+- 継承 — 資料をリミックス、変更、または加工する場合は、あなたの貢献部分を元の資料と同じライセンスの下で配布する必要があります。
+- 追加制限なし — ライセンスで許可されている行為を他者が法的に制限するような法的条項または技術的手段を適用することはできません。
+
+ライセンス全文へのリンク: https://creativecommons.org/licenses/by-sa/4.0/legalcode
+
+本書に記載されている情報は、法的助言を構成するものではなく、また法的助言を構成することを意図するものでもありません。すべての情報は、一般的な情報提供のみを目的としています。
+
+本書には、第三者のウェブサイトへのリンクが含まれています。これらのリンクは便宜上提供されているものであり、OWASP は、第三者のウェブサイトのコンテンツを推奨または支持するものではありません。
 
 # 導入と背景
 
-このチート シートは、サードパーティ製の MCP（つまり、自社組織内で開発されていない MCP）の使用を計画している企業や開発者を対象としています。MCP 開発者向けのチート シートではありません。
+このチート シートは、サード パーティ製の MCP（つまり、自社組織内で開発されていない MCP）の使用を計画している企業や開発者を対象としています。MCP 開発者向けのチート シートではありません。
 
 **モデル コンテキスト プロトコル（MCP）** は、LLM/エージェント ホストがサーバー経由で外部ツール、データ、プロンプト テンプレートに接続する方法を標準化するオープンなプロトコルです。モデルをデータベース、API、社内アプリケーションなどのシステムに接続することで、MCP は強力な自動化を実現し、AI がテキスト生成以外のアクションを実行できるようにします。しかし、MCP は新たな攻撃対象領域も生み出し、組織を悪意のある攻撃にさらす可能性があります。ツールはコードの実行、ファイルへのアクセス、ネットワーク呼び出しを行うことができるため、MCP スタックが侵害されると、データの盗難、悪意のあるコードの実行、システムの妨害につながる可能性があります。
 
@@ -52,20 +48,20 @@ MCP は、API セマンティクス用の**データ層**（JSON-RPC）と通信
 	- リソース: AI アプリケーションにコンテキスト情報を提供するデータソース（例: ファイルの内容、データベース レコード、API レスポンス）。モデルへの参照。
 	- プロンプト: 言語モデルとのインタラクションを構造化するのに役立つ再利用可能なテンプレート（例: システム プロンプト、Few-Shot の例）。
 
-このチート シートは、（MCP をセキュアに使用して）サードパーティ製の MCP サーバーを使用する開発者向けの主要なセキュリティ管理策の概要を示します。
+このチート シートは、（MCP をセキュアに使用して）サード パーティ製の MCP サーバーを使用する開発者向けの主要なセキュリティ管理策の概要を示します。
 
 ## 利用事例
 
 <div align="center">
 
-![Fig-01.jpg](_resources/Fig-01.jpg)
+![Fig-01.jpg](./_resources/Fig-01.jpg)
 </div>
 
 ダウンロード可能な MCP サーバーは、ローカルで実行され、ネイティブ ツールとシステム レベルの権限を使用して、外部インフラストラクチャに依存しないタスクを実行します。これらのシステムでは、MCP クライアントとサーバー間の通信に STDIO を使用することがよくあります。コア操作はローカルで実行されますが、LLM 実行やリモート API 呼び出しなどの一部の機能は、構成に応じてリモート サービスと連携する場合があります。
 
 <div align="center">
 
-![Fig-02.jpg](_resources/Fig-02.jpg)
+![Fig-02.jpg](./_resources/Fig-02.jpg)
 </div>
 
 この MCP クライアントは、MCP の HTTP Streamable 通信を介してサーバーに接続し、サーバーはリモートで実行されます。サーバーは、多くの場合クラウド環境でホストされている外部ツールや API と連携する機能を持ちます。このデプロイメントにおける主要な考慮事項には、認証/認可、サーバーの検出、そしてレビューされていない MCP ツールの変更が含まれます。
@@ -95,7 +91,7 @@ LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/
 - **信頼できないデータの検証**: ツールの説明やサーバーの応答、ユーザー入力など、すべての外部データをモデルに渡す前に無害化および検証します。[OWASP
 LLM Prompt Injection Prevention Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/LLM_Prompt_Injection_Prevention_Cheat_Sheet.html) の「Input Validation and Sanitization（入力の検証と無害化）」セクションを参考にします。
 - **強力なスキーマの使用**: すべてのツール入力に対して厳格な JSON/YAML スキーマを定義し適用します。検証には、Pydantic (Python) や JSON Schema などのライブラリを使用します。
-- **コンテキストのセグメント化**: 異なるユーザーとのクライアント インタラクションをセグメント化し、新しい操作または別の操作にはサードパーティ製 MCP サーバーとの新しい接続/セッションを確立します。
+- **コンテキストのセグメント化**: 異なるユーザーとのクライアント インタラクションをセグメント化し、新しい操作または別の操作にはサード パーティ製 MCP サーバーとの新しい接続/セッションを確立します。
 
 ## 記憶の汚染
 
@@ -142,7 +138,7 @@ MCP サーバーを使用する上で重要な段階は「検出」です。こ�
 - **接続前のオリジン検証**: 信頼できるレジストリからのサーバーにのみ接続します。IP 許可リストとネットワーク分離を使用して、不明なサーバーへの接続を防止します。オープンソース ツールまたはローカルにホストされているサーバーの場合は、常にソースを検証し、署名を確認し、既知の脆弱性や悪意のある変更がないかスキャンします。
 - **利用サーバーをレジストリに限定**: 承認済みの全サーバーを中央のレジストリで一元管理します。
 - **ホスティングと接続の典型例の選択**:
-	- **STDIO（ローカル接続）**: ローカルにホストされている MCP サーバー（サード パーティのリポジトリまたはベンダーからダウンロード）の場合は、MCP サーバーのサブ プロセスへの接続として STDIO を使用します。このアプローチはレイテンシが最も低く、プロセス サンドボックス、[seccomp]()、または [AppArmor]() による強化が容易です。
+	- **STDIO（ローカル接続）**: ローカルにホストされている MCP サーバー（サード パーティのリポジトリまたはベンダーからダウンロード）の場合は、MCP サーバーのサブ プロセスへの接続として STDIO を使用します。このアプローチはレイテンシが最も低く、プロセス サンドボックス、[seccomp](https://en.wikipedia.org/wiki/Seccomp)、または [AppArmor](https://apparmor.net/) による強化が容易です。
 	- **Streamable HTTP（リモート接続）**: リモート サーバー、マルチテナント サーバー、または自動スケーリング サーバーの場合は、Streamable HTTP 経由のリモート接続を使用します。堅牢な認証には TLS/mTLS または OAuth 2.1 を使用し、WAF とレート制限機能で保護します。認証情報（API キー、証明書）は定期的に変更します。
 
 ### 検証
@@ -157,6 +153,146 @@ MCP サーバーを使用する上で重要な段階は「検出」です。こ�
 
 ### 認証
 
+- **システム操作に対してクライアント資格情報を活用します**。MCP クライアントがユーザー ID を持たないシステムとして対話する場合は、アイデンティティ プロバイダーのクライアント資格情報を使用してリモート MCP サーバーへの認証を行います。
+- **ユーザー操作に対して OIDC/PKCE を活用します**。チャット ボットや AI アシスタントなど、ユーザーが操作に密接に関連する利用事例では、ユーザー ログインには OIDC と PKCE を使用し、下流の MCP サーバーへの認証にはユーザー資格情報を活用します。
+	- OAuth を実装できない場合は、スコープが狭く有効期間が短いパーソナル アクセス トークンを使用して、ユーザー アクセスを識別および制限します。
+- **保護された登録**。[動的クライアント登録](https://datatracker.ietf.org/doc/html/rfc7591)は、ほとんどの利用事例では推奨されません。ただし、必要な場合、クライアントの不正登録を提供したくない認可サーバーには、登録エンド ポイントを保護するためのいくつかのオプションがあります。
+	- **アクセス トークン**: サーバーは、登録リクエストに対して認可（例：OAuth アクセス トークン経由）を要求する場合があります。ほとんどの場合、このトークンはクライアント登録フローの外で手動でリクエストできます。
+	- **ソフトウェア ステートメント**: クライアントは、クライアント メタデータをアサートする署名付き JWT である[ソフトウェア ステートメント](https://datatracker.ietf.org/doc/html/rfc7591#section-2.2)を提供する場合があります。認可サーバーは、信頼を確立するためにこれを検証する場合があります。
+	- **署名付きリクエスト ボディ**: サーバーは、登録リクエストに署名を要求し、事前設定された鍵に基づいて署名を検証する場合があります。
 
 ### 認可
 
+- **最小権限を持つ OAuth スコープの定義**: OAuth スコープを使用してリソースへのアクセスを制限し、MCP クライアントまたはユーザーに過度のアクセス権が付与されないようにします。
+- **きめ細かな権限の使用**: ID ごとにアクション レベルの権限を使用して、特定のアクションまたは個々のデータ要素への権限をさらに制限します。
+- **人間の介入による (Human-in-the-Loop) 制御**: ローカル MCP サーバーからのファイル システムへのアクセスや、メールへのアクセスなどの新しいリソースに対するリモート MCP 実行など、以前に実行されたことのないアクションには、人間による承認を必須にします。
+
+# ツールおよびユーティリティ
+
+どのツールも完全なカバレッジを提供するものではなく、リストされているツールの成熟度や有効性はそれぞれ異なります。これらのリストを参考に、利用事例や技術要件に適したツールを調査・選定してください。
+
+## 自動スキャナー
+
+- [Invariant Labs MCP-Scan](https://github.com/invariantlabs-ai/mcp-scan): MCP ツールにおける悪意のある記述をスキャンし接続を監視して、プロンプト インジェクション、ツール汚染、セキュアでないデータ フローなどの問題を検出します。
+- [Semgrep MCP Scanner](https://github.com/semgrep/semgrep/tree/develop/cli/src/semgrep/mcp): MCP 用のルールを備えた静的解析ツール（ベータ版）。Python および Node.js の依存関係をスキャンし、MCP-Get と統合してリストされているすべてのサーバーをスキャンします。
+- [mcp-watch](https://github.com/kapilduraphe/mcp-watch): 認証情報のセキュアでない保存やツール汚染の試みなどの脆弱性をスキャンします。
+- [Trail Of Bits mcp-context-protector](https://github.com/trailofbits/mcp-context-protector): 信頼できない MCP サーバーの実行に伴うリスクに対処する MCP サーバー用のセキュリティ ラッパーです。
+- [Vijil Evaluate](https://www.vijil.ai/evaluate): AI エージェントの信頼性、安全性、セキュリティを評価するプラットフォームです。
+
+## コンテンツ監視/モデレーション
+
+- [LangKit](https://github.com/whylabs/langkit): LLM 出力を監視するためのツール キット。
+- [OpenAI Moderation API](https://platform.openai.com/docs/guides/moderation): 不適切なコンテンツを検出するための API。
+- [Invariant Labs Invariant](https://github.com/invariantlabs-ai/invariant): エージェント システムを保護するためのコンテキスト ガードレール。
+- [LlamaFirewall](https://github.com/meta-llama/PurpleLlama/tree/main/LlamaFirewall): エージェントによる LLM の使用に影響を与えるリスクを検知するスキャナーを備えたフレームワーク。
+
+## オープンソース管理
+
+- [OpenSSF Scorecard](https://github.com/ossf/scorecard): リポジトリの成熟度を検証します。
+- [Snyk package health](https://snyk.io/advisor/): リポジトリのメンテナンス状況を検証します。
+
+## サンドボックス実行
+
+- [Docker](https://www.docker.com/): ローカルとリモートの両方のコンピューティング環境において、Docker コンテナ内で MCP サーバーを実行し、ローカル ファイルへのアクセスを制限し、悪意のあるツールが定義されたオペレーティング環境から脱出することを防ぎます。
+
+# ガバナンス
+
+審査および監視された MCP サーバーのみが使用されるように、正式なガバナンス戦略を確立します。この戦略の中核となるのは、**信頼できる MCP レジストリ**です。
+
+レジストリは、承認された各サーバーに関するメタデータを保持し、実行時にポリシーを適用する必要があります。これにより、**コードとしてのポリシー** ゲートと監査のための証拠を用いて、**審査済みで最小限の権限しか付与されず、継続的に監視されている** MCP サーバーのみがホスト/エージェントから利用可能であることを保証できます。
+
+## ガバナンス ワークフロー
+
+1. **提出**: 開発者は、新しいサードパーティ製 MCP サーバーを、そのドキュメントとツールの説明のハッシュとともにレビューのために提出します。
+2. **スキャン**: 自動化されたセキュリティ ツールが、サーバー（または利用可能な場合はコード リポジトリ）を解析し、マルウェア、隠し命令、その他のリスクの有無を確認します。
+3. **レビューと承認**: セキュリティ専門家とドメイン専門家がスキャン結果をレビューします。承認されたサーバーは、バージョンが固定され、レジストリに追加されます。
+4. **デプロイメントと監視**: サーバーはステージング環境にデプロイされ、監視されます。試用期間の後、本番環境に昇格されます。
+5. **定期的な再検証**: サーバーは、定期的にまたはバージョンが更新されるたびに自動的に再スキャンされます。
+
+## 推奨される役割および責任
+
+- **提出者（開発者）:**: 新しいサーバー統合を提案し、ドキュメントを提供します。
+- **セキュリティ レビュー担当者**: セキュリティ管理策、スキャン、サプライ チェーンの整合性を検証します。
+- **ドメイン所有者**: サーバーの機能上の必要性を確認し、スコープを承認します。
+- **承認者**: サーバーを有効化する前に、セキュリティ担当者とドメイン所有者の両方の承認を必要とします。
+- **オペレーター（SRE）**: 接続のロールアウト、監視、キル スイッチを管理します。
+
+# 謝辞
+
+## 寄稿者
+
+<table border="0" >
+<tr><td>Idan Habler</td><td>ServiceNow</td></tr>
+<tr><td>Tomer Elias</td><td>HUMAN Security</td></tr>
+<tr><td>Joshua Beck</td><td>SAS</td></tr>
+<tr><td>Netanel Rotem</td><td></td></tr>
+<tr><td>Victor Lu</td><td></td></tr>
+<tr><td>Keren Katz</td><td></td></tr>
+<tr><td>Sonu Kumar</td><td></td></tr>
+<tr><td>Ella Duffy</td><td>IBM</td></tr>
+<tr><td>Gurpreet Kaur Khalsa</td><td>Palo Alto Networks</td></tr>
+<tr><td>Abhishek Mishra</td><td>OneTrust</td></tr>
+<tr><td>Sumeet Jeswani</td><td>Google</td></tr>
+<tr><td>Adrian Sroka</td><td></td></tr>
+<tr><td>Ken Huang</td><td></td></tr>
+<tr><td>Riggs Goodman III</td><td>AWS</td></tr>
+<tr><td>Brian M. Green</td><td>Health-Vision.AI, LLC</td></tr>
+<tr><td>Syed Aamiruddin</td></tr>
+<tr><td>RIco Komenda</td><td></td></tr>
+<tr><td>John Cotter</td><td>Bentley Systems</td></tr>
+<tr><td>Saquib Saifee</td><td>IBM</td></tr>
+<tr><td>Almog Langleben</td><td></td></tr>
+<tr><td>Mohsin Khan</td><td>SAP</td></tr>
+<tr><td>Dipen Shah</td><td>Affirm</td></tr>
+<tr><td>Subaru Ueno</td><td>Vijil</td></tr>
+<tr><td>Venkata Sai Kishore Modalavalasa</td><td>Straiker</td></tr>
+</table>
+
+# OWASP GenAI Security Project のスポンサー
+
+プロジェクト スポンサーの皆様には、プロジェクトの目標達成を支援する資金提供、そして OWASP.org 財団が提供するリソースを補うための運営費やアウト リーチ費用の負担にご協力いただき、心より感謝申し上げます。OWASP GenAI Security Project は、ベンダー中立かつ公平なアプローチを継続的に維持しています。スポンサーの皆様には、サポートの一環として特別なガバナンス上の配慮は提供されません。
+
+スポンサーの皆様には、OWASP の資料やウェブ資産における貢献に対する謝辞を掲載しています。プロジェクトが生成するすべての資料は、コミュニティによって開発・運営され、オープン ソースおよびクリエイティブ コモンズ ライセンスの下で公開されています。スポンサーになる方法の詳細については、OWASP ウェブサイトのスポンサーシップ セクションをご覧ください。スポンサーシップを通じてプロジェクトを継続していくための支援について、詳しくはこちらをご覧ください。
+
+## プロジェクト スポンサー
+
+<div align="center">
+	
+![Fig-03.jpg](./_resources/Fig-03.jpg)
+</div>
+
+# プロジェクト サポーター
+
+プロジェクト サポーターは、プロジェクトの目標達成を支援するために自らのリソースと専門知識を提供しています。
+
+<table border="0" >
+<tr><td>Accenture</td><td>Cobalt</td><td>Kainos</td><td>PromptArmor</td></tr>
+<tr><td>AddValueMachine Inc</td><td>Cohere</td><td>KLAVAN</td><td>Pynt</td></tr>
+<tr><td>Aeye Security Lab Inc.</td><td>Comcast</td><td>Klavan Security Group</td><td>Quiq</td></tr>
+<tr><td>AI informatics GmbH</td><td>Complex Technologies</td><td>KPMG Germany FS</td><td>Red Hat</td></tr>
+<tr><td>AI Village</td><td>Credal.ai</td><td>Kudelski Security</td><td>RHITE</td></tr>
+<tr><td>aigos</td><td>Databook</td><td>Lakera</td><td>SAFE Security</td></tr>
+<tr><td>Aon</td><td>DistributedApps.ai</td><td>Lasso Security</td><td>Salesforce</td></tr>
+<tr><td>Aqua Security</td><td>DreadNode</td><td>Layerup</td><td>SAP</td></tr>
+<tr><td>Astra Security</td><td>DSI</td><td>Legato</td><td>Securiti</td></tr>
+<tr><td>AVID</td><td>EPAM</td><td>Linkfire</td><td>See-Docs & Thenavigo</td></tr>
+<tr><td>AWARE7 GmbH</td><td>Exabeam</td><td>LLM Guard</td><td>ServiceTitan</td></tr>
+<tr><td>AWS</td><td>EY Italy</td><td>LOGIC PLUS</td><td>SHI</td></tr>
+<tr><td>BBVA</td><td>F5</td><td>MaibornWolff</td><td>Smiling Prophet</td></tr>
+<tr><td>Bearer</td><td>FedEx</td><td>Mend.io</td><td>Snyk</td></tr>
+<tr><td>BeDisruptive</td><td>Forescout</td><td>Microsoft</td><td>Sourcetoad</td></tr>
+<tr><td>Bit79</td><td>GE HealthCare</td><td>Modus Create</td><td>Sprinklr</td></tr>
+<tr><td>Blue Yonder</td><td>Giskard</td><td>Nexus</td><td>stackArmor</td></tr>
+<tr><td>BroadBand Security, Inc.</td><td>GitHub</td><td>Nightfall AI</td><td>Tietoevry</td></tr>
+<tr><td>BuddoBot</td><td>Google</td><td>Nordic Venture Family</td><td>Trellix</td></tr>
+<tr><td>Bugcrowd</td><td>GuidePoint Security</td><td>Normalyze</td><td>Trustwave SpiderLabs</td></tr>
+<tr><td>Cadea</td><td>HackerOne</td><td>NuBinary</td><td>U Washington</td></tr>
+<tr><td>Check Point</td><td>HADESS</td><td>Palo Alto Networks</td><td>University of Illinois</td></tr>
+<tr><td>Cisco</td><td>IBM</td><td>Palosade</td><td>VE3</td></tr>
+<tr><td>Cloud Security Podcast</td><td>iFood</td><td>Praetorian</td><td>WhyLabs</td></tr>
+<tr><td>Cloudflare</td><td>IriusRisk</td><td>Preamble</td><td>Yahoo</td></tr>
+<tr><td>Cloudsec.ai</td><td>IronCore Labs</td><td>Precize</td><td>Zenity</td></tr>
+<tr><td>Coalfire</td><td>IT University Copenhagen</td><td>Prompt Security</td><td></td></tr>
+</table>
+
+サポーターのリストは、本書公開時点のものです。完全なサポーター リストは[こちら](https://owasp.org/supporters/list)をご覧ください。
