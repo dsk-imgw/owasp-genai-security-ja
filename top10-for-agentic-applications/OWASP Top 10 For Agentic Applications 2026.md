@@ -426,12 +426,46 @@ ASI Top 10、LLM Top 10、Agentic AI Threats & Mitigations、AIVSS Core Risks �
 
 # 付録 B: OWASP CycloneDX および AIBOM との関係性
 
+OWASP CycloneDX プロジェクトは、サプライチェーン全体にわたるソフトウェア、ハードウェア、機械学習コンポーネントの可視性と出所を提供する、世界的に採用されている**部品表（BOM）** の標準を提供します。構造化された SBOM、ML-BOM、AI-BOM 形式を通じて、依存関係、バージョン、出所を含むコンポーネント データを識別および交換する方法を定義します。
+
+**OWASP Agentic AI Top 10** は、この基盤の上に構築され、静的なコンポーネント インベントリにとどまらない、**動作および自律性に起因するリスク**に対処します。CycloneDX は、組織が *「自社の AI システムにはどのようなコンポーネントとツールがあるのか？」* という問いに答えるのに役立ちます。一方、Agentic AI Top 10 と AIVSS スコアリング フレームワークは、 *「これらのコンポーネントと自律エージェントは、どのように動作し、相互作用し、または安全でない方法で失敗する可能性があるのか？」* という問いに答えます。
+
+これら 2 つのイニシアチブは、AI セキュリティの統一的な視点を提供します。CycloneDX は**サプライチェーンの透明性と出所**を確立し、Agentic AI Top 10 は、エージェント システム向けの**脅威認識、行動の保証、軽減策のマッピング**を導入します。AIVSS スコアリングとエージェント脅威モデルを CycloneDX SBOM データと統合することで、**コンポーネントの信頼**から**エージェントの行動**に至るまで継続的なリスク評価が可能になり、AI ライフサイクル全体の保証が強化されます。また、新たに設立された AIBOM OWASP プロジェクトが発展すれば、同様のアプローチを追求していきます。
+
+また、新たに設立された AIBOM OWASP プロジェクトが発展したら、同様のアプローチを追求する予定です。
 
 # 付録 C: OWASP Non-Human Identities Top 10 (2025) と OWASP Agentic AI Top 10 の対応関係
+
+以下の表は、OWASP Non-Human Identities (NHI) Top 10 (2025) のリスクを、OWASP  Agentic AI Top 10 (ASI)、Agentic-AI Threats & Mitigations（T-番号）、および AIVSS Core Risk カテゴリーにマッピングし、アイデンティティー中心のリスクとエージェント行動中心のリスクの整合性を示しています。
+
+| NHI リスク ID | 概略 | 対応する ASI Top 10 項目 | 対応する T-番号/Threats & Mitigations | 対応する AIVSS Core Risk Alignment|
+| ----- | ----- | ----- | ----- | ----- |
+| NHI1: Improper Offboarding | 使用されていない非人間 ID を無効化または削除しないと、攻撃対象領域が永続的に存在してしまいます。| ASI04 – エージェント型サプライチェーンの脆弱性 | | |
+| NHI2: Secret Leakage | 非人間アイデンティティーによって使用される API 鍵、トークン、または証明書の漏洩。|  | | |
+| NHI3: Vulnerable Third-Party NHI | サードパーティの統合アイデンティティ－が侵害され悪用されます。|  | | |
+| NHI4: Insecure Authentication | NHI の認証の仕組みが脆弱または非推奨。|  | | |
+| NHI5: Overprivileged NHI | 非人間アイデンティティーに過剰な権限が付与されています。|  | | |
+| NHI6: Cloud Deployment Configurations | 静的認証情報を使用した CI/CD とクラウド セットアップの不適切な設定。|  | | |
+| NHI7: Long-Lived Secrets | 有効期限が長い認証情報や鍵は攻撃者の滞在時間を長くします。|  | | |
+| NHI8: Environment Isolation | 開発/テスト/本番環境全体での NHI の再利用により、水平展開が可能になります。|  | | |
+| NHI9: NHI Reuse | 同じ NHI をサービス間で再利用すると侵害の影響が拡大します。|  | | |
+| NHI10: Human Use of NHI | 人間が非人間の資格情報を使用すると、説明責任の喪失と特権の不正使用が発生します。|  | | |
 
 
 # 付録 D: ASI Agentic Exploits & Incidents Tracker
 
+ASI Exploits and Incidents initiative は、実際のインシデントやエクスプロイトを参考に、エージェント アプリケーション向け OWASP Top 10 の情報提供と確立を目指しています。これは、GenAI Security プロジェクトにおける既存の脆弱性報告を補完するものであり、既存のものに取って代わるものではありません。同様に、インシデント対応に関するあらゆる側面については、インシデント対応ガイドの発行を担当する CTI イニシアチブと協議する必要があります。
+
+以下のリストは、公開されている最新の情報を反映するために毎週更新されます。最新版は、以下の専用 GitHub リポジトリからアクセスできます。
+
+https://github.com/OWASP/www-project-top-10-for-large-language-modelapplications/blob/main/initiatives/agent_security_initiative/ASI%20Agentic%20Exploits%20%26%20Incidents/ASI_Agentic_Exploits_Incidents.md
+
+## Exploits & Incidents 表
+
+| 日付 | Exploit/Incident | 影響の概要 | 対応する ASI T&M | さらなる分析のためのリンク |
+| ----- | ----- | ----- | ----- | ----- |
+
 
 # 付録 E: 略語集
+
 
