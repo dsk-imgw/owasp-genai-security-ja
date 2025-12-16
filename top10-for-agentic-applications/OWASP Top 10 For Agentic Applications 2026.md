@@ -133,10 +133,10 @@ AI エージェントは、目標を達成するために一連のタスクを�
 
 ## 参考情報
 
-1. [Security Advisory - ChatGPT Crawler Reflective DDOS Vulnerability: Security advisory detailing the vulnerability]()
-2. [AIM Echoleak Blog Post: Blog post describing the vulnerability]()
-3. [ChatGPT Plugin Exploit Explained: From Prompt Injection to Accessing Private Data.]()
-4. [AgentFlayer: 0click inception attack on ChatGPT users.]()
+1. [Security Advisory - ChatGPT Crawler Reflective DDOS Vulnerability: Security advisory detailing the vulnerability](https://github.com/bf/security-advisories/blob/main/2025-01-ChatGPT-Crawler-Reflective-DDOS-Vulnerability.md)
+2. [AIM Echoleak Blog Post: Blog post describing the vulnerability](https://www.aim.security/post/echoleak-blogpost)
+3. [ChatGPT Plugin Exploit Explained: From Prompt Injection to Accessing Private Data](https://embracethered.com/blog/posts/2023/chatgpt-cross-plugin-request-forgery-and-prompt-injection./)
+4. [AgentFlayer: 0click inception attack on ChatGPT users.](https://zenity.io/research/agentflayer-vulnerabilities)
 
 # ASI02: ツールの不正使用および悪用 (Tool Misuse and Exploitation)
 
@@ -184,11 +184,11 @@ DNS クエリを通じてデータを盗み出します。
 
 ## 参考情報
 
-1. [Progent: Programmable Privilege Control for LLM Agents]()
-2. [AutoGPT - Make Auto-GPT aware of it's running cost]() 初期のAutoGPTの障害事例。無制限のファイル システムと実行権限を持つエージェントが意図しない破壊的なアクションを実行する可能性があることが示されています。
-3. [Building AI Agents with Python: From LangChain to AutoGPT]() 制約のないツール、アイデンティティーのない実行、そして過度に許容的なエージェント機能のリスクを説明する、エージェント構築入門チュートリアル。
-4. [AgentFlayer: 0click Exploit Leading to Data Exfiltration from Microsoft Copilot Studio.]()
-5. [Amazon Q Developer: Secrets Leaked via DNS and Prompt Injection]()
+1. [Progent: Programmable Privilege Control for LLM Agents](https://arxiv.org/abs/2504.11703)
+2. [AutoGPT - Make Auto-GPT aware of it's running cost](https://github.com/Significant-Gravitas/AutoGPT/issues/6) 初期の AutoGPT の障害事例。無制限のファイル システムと実行権限を持つエージェントが意図しない破壊的なアクションを実行する可能性があることが示されています。
+3. [Building AI Agents with Python: From LangChain to AutoGPT](https://python.plainenglish.io/building-ai-agents-with-python-from-langchain-to-autogpt-925f82463645) 制約のないツール、アイデンティティーのない実行、そして過度に許容的なエージェント機能のリスクを説明する、エージェント構築入門チュートリアル。
+4. [AgentFlayer: 0click Exploit Leading to Data Exfiltration from Microsoft Copilot Studio](https://zenity.io/research/agentflayer-vulnerabilities)
+5. [Amazon Q Developer: Secrets Leaked via DNS and Prompt Injection](https://embracethered.com/blog/posts/2025/amazon-q-developer-data-exfil-via-dns)
 
 # ASI03: アイデンティティーおよび権限の乱用 (Identity and Privilege　Abuse)
 
@@ -237,26 +237,61 @@ AIVSS では **Core Risk 2: エージェントのアクセス制御違反**に�
 10. 
 ## 参考情報
 
-1. [https://research.aimultiple.com/agentic-ai-cybersecurity/](https://research.aimultiple.com/agentic-ai-cybersecurity/)
-2. [https://www.docker.com/blog/mcp-horror-stories-github-prompt-injection/](https://www.docker.com/blog/mcp-horror-stories-github-prompt-injection/)
-3. [https://css.csail.mit.edu/6.858/2015/readings/confused-deputy.html](https://css.csail.mit.edu/6.858/2015/readings/confused-deputy.html)
-4. [15 Ways to Break Your Copilot, BHUSA 2024]()
-5. [NVD - cve-2025-31491]()
+1. [Agentic AI for Cybersecurity: Real life Use Cases & Examples](https://research.aimultiple.com/agentic-ai-cybersecurity/)
+2. [MCP Horror Stories: The GitHub Prompt Injection Data Heist](https://www.docker.com/blog/mcp-horror-stories-github-prompt-injection/)
+3. [The Confused Deputy](https://css.csail.mit.edu/6.858/2015/readings/confused-deputy.html)
+4. [15 Ways to Break Your Copilot, BHUSA 2024](https://www.mbgsec.com/assets/pdfs/2024-08-07_15_ways_to_break_your_Copilot.pdf)
+5. [NVD - cve-2025-31491](https://nvd.nist.gov/vuln/detail/cve-2025-31491)
 
 
-# ASI04: エージェント型サプライチェーンの脆弱性 (Agentic Supply Chain　Vulnerabilities)
+# ASI04: エージェント型サプライチェーンの脆弱性 (Agentic Supply Chain Vulnerabilities)
 
 ## 解説
 
+**エージェント型サプライチェーンの脆弱性**は、エージェント、ツール、およびそれらが連携する関連アーティファクトがサードパーティによって提供されたり、それらが悪意のある、侵害された、または輸送中に改ざんされる可能性がある場合に発生します。これらのコンポーネントには、モデルとモデルの重み、ツール、プラグイン、データセット、他のエージェント、エージェント型インターフェース（MCP（モデル コンテキスト プロトコル）、A2A（エージェント ツー エージェント））、エージェント型レジストリおよび関連アーティファクト、更新チャネルなど、静的および動的なソース コンポーネントが含まれます。これらの依存関係により、安全でないコード、隠された命令、または欺瞞的な動作がエージェントの実行チェーンに導入される可能性があります。
+
+サプライチェーンについては、**LLM03:2025** サプライチェーンの脆弱性で詳細に説明されています。ただし、ここでは静的な依存関係に重点が置かれています。従来の AI やソフトウェアのサプライチェーンとは異なり、エージェント型エコシステムは、多くの場合、**実行時に機能を構築し**、外部ツールやエージェント ペルソナを動的にロードすることで、攻撃対象領域を拡大します。この分散型ランタイム調整とエージェントの自律性を組み合わせることで、エージェント間で脆弱性を連鎖的に伝播させるライブ サプライチェーンが形成されます。これにより、多様で不透明なコンポーネントのセキュリティは、マニフェストからランタイム セキュリティへと焦点が移ります。この問題に対処するには、開発時のツールと、コンポーネントが動的にロード、共有、信頼されるランタイム オーケストレーションを綿密に構築する必要があります。
+
+このエントリは、**Agentic Threats and Mitigations** の **T17 サプライチェーンの侵害** に対応し、**T2 ツールの不正使用**、**T11 予期せぬ RCE およびコード攻撃**、**T12 エージェント通信の汚染**、**T13 不正エージェント**、および**T16 セキュアでないエージェント間プロトコルの乱用** にも対応します。
+
 ## 脆弱性の一般的な例
+
+1. **リモートからロードされた不正なプロンプト テンプレート**: エージェントは、外部ソースからプロンプト テンプレートを自動的に取得します。これらのテンプレートには、データの持出しや破壊的なアクションの実行など、隠された指示が含まれています。これにより、開発者の意図に反して悪意のある動作が実行されます。
+2. **ツール記述子インジェクション**: 攻撃者は、ツールのメタデータまたは MCP/エージェント カードに隠された指示や悪意のあるペイロードを埋め込み、ホスト エージェントはそれを信頼できるガイダンスとして解釈して動作します。
+3. **なりすましとタイポ スクワッティング:** エージェントが外部ツールやサービスを動的に検出または接続する場合、タイポ スクワッティングされたエンドポイント（解決を欺くために選択された類似の名前）またはシンボル攻撃にの 2 つの方法で欺かれる可能性があります。シンボル攻撃では、悪意のあるサービスが正当なツールやエージェントを故意に偽装し、そのアイデンティティー、API、および動作を模倣して信頼を獲得し、悪意のあるアクションを実行します。
+4. **脆弱なサードパーティ製エージェント（エージェント→エージェント）**。パッチ未適用の脆弱性、またはセキュアでないデフォルトを持つサードパーティ製エージェントが、マルチ エージェント ワークフローに招き入れられます。侵害済みまたはバグのあるピア エージェントは、ピボット、データ漏洩、または本来信頼されているエージェントへの悪意のある指示の中継に利用される可能性があります。
+5. **侵害済み MCP / レジストリ サーバー**。悪意のある、または侵害済みエージェント管理 / MCP
+サーバー（またはパッケージ レジストリ）は、署名されたように見えるマニフェスト、プラグイン、またはエージェント記述子を提供します。オーケストレーション システムはレジストリを信頼しているため、改ざんされたコンポーネントが広範囲に露出し、大規模な記述子インジェクションが発生する可能性があります。
+6. **汚染された知識プラグイン**: 一般的な RAG プラグインは、細工されたエントリでシードされたサードパーティ製インデクサーからコンテキストを取得します。エージェントは、このデータを使用するにつれて徐々にバイアスがかかり、通常の使用中に機密データを盗み出します。
 
 ## 攻撃シナリオの例
 
+1. **Amazon Q サプライチェーンの侵害**: VS Code 用 Q リポジトリの汚染されたプロンプトが、v1.84.0 で数千人に配布されましたが、検出されませんでした。これは、上流のエージェント ロジックの改ざんが拡張機能を介して連鎖的に広がり、影響を拡大する様子を示しています。
+2. **MCP ツール記述子の改ざん**: 研究者が、GitHub の MCP におけるプロンプト インジェクションを実証しました。このツールでは、悪意のある公開ツールがメタデータ内にコマンドを隠蔽しています。このツールが呼び出されると、アシスタントはユーザーに気付かれることなく、プライベート リポジトリのデータを盗み出します。
+3. **Postmark を装う悪意のある MCP サーバー**: npm 上で初めて確認された悪意のある MCP サーバーとして報告されたこのサーバーは、postmark-mcp を装い、攻撃者に密かに BCC でメールを送信していました。
+4. **AgentSmith Prompt-Hub プロキシ攻撃**: Prompt プロキシはデータを盗み出し、応答フローを乗っ取り、Agentic システムの動的なオーケストレーションを操作します。
+5. **侵害済み NPM パッケージ**（例: nx/debug リリースの汚染）がコーディング エージェントによって自動的にインストールされ、SSH 鍵と API トークンを盗み出す隠れたバックドアが有効化され、エージェント ワークフロー全体にサプライチェーンの侵害が伝播しました。
+6. **エージェント カードによる中間者攻撃**: 侵害済みピアまたは不正なピアは、エージェント カード（例：/.well-known/agent.json）に誇張された機能をアドバタイズします。ホスト エージェントはそれをタスクに選択します。これにより、機密性の高いリクエストとデータが攻撃者が制御するエージェントを経由してルーティングされ、レスポンスが盗み出されたり破損したりします。
+
 ## 防止策および軽減策のガイドライン
+
+1. **出所とSBOM、AIBOM**: マニフェスト、プロンプト、ツール定義に署名と証明を行います。定期的な証明をもって、SBOM、AIBOM を要求して運用可能にします。AI コンポーネントのインベントリを維持します。キュレーションされたレジストリを使用し、信頼できないソースをブロックします。
+2. **依存関係のゲート キーピング**: ホワイト リストとピン留めを行います。タイポ スクワット（PyPI、npm、LangChain、LlamaIndex）をスキャンします。インストールまたはアクティベーション前に出所を検証します。署名されていないものや検証されていないものは自動的に拒否します。
+3. **封じ込めとビルド**: 機密性の高いエージェントを、厳格なネットワークまたはシステム コール制限のあるサンドボックス化されたコンテナで実行します。再現可能なビルドを要求します。
+4. **プロンプトと記憶のセキュリティ保護**: プロンプト、オーケストレーション スクリプト、記憶スキーマをピア レビューによるバージョン管理下に置きます。異常をスキャンします。
+5. **エージェント間セキュリティ**: PKI および mTLS を介して相互認証と構成証明を実施します。オープン登録は行いません。すべてのエージェント間メッセージに署名と検証を行います。
+6. **継続的な検証と監視**: 実行時に署名、ハッシュ、SBOM（AIBOM を含む）を再確認し、動作、権限の使用、系譜、モジュール間テレメトリに異常がないか監視します。
+7. **ピン留め**: プロンプト、ツール、設定をコンテンツ ハッシュとコミット ID でピン留めします。段階的なロールアウトを義務付け、差分テストとハッシュ ドリフトまたは動作変更時の自動ロールバックを実施します。
+8. **サプライチェーン キル スイッチ**: 侵害が検出された場合、すべてのデプロイメントで特定のツール、プロンプト、またはエージェント接続を即座に無効にできる緊急失効の仕組みを実装し、さらなる連鎖的な被害を防ぎます。
+9. **アプリケーション設計におけるゼロ トラスト セキュリティ モデル**: LLM またはエージェント機能コンポーネントの障害または悪用を想定したセキュリティ フォールト トレランスを備えたシステムを設計します。
 
 ## 参考情報
 
-
+1. [Amazon AI coding agent hacked to inject data wiping commands](https://www.bleepingcomputer.com/news/security/amazon-ai-coding-agent-hacked-to-inject-data-wiping-commands/)
+2. [GitHub MCP Exploited: Accessing private repositories via MCP](https://invariantlabs.ai/blog/mcp-github-vulnerability)
+3. [Reconstructing a timeline for Amazon Q prompt infection](https://www.mbgsec.com/posts/2025-07-24-constructing-a-timeline-for-amazon-q-prompt-infection/)
+4. [Agent In the Middle – Abusing Agent Cards in the Agent-2-Agent (A2A) Protocol To ‘Win’ All the Tasks](https://levelblue.com/blogs/spiderlabs-blog/agent-in-the-middle-abusing-agent-cards-in-the-agent-2-agent-protocol-to-win-all-the-tasks/)
+5. [How an AI Agent Vulnerability in LangSmith Could Lead to Stolen API Keys and Hijacked LLM Responses - Noma Security](https://noma.security/blog/how-an-ai-agent-vulnerability-in-langsmith-could-lead-to-stolen-api-keys-and-hijacked-llm-responses/)
 
 # ASI05: 予期せぬコード実行 (RCE) (Unexpected Code Execution (RCE))
 
@@ -423,7 +458,6 @@ ASI Top 10、LLM Top 10、Agentic AI Threats & Mitigations、AIVSS Core Risks �
 - **AIVSS Core Risks**: 優先順位付けと深刻度ランキングのための定量スコアリング カテゴリ（例: BI、OS、CV）に対応します。
 - **クロス オーバーの考察**: ASI のエントリは、多くの場合、複数の LLM エントリを組み合わせます。例えば、ASI01 は LLM01:2025（プロンプト）と LLM06（自律性）を組み合わせており、エージェントの自律性がモデル レベルのリスクをどのように複雑化させるかを表しています。
 
-
 # 付録 B: OWASP CycloneDX および AIBOM との関係性
 
 OWASP CycloneDX プロジェクトは、サプライチェーン全体にわたるソフトウェア、ハードウェア、機械学習コンポーネントの可視性と出所を提供する、世界的に採用されている**部品表（BOM）** の標準を提供します。構造化された SBOM、ML-BOM、AI-BOM 形式を通じて、依存関係、バージョン、出所を含むコンポーネント データを識別および交換する方法を定義します。
@@ -467,5 +501,4 @@ https://github.com/OWASP/www-project-top-10-for-large-language-modelapplications
 
 
 # 付録 E: 略語集
-
 
