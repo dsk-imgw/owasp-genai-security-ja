@@ -703,7 +703,7 @@ ASI Exploits and Incidents initiative は、実際のインシデントやエク
 
 以下のリストは、公開されている最新の情報を反映するために毎週更新されます。最新版は、以下の専用 GitHub リポジトリからアクセスできます。
 
-https://github.com/OWASP/www-project-top-10-for-large-language-modelapplications/blob/main/initiatives/agent_security_initiative/ASI%20Agentic%20Exploits%20%26%20Incidents/ASI_Agentic_Exploits_Incidents.md
+https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/blob/main/initiatives/agent_security_initiative/ASI%20Agentic%20Exploits%20%26%20Incidents/ASI_Agentic_Exploits_Incidents.md
 
 ## Exploits & Incidents 表
 
