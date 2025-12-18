@@ -791,15 +791,15 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td>2025 年 10 月</td>
 	<td>悪意のある MCP パッケージによるバックドア</td>
 	<td>NPM パッケージはバックドア付きの MCP サーバーをホストし、デュアル リバース シェル（インストール時と実行時）を備え、エージェント環境への永続的なリモート アクセスを可能にしました。</td>
-	<td><li>ASI04 （エージェント型サプライチェーンの脆弱性）</td>
-	<td><li>NPM<li>Koli Security</td>
+	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）</ul></td>
+	<td><ul><li>NPM<li>Koli Security</ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
 	<td>Framelink Figma MCP の RCE</td>
 	<td>Framelink Figma MCP の <code>get_figma_data</code> ツールにおいてユーザー入力が無害化されておらず、ホストシステム上で未認証でリモート コマンド実行が可能になりました。</td>
-	<td><li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI02 （ツールの不正使用および悪用）</td>
-	<td><li>Figma Context MCP<li>NVD<li>Imperva</td>
+	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI02 （ツールの不正使用および悪用）</ul></td>
+	<td><ul><li>Figma Context MCP<li>NVD<li>Imperva</ul></td>
 </tr>
 <tr>
 	<td></td>
