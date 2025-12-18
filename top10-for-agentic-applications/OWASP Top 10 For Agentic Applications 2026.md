@@ -651,7 +651,7 @@ ASI Top 10、LLM Top 10、Agentic AI Threats & Mitigations、AIVSS Core Risks �
 	<td>ASI09 - 人間とエージェント間の信頼の悪用</td>
 	<td>LLM01:2025 プロンプト インジェクション<br>LLM05:2025 不適切な出力制御<br>LLM06:2025 過剰な主体性<br>LLM09:2025 誤情報</td>
 	<td>T7 不整合で欺瞞的な振舞い<br>T8 否認および追跡不能<br>T10 過負荷なヒューマン イン ザ ループ</td>
-	<td>T10 エージェントの非追跡可能性/人間の操作</td>
+	<td>エージェントの追跡不能性/人間の操作</td>
 </tr>
 <tr>
 	<td>ASI10 - 不正エージェント</td>
@@ -683,18 +683,88 @@ OWASP CycloneDX プロジェクトは、サプライチェーン全体にわた�
 
 以下の表は、OWASP Non-Human Identities (NHI) Top 10 (2025) のリスクを、OWASP  Agentic AI Top 10 (ASI)、Agentic-AI Threats & Mitigations（T-番号）、および AIVSS Core Risk カテゴリーにマッピングし、アイデンティティー中心のリスクとエージェント行動中心のリスクの整合性を示しています。
 
-| NHI リスク ID | 概略 | 対応する ASI Top 10 項目 | 対応する T-番号/Threats & Mitigations | 対応する AIVSS Core Risk との整合 |
-| ----- | ----- | ----- | ----- | ----- |
-| NHI1: Improper Offboarding | 使用されていない非人間 ID を無効化または削除しないと、攻撃対象領域が永続的に存在してしまいます。| ASI04 – エージェント型サプライチェーンの脆弱性 | | |
-| NHI2: Secret Leakage | 非人間アイデンティティーによって使用される API 鍵、トークン、または証明書の漏洩。|  | | |
-| NHI3: Vulnerable Third-Party NHI | サードパーティの統合アイデンティティ－が侵害され悪用されます。|  | | |
-| NHI4: Insecure Authentication | NHI の認証の仕組みが脆弱または非推奨。|  | | |
-| NHI5: Overprivileged NHI | 非人間アイデンティティーに過剰な権限が付与されています。|  | | |
-| NHI6: Cloud Deployment Configurations | 静的認証情報を使用した CI/CD とクラウド セットアップの不適切な設定。|  | | |
-| NHI7: Long-Lived Secrets | 有効期限が長い認証情報や鍵は攻撃者の滞在時間を長くします。|  | | |
-| NHI8: Environment Isolation | 開発/テスト/本番環境全体での NHI の再利用により、水平展開が可能になります。|  | | |
-| NHI9: NHI Reuse | 同じ NHI をサービス間で再利用すると侵害の影響が拡大します。|  | | |
-| NHI10: Human Use of NHI | 人間が非人間の資格情報を使用すると、説明責任の喪失と特権の不正使用が発生します。|  | | |
+<div align="center">
+<table>
+<tr>
+	<th width="18%">NHI リスク ID</th>
+	<th width="28%">概略</th>
+	<th width="18%">対応する ASI Top 10 項目</th>
+	<th width="18%">対応する T-番号/Threats & Mitigations</th>
+	<th width="18%">対応する AIVSS Core Risk との整合</th>
+</tr>
+<tr>
+	<td width=18%"">NHI1: Improper Offboarding</td>
+	<td width=28%"">使用されていない非人間 ID を無効化または削除しないと、攻撃対象領域が永続的に存在してしまいます。</td>
+	<td width=18%"">ASI04 -エージェント型サプライチェーンの脆弱性</td>
+	<td width=18%"">T17 サプライチェーンの侵害<br>T2 ツールの不正使用</td>
+	<td width=18%"">エージェントのサプライチェーンおよび依存関係に対する攻撃</td>
+</tr>
+<tr>
+	<td width=18%"">NHI2: Secret Leakage</td>
+	<td width=28%"">非人間アイデンティティーによって使用される API 鍵、トークン、または証明書の漏洩。</td>
+	<td width=18%"">ASI02 - ツールの不正使用および悪用<br>ASI06 - 記憶およびコンテキストの汚染</td>
+	<td width=18%"">T6 目標の操作<br>T1 記憶汚染</td>
+	<td width=18%"">記憶の使用およびコンテキストの認知</td>
+</tr>
+<tr>
+	<td width=18%"">NHI3: Vulnerable Third-Party NHI</td>
+	<td width=28%"">サードパーティの統合アイデンティティ－が侵害され悪用されます。</td>
+	<td width=18%"">ASI04 -エージェント型サプライチェーンの脆弱性<br>ASI03 - アイデンティティーおよび権限の乱用</td>
+	<td width=18%"">T12 エージェント通信の汚染<br>T13 マルチ エージェント システムにおける不正エージェント</td>
+	<td width=18%"">エージェントのサプライチェーンおよび依存関係に対する攻撃</td>
+</tr>
+<tr>
+	<td width=18%"">NHI4: Insecure Authentication</td>
+	<td width=28%"">NHI の認証の仕組みが脆弱または非推奨。</td>
+	<td width=18%"">ASI03 - アイデンティティーおよび権限の乱用<br>ASI07 - セキュアでないエージェント間通信</td>
+	<td width=18%"">T16 セキュアでないエージェント間通信の乱用</td>
+	<td width=18%"">エージェントのアクセス制御違反</td>
+</tr>
+<tr>
+	<td width=18%"">NHI5: Overprivileged NHI </td>
+	<td width=28%"">非人間アイデンティティーに過剰な権限が付与されています。</td>
+	<td width=18%"">ASI02 - ツールの不正使用および悪用<br>ASI03 - アイデンティティーおよび権限の乱用</td>
+	<td width=18%"">T2 ツールの不正使用<br>T3 権限の侵害</td>
+	<td width=18%"">エージェントのアクセス制御違反</td>
+</tr>
+<tr>
+	<td width=18%"">NHI6: Cloud Deployment Configurations</td>
+	<td width=28%"">静的認証情報を使用した CI/CD とクラウド セットアップの不適切な設定。</td>
+	<td width=18%"">ASI04 -エージェント型サプライチェーンの脆弱性<br>ASI05 - 予期せぬコード実行 (RCE)</td>
+	<td width=18%"">T11 予期せぬ RCE やコードによる攻撃</td>
+	<td width=18%"">エージェントと重要システムのセキュアでないインタラクション</td>
+</tr>
+<tr>
+	<td width=18%"">NHI7: Long-Lived Secrets</td>
+	<td width=28%"">有効期限が長い認証情報や鍵は攻撃者の滞在時間を長くします。</td>
+	<td width=18%"">ASI06 - 記憶およびコンテキストの汚染<br>ASI08 - 連鎖的な失敗</td>
+	<td width=18%"">T4 記憶への過負荷<br>T12 エージェント通信の汚染</td>
+	<td width=18%"">記憶の使用およびコンテキストの認知</td>
+</tr>
+<tr>
+	<td width=18%"">NHI8: Environment Isolation</td>
+	<td width=28%"">開発/テスト/本番環境全体での NHI の再利用により、水平展開が可能になります。</td>
+	<td width=18%"">ASI08 - 連鎖的な失敗<br>ASI07 - セキュアでないエージェント間通信</td>
+	<td width=18%"">T8 否認および追跡不能<br>T12 エージェント通信の汚染</td>
+	<td width=18%"">エージェントの連鎖的な失敗</td>
+</tr>
+<tr>
+	<td width=18%"">NHI9: NHI Reuse</td>
+	<td width=28%"">同じ NHI をサービス間で再利用すると侵害の影響が拡大します。</td>
+	<td width=18%"">ASI08 - 連鎖的な失敗<br>ASI04 - エージェント型サプライチェーンの脆弱性</td>
+	<td width=18%"">T5 連鎖的幻覚による攻撃<br>T13 不正エージェント</td>
+	<td width=18%"">エージェントの連鎖的な失敗</td>
+</tr>
+<tr>
+	<td width=18%"">NHI10: Human Use of NHI</td>
+	<td width=28%"">人間が非人間の資格情報を使用すると、説明責任の喪失と特権の不正使用が発生します。</td>
+	<td width=18%"">ASI09 - 人間とエージェント間の信頼の悪用<br>ASI01 - エージェント目標の乗っ取り</td>
+	<td width=18%"">T10 過負荷なヒューマン イン ザ ループ<br>T7 不整合で欺瞞的な振舞い</td>
+	<td width=18%"">エージェントの追跡不能性/人間の操作</td>
+</tr>
+</table>
+</div>
+
 
 
 # 付録 D: ASI Agentic Exploits & Incidents Tracker
@@ -707,9 +777,181 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 
 ## Exploits & Incidents 表
 
-| 日付 | Exploit/Incident | 影響の概要 | 対応する ASI T&M | さらなる分析のためのリンク |
-| ----- | ----- | ----- | ----- | ----- |
 
+<div align="center">
+<table>
+<tr>
+	<th width="18%">日付</th>
+	<th width="18%">Exploit/Incident</th>
+	<th width="28%">影響の概要</th>
+	<th width="18%">対応する ASI T&M</th>
+	<th width="18%">さらなる分析のためのリンク</th>
+</tr>
+<tr>
+	<td>2025 年 10 月</td>
+	<td>悪意のある MCP パッケージによるバックドア</td>
+	<td>NPM パッケージはバックドア付きの MCP サーバーをホストし、デュアル リバース シェル（インストール時と実行時）を備え、エージェント環境への永続的なリモート アクセスを可能にしました。</td>
+	<td><li>ASI04 （エージェント型サプライチェーンの脆弱性）</td>
+	<td><li>NPM<li>Koli Security</td>
+</tr>
+<tr>
+	<td>2025 年 10 月</td>
+	<td>Framelink Figma MCP の RCE</td>
+	<td>Framelink Figma MCP の <code>get_figma_data</code> ツールにおいてユーザー入力が無害化されておらず、ホストシステム上で未認証でリモート コマンド実行が可能になりました。</td>
+	<td><li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI02 （ツールの不正使用および悪用）</td>
+	<td><li>Figma Context MCP<li>NVD<li>Imperva</td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
 
+</table>
+
+	
+</div>
+
+|
 # 付録 E: 略語集
 
+<div align="center">
+<table border="0">
+<tr>
+	<td width="50%"><b>A2A</b>…Agent-to-Agent (protocol / directory / communication)</td>
+	<td width="50%"><b>DNS</b>...Domain Name System</td>
+</tr>
+<tr>
+	<td width="50%"><b>AARS</b>…Agentic AI Risk Scoring (AIVSS field)</td>
+	<td width="50%"><b>EDR</b>...Endpoint Detection & Response</td>
+</tr>
+<tr>
+	<td width="50%"><b>AIBOM</b>…AI Bill of Materials</td>
+	<td width="50%"><b>gRPC</b>...Google Remote Procedure Call (protocol</td>
+</tr>
+<tr>
+	<td width="50%"><b>AI</b>…Artificial Intelligence</td>
+	<td width="50%"><b>HITL</b>...Human in the Loop</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+<tr>
+	<td width="50%"><b>A</b>…Aaaa</td>
+	<td width="50%"><b>B</b>...Bbbb</td>
+</tr>
+</table>
+
+</div>
+
+# 謝辞
