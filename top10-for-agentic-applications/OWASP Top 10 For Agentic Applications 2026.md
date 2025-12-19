@@ -793,49 +793,49 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td>悪意のある MCP パッケージによるバックドア</td>
 	<td>NPM パッケージはバックドア付きの MCP サーバーをホストし、デュアル リバース シェル（インストール時と実行時）を備え、エージェント環境への永続的なリモート アクセスを可能にしました。</td>
 	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）</ul></td>
-	<td><ul><li>NPM<li><a href="https://checkmarx.com/zero-post/npm-malware-alert-lanyer640-mcp-runcommand-server-with-reverse-shell/">Koi Security</a></ul></td>
+	<td><ul><li><a href="https://www.npmjs.com/package/@lanyer640/mcp-runcommand-server">NPM</a><li><a href="https://www.koi.ai/blog/mcp-malware-wave-continues-a-remote-shell-in-backdoor/">Koi Security</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
 	<td>Framelink Figma MCP の RCE</td>
 	<td>Framelink Figma MCP の <code>get_figma_data</code> ツールにおいてユーザー入力が無害化されておらず、ホストシステム上で未認証でリモート コマンド実行が可能になりました。</td>
 	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI02 （ツールの不正使用および悪用）</ul></td>
-	<td><ul><li>Figma Context MCP<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53967">NVD</a><li><a href="https://www.imperva.com/blog/another-critical-rce-discovered-in-a-popular-mcp-server/">Imperva</a></ul></td>
+	<td><ul><li<a href="https://github.com/GLips/Figma-Context-MCP/security/advisories/GHSA-gxw4-4fc5-9gr5">Figma Context MCP</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53967">NVD</a><li><a href="https://www.imperva.com/blog/another-critical-rce-discovered-in-a-popular-mcp-server/">Imperva</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
 	<td>Case のミスマッチを介した Cursor 設定の上書き</td>
 	<td>大文字と小文字を区別しないファイルシステムでは、細工されたプロンプトが重要な Cursor 設定を上書きし、永続的な RCE 攻撃とエージェントの侵害が可能になりました。</td>
 	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
-	<td><ul><li>Cursor<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59944">NVD</a><li><a href="https://www.lakera.ai/blog/cursor-vulnerability-cve-2025-59944">Lakera</a></ul></td>
+	<td><ul><li><a href="https://github.com/cursor/cursor/security/advisories/GHSA-xcwh-rrwj-gxc7">Cursor</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-59944">NVD</a><li><a href="https://www.lakera.ai/blog/cursor-vulnerability-cve-2025-59944">Lakera</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
 	<td>Cursor ワークスペース ファイルの注入</td>
 	<td>Cursor エージェントのプロンプトにより、Cursor は悪意のある <code>.code-workspace</code> 設定を書き込み、VSCode 統合経由でワークスペースを開いた際にコマンド実行を許可しました。</td>
 	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
-	<td><ul><li>Cursor<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-54130">NVD</a><li><a href="https://maccarita.com/posts/idesaster/">MaccariTA</a></ul></td>
+	<td><ul><li><a href="https://github.com/cursor/cursor/security/advisories/GHSA-xg6w-rmh5-r77r">Cursor</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-54130">NVD</a><li><a href="https://github.com/MaccariTA">MaccariTA</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
 	<td>MCP OAuth レスポンスの悪用</td>
 	<td>信頼できない MCP サーバーの OAuth フローは、汚染されたレスポンスを返す可能性があり、攻撃者は認証後にエージェントによって実行されるコマンドを挿入できます。</td>
 	<td><ul><li>ASI07 （安全でないエージェント間通信）</ul></td>
-	<td><ul><li>Cursor<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61591">NVD</a><li><a href="https://github.com/cursor/cursor/security/advisories/GHSA-wj33-264c-j9cq">Y4tacker</a></ul></td>
+	<td><ul><li><a href="https://github.com/cursor/cursor/security/advisories/GHSA-wj33-264c-j9cq">Cursor</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61591">NVD</a><li><a href="https://github.com/Y4tacker">Y4tacker</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
 	<td>Cursor CLI プロジェクト設定の RCE</td>
 	<td><code>.cursor/cli.json</code> を含むクローン プロジェクトは、グローバル設定を上書きし、攻撃者が制御するコマンドを Cursor CLI コンテキスト経由で実行できる可能性があります。</td>
 	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）</ul></td>
-	<td><ul><li>Cursor<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61592">NVD</a><li><a href="https://research.jfrog.com/vulnerabilities/cursor-cli-untrusted-project-rce/">Assaf Levkovich</a></ul></td>
+	<td><ul><li><a href="https://github.com/cursor/cursor/security/advisories/GHSA-x2vq-h6v6-jhc6">Cursor</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61592">NVD</a><li><a href="https://research.jfrog.com/vulnerabilities/cursor-cli-untrusted-project-rce/">Assaf Levkovich</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
 	<td>Cursor エージェントのファイル保護の迂回</td>
 	<td>Cursor CLI エージェントのファイル保護機構は、プロンプト インジェクションによって迂回され、設定の上書きによる RCE 攻撃が可能になります。</td>
 	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
-	<td><ul><li>Cursor<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-64110">NVD</a></ul></td>
+	<td><ul><li><a fref="https://github.com/cursor/cursor/security/advisories/GHSA-x2vq-h6v6-jhc6">Cursor</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-61593">NVD</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 9 月</td>
@@ -849,7 +849,7 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td>Postmark に偽装した悪意のある MCP サーバー</td>
 	<td>npm 上で初めて確認された悪意のある MCP サーバーとして報告されました。このサーバーは postmark-mcp を偽装し、密かに攻撃者にメールを BCC 送信していました。</td>
 	<td><ul><li>ASI02 （ツールの不正使用および悪用）<li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI07 （セキュアでないエージェント間通信）</ul></td>
-	<td><ul><li>Postmark<li><a href="https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft">Koi Security</a></ul></td>
+	<td><ul><li><a href="https://postmarkapp.com/blog/information-regarding-malicious-postmark-mcp-package">Postmark</a><li><a href="https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft">Koi Security</a></ul></td>
 </tr>
 <tr>
 	<td></td>
