@@ -880,78 +880,147 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 |
 # 付録 E: 略語集
 
+
+- **A2A**  - Agent-to-Agent (protocol / directory / communication)
+- **AARS** - Agentic AI Risk Scoring (AIVSS field)
+- **AIBOM** - AI Bill of Materials
+- **AI** - Artificial Intelligence
+- **API** - Application Programming Interface
+- **AS** - Agentic System
+- **ASI** - Agentic Security Initiative / Agentic Security Item
+- **AWS** - Amazon Web Services
+- **BOM** - Bill of Materials
+- **CDR** - Content Disarm and Reconstruction
+- **CI/CD** - Continuous Integration / Continuous Deployment
+- **CLI** - Command Line Interface
+- **CRUD** - Create, Read, Update, Delete
+- **CV** - Compliance Violations (AIVSS scoring category)
+- **DB** - Database
+- **DDOS / DDoS** - Distributed Denial of Service
+- **DNS** - Domain Name System
+- **EDR** - Endpoint Detection & Response
+- **gRPC** - Google Remote Procedure Call (protocol)
+- **HITL** - Human in the Loop
+- **HSM** - Hardware Security Module
+- **IAM** - Identity & Access Management
+- **ID** - Identifier
+- **IR** - Incident Response
+- **JIT** - Just-In-Time (credentials or privilege)
+- **KMS** - Key Management Service
+- **LLM** - Large Language Model
+- **MCP** - Model Context Protocol
+- **MITM** - Man-in-the-Middle
+- **MFA** - Multi-Factor Authentication
+- **MLOps** - Machine Learning Operations
+- **mTLS** - Mutual Transport Layer Security
+- **NFA** - Non-Functional Attributes (in AIVSS / mapping context; appears implicitly through the AIVSS fields)
+- **NHI** - Non-Human Identity
+- **NVD** - National Vulnerability Database
+- **OAuth** - Open Authorization
+- **OSINT** - Open-Source Intelligence
+- **OS** - Operational Security (AIVSS scoring category)
+- **PEP / PDP** - Policy Enforcement Point / Policy Decision Point
+- **PKI** - Public Key Infrastructure
+- **RAG** - Retrieval-Augmented Generation
+- **RCE** - Remote Code Executi
+- **SBOM** - Software Bill of Materials
+- **SDK** - Software Development Kit (appears in references)
+- **SSH** - Secure Shell
+- **SSRF** - Server-Side Request Forgery
+- **TTL** - Time to Live
+- **UI** - User Interface
+- **VS Code** - Visual Studio Code (appears in examples)
+- **WASM** - WebAssembly (mentioned under RCE)
+
+
+
+
+# 謝辞
+
+## Top 10 リーダーとエントリー リード
+
+エージェント型アプリケーション向け OWASP Top 10 は、John Sotiropoulos 氏（Deep Cyber）、Keren Katz 氏（Tenable）、Ron F Del Rosario氏（SAP）が主導し、エントリー リードの多大な支援を受けて実現しました。彼らの尽力なしには実現できませんでした。
+
+| エントリー | リード |
+| ----- | ----- |
+| **ASI01 - エージェント目標の乗っ取り** | Kayla Underkoffler, Rakshith Aralimatti |
+| **ASI02 - ツールの不正使用および悪用**| Riggs Goodman, Gaurav Mukherjee |
+| **ASI03 - アイデンティティーおよび権限の乱用** | Kellen Carl, Ken Huang |
+| **ASI04 - エージェント型サプライチェーンの脆弱性** | Kayla Underkoffler, Rakshith Aralimatti |
+| **ASI05 - 予期せぬコード実行 (RCE)** | Allie Howe, Vineeth Sai Narajala |
+| **ASI06 - 記憶およびコンテキストの汚染** | Idan Habler, Joshua Back |
+| **ASI07 - セキュアでないエージェント間通信** | Stefano Amorelli, Vasilios Mavroudis |
+| **ASI08 - 連鎖的な失敗** | Diana Henderson |
+| **ASI09 - 人間とエージェント間の信頼の悪用** | Adam Morris |
+| **ASI10 - 不正エージェント** | Tomer Elias, Mo Sadek, Priyadharhshini Parthasarathy |
+
+## 追加の貢献者
+
 <div align="center">
 <table border="0">
 <tr>
-	<td width="50%"><b>A2A</b>…Agent-to-Agent (protocol / directory / communication)</td>
-	<td width="50%"><b>DNS</b>...Domain Name System</td>
+	<td width="50%">Almog Langleben, Sunbit</td>
+	<td width="50%">Ron Bitton, Intuit</td>
 </tr>
 <tr>
-	<td width="50%"><b>AARS</b>…Agentic AI Risk Scoring (AIVSS field)</td>
-	<td width="50%"><b>EDR</b>...Endpoint Detection & Response</td>
+	<td width="50%">Amritha Lal</td>
+	<td width="50%">Kanmani Rani</td>
 </tr>
 <tr>
-	<td width="50%"><b>AIBOM</b>…AI Bill of Materials</td>
-	<td width="50%"><b>gRPC</b>...Google Remote Procedure Call (protocol</td>
+	<td width="50%">Sumeet Jeswani, Google</td>
+	<td width="50%">Helen Oakley, SAP</td>
 </tr>
 <tr>
-	<td width="50%"><b>AI</b>…Artificial Intelligence</td>
-	<td width="50%"><b>HITL</b>...Human in the Loop</td>
+	<td width="50%">Nayan Goel, Upgrade Inc</td>
+	<td width="50%">Rock Lambros, RockCyber</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Eva Benn, Microsoft Security</td>
+	<td width="50%">Subaru Ueno</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">John Cotter, Bentley Systems</td>
+	<td width="50%">Josh Devon</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Mark de Rijk, Agentics Foundation</td>
+	<td width="50%">Manish Kumar Yadav, SAP</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Sumit Ranjan, Protect Neuron</td>
+	<td width="50%">Mohsin Khan</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Rico Komenda, Adesso SE</td>
+	<td width="50%">Edward Bolles</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Cole Murray</td>
+	<td width="50%">Venkata Sai Kishore Modalavalasa</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Uday Bhaskar Seelamantula, Autodesk</td>
+	<td width="50%">Michael Marien</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Abhishek Mishra, OneTrust</td>
+	<td width="50%">Kaustubh Phatak</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Hariprasad Holla, CrowdStrike</td>
+	<td width="50%">Mohsin Khan</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Trent Holmes, Trend Micro</td>
+	<td width="50%">Peter Boucher, abbView</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Emile Delcourt, Panorama Education</td>
+	<td width="50%">Neeraj Nagpal</td>
 </tr>
 <tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
-</tr>
-<tr>
-	<td width="50%"><b>A</b>…Aaaa</td>
-	<td width="50%"><b>B</b>...Bbbb</td>
+	<td width="50%">Allie Howe, Growth Cyber</td>
+	<td width="50%"></td>
 </tr>
 </table>
-
 </div>
-
-# 謝辞
