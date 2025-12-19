@@ -778,6 +778,7 @@ ASI Exploits and Incidents initiative は、実際のインシデントやエク
 https://github.com/OWASP/www-project-top-10-for-large-language-model-applications/blob/main/initiatives/agent_security_initiative/ASI%20Agentic%20Exploits%20%26%20Incidents/ASI_Agentic_Exploits_Incidents.md
 
 ## Exploits & Incidents 表
+
 <div align="center">
 <table>
 <tr>
@@ -792,7 +793,7 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td>悪意のある MCP パッケージによるバックドア</td>
 	<td>NPM パッケージはバックドア付きの MCP サーバーをホストし、デュアル リバース シェル（インストール時と実行時）を備え、エージェント環境への永続的なリモート アクセスを可能にしました。</td>
 	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）</ul></td>
-	<td><ul><li>NPM<li><a href="https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft">Koli Security</a></ul></td>
+	<td><ul><li>NPM<li><a href="https://checkmarx.com/zero-post/npm-malware-alert-lanyer640-mcp-runcommand-server-with-reverse-shell/">Koi Security</a></ul></td>
 </tr>
 <tr>
 	<td>2025 年 10 月</td>
@@ -844,11 +845,11 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td><ul><li><a href="https://www.tenable.com/blog/the-trifecta-how-three-new-gemini-vulnerabilities-in-cloud-assist-search-model-and-browsing">Tenable</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 9 月</td>
+	<td>Postmark に偽装した悪意のある MCP サーバー</td>
+	<td>npm 上で初めて確認された悪意のある MCP サーバーとして報告されました。このサーバーは postmark-mcp を偽装し、密かに攻撃者にメールを BCC 送信していました。</td>
+	<td><ul><li>ASI02 （ツールの不正使用および悪用）<li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI07 （セキュアでないエージェント間通信）</ul></td>
+	<td><ul><li>Postmark<li><a href="https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft">Koi Security</a></ul></td>
 </tr>
 <tr>
 	<td></td>
