@@ -778,6 +778,8 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 ## Exploits & Incidents 表
 
 
+
+
 <div align="center">
 <table>
 <tr>
@@ -802,6 +804,62 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td><ul><li>Figma Context MCP<li>NVD<li>Imperva</ul></td>
 </tr>
 <tr>
+	<td>2025 年 10 月</td>
+	<td>Case のミスマッチを介した Cursor 設定の上書き</td>
+	<td>大文字と小文字を区別しないファイルシステムでは、細工されたプロンプトが重要な Cursor 設定を上書きし、永続的な RCE 攻撃とエージェントの侵害が可能になりました。</td>
+	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
+	<td><ul><li>Cursor<li>NVD<li>Lakera</ul></td>
+</tr>
+<tr>
+	<td>2025 年 10 月</td>
+	<td>Cursor ワークスペース ファイルの注入</td>
+	<td>Cursor エージェントのプロンプトにより、Cursor は悪意のある <code>.code-workspace</code> 設定を書き込み、VSCode 統合経由でワークスペースを開いた際にコマンド実行を許可しました。</td>
+	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
+	<td><ul><li>Cursor<li>NVD<li>MaccariTA</ul></td>
+</tr>
+<tr>
+	<td>2025 年 10 月</td>
+	<td>MCP OAuth レスポンスの悪用</td>
+	<td>信頼できない MCP サーバーの OAuth フローは、汚染されたレスポンスを返す可能性があり、攻撃者は認証後にエージェントによって実行されるコマンドを挿入できます。</td>
+	<td><ul><li>ASI07 （安全でないエージェント間通信）</ul></td>
+	<td><ul><li>Cursor<li>NVD<li>Y4tacker</ul></td>
+</tr>
+<tr>
+	<td>2025 年 10 月</td>
+	<td>Cursor CLI プロジェクト設定の RCE</td>
+	<td><code>.cursor/cli.json</code> を含むクローン プロジェクトは、グローバル設定を上書きし、攻撃者が制御するコマンドを Cursor CLI コンテキスト経由で実行できる可能性があります。</td>
+	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）</ul></td>
+	<td><ul><li>Cursor<li>NVD<li>Assaf Levkovich</ul></td>
+</tr>
+<tr>
+	<td>2025 年 10 月</td>
+	<td>Cursor エージェントのファイル保護の迂回</td>
+	<td>Cursor CLI エージェントのファイル保護機構は、プロンプト インジェクションによって迂回され、設定の上書きによる RCE 攻撃が可能になります。</td>
+	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
+	<td><ul><li>Cursor<li>NVD</ul></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+	<td></td>
+</tr>
+<tr>
 	<td></td>
 	<td></td>
 	<td></td>
@@ -872,12 +930,15 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td></td>
 </tr>
 
+
+
+	
 </table>
 
 	
 </div>
 
-|
+
 # 付録 E: 略語集
 
 
