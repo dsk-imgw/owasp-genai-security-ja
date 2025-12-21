@@ -846,10 +846,24 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 </tr>
 <tr>
 	<td>2025 年 9 月</td>
-	<td>Postmark に偽装した悪意のある MCP サーバー</td>
-	<td>npm 上で初めて確認された悪意のある MCP サーバーとして報告されました。このサーバーは postmark-mcp を偽装し、密かに攻撃者にメールを BCC 送信していました。</td>
-	<td><ul><li>ASI02 （ツールの不正使用および悪用）<li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI07 （セキュアでないエージェント間通信）</ul></td>
-	<td><ul><li><a href="https://postmarkapp.com/blog/information-regarding-malicious-postmark-mcp-package">Postmark</a><li><a href="https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft">Koi Security</a></ul></td>
+	<td>ForcedLeak (Salesforce Agentforce)</td>
+	<td>Salesforce Agentforce における重大な間接プロンプト インジェクションにより、外部の攻撃者がエージェントを欺き、機密性の高い CRM レコードを組織外に持ち出す可能性があります。</td>
+	<td><ul><li>ASI01（エージェント振舞いの乗っ取り）<li>ASI02 （ツールの不正使用および悪用）</ul></td>
+	<td><ul><lI><a href="https://help.salesforce.com/s/articleView?id=005135034&type=1">Salesforce</a><lI><a href="https://noma.security/blog/forcedleak-agent-risks-exposed-in-salesforce-agentforce/">Noma Security</a></ul></td>
+</tr>
+<tr>
+	<td>2025 年 9 月</td>
+	<td>Visual Studio Code および Agentic AI workflows の RCE</td>
+	<td>Agentic AI workflows におけるコマンド インジェクションにより、認証されていないリモートの攻撃者が VS Code に開発者のマシン上にコマンドを挿入し実行させる可能性があります。</td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI02 （ツールの不正使用および悪用）<li>ASI05 （予期せぬコード実行）</ul></td>
+	<td><ul><lI><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-55319">Microsoft</a><lI><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55319">NVD</a></ul></td>
+</tr>
+<tr>
+	<td>2025 年 7 月</td>
+	<td>Amazon Q のプロンプト汚染</td>
+	<td>拡張機能の破壊的なプロンプトにより、ファイルが消去される危険性があります。</td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI02 （ツールの不正使用および悪用）<li>ASI04 （エージェント型サプライチェーンの脆弱性）</ul></td>
+	<td><ul><lI><a href="https://aws.amazon.com/security/security-bulletins/AWS-2025-015">AWS</a><lI><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8217">NVD</a></ul></td>
 </tr>
 <tr>
 	<td></td>
