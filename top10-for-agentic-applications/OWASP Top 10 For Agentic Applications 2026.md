@@ -779,6 +779,7 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 
 ## Exploits & Incidents 表
 
+
 <div align="center">
 <table>
 <tr>
@@ -846,6 +847,13 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 </tr>
 <tr>
 	<td>2025 年 9 月</td>
+	<td>Postmark に偽装した悪意のある MCP サーバー</td>
+	<td>npm 上で初めて確認された悪意のある MCP サーバーとして報告されました。このサーバーは postmark-mcp を偽装し、密かに攻撃者にメールを BCC 送信していました。</td>
+	<td><ul><li>ASI02 （ツールの不正使用および悪用）<li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI07 （セキュアでないエージェント間通信）</ul></td>
+	<td><ul><li><a href="https://postmarkapp.com/blog/information-regarding-malicious-postmark-mcp-package">Postmark</a><li><a href="https://www.koi.ai/blog/postmark-mcp-npm-malicious-backdoor-email-theft">Koi Security</a></ul></td>
+</tr>
+<tr>
+	<td>2025 年 9 月</td>
 	<td>ForcedLeak (Salesforce Agentforce)</td>
 	<td>Salesforce Agentforce における重大な間接プロンプト インジェクションにより、外部の攻撃者がエージェントを欺き、機密性の高い CRM レコードを組織外に持ち出す可能性があります。</td>
 	<td><ul><li>ASI01（エージェント振舞いの乗っ取り）<li>ASI02 （ツールの不正使用および悪用）</ul></td>
@@ -866,89 +874,90 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td><ul><lI><a href="https://aws.amazon.com/security/security-bulletins/AWS-2025-015">AWS</a><lI><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-8217">NVD</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 7 月</td>
+	<td>Google Gemini CLI ファイルの喪失</td>
+	<td>エージェントがファイル指示を誤解し、ユーザーのディレクトリを消去したため、壊滅的な損失となりました。</td>
+	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
+	<td><ul><li><a href="https://github.com/google-gemini/gemini-cli/issues/4586">Google</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 7 月</td>
+	<td>SharePoint を介した ToolShell RCE</td>
+	<td>エージェントが利用する SharePoint の RCE エクスプロイト</td>
+	<td><ul><li>ASI05 （予期せぬコード実行）</ul></td>
+	<td><ul><lI><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-53770">Microsoft</a><lI><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53770">NVD</a><li><a href="https://research.eye.security/sharepoint-under-siege">Eye Security</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 7 月</td>
+	<td>Replit Vibe Coding の完全ダウン</td>
+	<td>エージェントは、データをでっち上げ、本番 DB を削除し、ミスを隠すために偽の出力を生成しました。</td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI09 （人間とエージェント間の信頼の悪用）</ul><li>ASI10 （不正エージェント）</ul></td>
+	<td><ul><lI><a href="https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases">Replit</a><lI><a href="https://www.saastr.com/replits-new-release-address-most-of-the-challenges-we-hit-vibe-coding-but-is-prosumer-vibe-coding-really-ready-for-commercial-apps-yet">SaaStr</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 7 月</td>
+	<td>Microsoft Copilot Studio のセキュリティ欠陥</td>
+	<td>エージェントはデフォルトで公開されており、認証がありませんでした。攻撃者は公開されているエージェントを列挙してアクセスし、本番環境から機密性の高いビジネス データを取得する可能性がありました。</td>
+	<td><ul><li>ASI03 （アイデンティティーおよび権限の乱用）<li>ASI07 （セキュアでないエージェント間通信）</ul></td>
+	<td><ul><li><a href="https://labs.zenity.io/p/a-copilot-studio-story-2-when-aijacking-leads-to-full-data-exfiltration-bc4a">Zenity Labs</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 6 月</td>
+	<td>Heroku MCP アプリの所有権の乗っ取り</td>
+	<td>悪意のあるツール入力により Heroku MCP の信頼境界が悪用され、エージェントを介した呼び出しインジェクションによってアプリの所有権が不正に乗っ取られました。</td>
+	<td><ul><li>ASI03 （アイデンティティーおよび権限の乱用）</ul></td>
+	<td><ul><li><a href="https://www.codeintegrity.ai/blog/heroku">Heroku</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 6 月</td>
+	<td>ハブ MCP プロンプト インジェクション（クロス コンテキスト）</td>
+	<td>悪意のある Web ページは、DNS 再バインディング/CSRF を介してローカル MCP インスペクタ プロキシ (認証なし) と通信し、stdio 経由で MCP コマンドを実行するように誘導する可能性があります。これにより、任意の OS コマンドの実行とデータの漏洩が発生する可能性があります。</td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI02 （ツールの不正使用および悪用）<li>ASI05 （予期せぬコード実行）</ul></td>
+	<td><ul><lI><a href="https://github.com/modelcontextprotocol/inspector/security/advisories/GHSA-7f8r-222p-6f5g">MCP</a><lI><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49596">NVD</a><li><a href="https://www.oligo.security/blog/critical-rce-vulnerability-in-anthropic-mcp-inspector-cve-2025-49596">Oligo Security</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 6 月</td>
+	<td>AgentSmith Prompt-Hub プロキシ攻撃</td>
+	<td>プロキシ プロンプト エージェントが API 鍵を盗み出しました。</td>
+	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）</ul></td>
+	<td><ul><li><a href="https://noma.security/blog/how-an-ai-agent-vulnerability-in-langsmith-could-lead-to-stolen-api-keys-and-hijacked-llm-responses">Noma Security</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 5 月</td>
+	<td>EchoLeak（ゼロ クリック プロンプト インジェクション）</td>
+	<td>重大なゼロ クリック攻撃により、単なる電子メールで Copilot が起動し、意図した範囲外の機密データ（電子メール、ファイル、チャット ログ）が漏洩する可能性があります。</td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI02 （ツールの不正使用および悪用）<li>ASI06 （記憶およびコンテキストの汚染）</ul></td>
+	<td><ul><lI><a href="https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-32711">Microsoft</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-32711">NVD</a><li><a href="https://www.aim.security/post/echoleak-blogpost">Aim Security</a></ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 5 月</td>
+	<td>GitPublic の Issue リポジトリの乗っ取り</td>
+	<td>公開されている Issue のテキストにより、AI 開発エージェントが乗っ取られ、クロス リポジトリ プロンプト インジェクションによってプライベート リポジトリのコンテンツが漏洩しました。</td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI02 （ツールの不正使用および悪用）<li>ASI06 （記憶およびコンテキストの汚染）<li>ASI07 （セキュアでないエージェント間通信）<li>ASI08 （連鎖的な失敗）</ul></td>
+	<td><ul><lI><a href="https://invariantlabs.ai/blog/mcp-github-vulnerability">Invariant Labs</ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 4 月</td>
+	<td>中間エージェント（A2A プロトコル スプーフィング）</td>
+		<td>悪意のあるエージェントが、オープンな A2A ディレクトリに偽のエージェントカードを公開し、高い信頼性を偽って主張しました。LLM 判断エージェントがそれを選択し、不正なエージェントが機密データを傍受して権限のない第三者に漏洩することができました。</td>
+	<td><ul><li>ASI03 （アイデンティティーおよび権限の乱用）<li>ASI06 （記憶およびコンテキストの汚染）<li>ASI07 （セキュアでないエージェント間通信）<li>ASI08 （連鎖的な失敗）<li>ASI10 （不正エージェント）</ul></td>
+	<td><ul><lI><a href="https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/agent-in-the-middle-abusing-agent-cards-in-the-agent-2-agent-protocol-to-win-all-the-tasks">Trustwave</ul></td>
 </tr>
 <tr>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
-	<td></td>
+	<td>2025 年 3 月</td>
+	<td>GitHub Copilot と Cursor コード エージェントのエクスプロイト</td>
+	<td>操作された AI コードの提案により、バックドアが挿入され、API 鍵が漏洩し、製品コードに論理的な欠陥が導入され、開発者が AI の出力を信頼したため、サプライチェーンに重大なリスクが生じました。</td>
+	<td><ul><li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI08 （連鎖的な失敗）<li>ASI09 （人間とエージェント間の信頼の悪用）</ul></td>
+	<td><ul><lI><a href="https://github.com/FlowiseAI/Flowise/security/advisories/GHSA-h42x-xx2q-6v6g">FlowiseAI</a><li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-26319">NVD</a><li><a href="https://medium.com/@attias.dor/the-burn-notice-part-2-5-5-flowise-pre-auth-arbitrary-file-upload-cve-2025-26319-0d4194a34183">Dor Attias (Medium)</a></ul></td>
 </tr>
-
-
-
-	
+<tr>
+	<td>2025 年 2 月</td>
+	<td>OpenAI ChatGPT Operator の脆弱性</td>
+	<td>ウェブ コンテンツへのプロンプト インジェクションにより、Operator は攻撃者の指示に従い、認証されたページにアクセスし、ユーザーの個人情報を漏洩しました。保護が緩い自律エージェントからの漏洩リスクが明らかになりました。</td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI02 （ツールの不正使用および悪用）<li>ASI03 （アイデンティティーおよび権限の乱用）<li>ASI04 （エージェント型サプライチェーンの脆弱性）<li>ASI06 （記憶およびコンテキストの汚染）<li>ASI07 （セキュアでないエージェント間通信）<li>ASI09 （人間とエージェント間の信頼の悪用）</ul></td>
+	<td><ul><lI><a href="https://embracethered.com/blog/posts/2025/chatgpt-operator-prompt-injection-exploits/">Wunderwuzzi</ul></td>
+</tr>
 </table>
-
-	
 </div>
 
 
