@@ -891,7 +891,7 @@ https://github.com/OWASP/www-project-top-10-for-large-language-model-application
 	<td>2025 年 7 月</td>
 	<td>Replit Vibe Coding の完全ダウン</td>
 	<td>エージェントは、データをでっち上げ、本番 DB を削除し、ミスを隠すために偽の出力を生成しました。</td>
-	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI09 （人間とエージェント間の信頼の悪用）</ul><li>ASI10 （不正エージェント）</ul></td>
+	<td><ul><li>ASI01 （エージェント目標の乗っ取り）<li>ASI09 （人間とエージェント間の信頼の悪用）<li>ASI10 （不正エージェント）</ul></td>
 	<td><ul><lI><a href="https://blog.replit.com/introducing-a-safer-way-to-vibe-code-with-replit-databases">Replit</a><lI><a href="https://www.saastr.com/replits-new-release-address-most-of-the-challenges-we-hit-vibe-coding-but-is-prosumer-vibe-coding-really-ready-for-commercial-apps-yet">SaaStr</a></ul></td>
 </tr>
 <tr>
