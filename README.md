@@ -16,6 +16,8 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - [a-practical-guide-for-securely-using-third-party-mcp-server](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/a-practical-guide-for-securely-using-third-party-mcp-servers) ディレクトリ配下
 - [【原典へのリンク】 OWASP Top 10 for Agentic Applications for 2026](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)... エージェント型アプリケーション向け OWASP Top 10, 2026
   - [top10-for-agentic-applications](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/top10-for-agentic-applications) ディレクトリ配下
+- [【原典へのリンク】 OWASP AI Exchange](https://owaspai.org/) ... AI システムおよびデータ中心システムのセキュリティとプライバシーを守るための包括的で実用的なガイドを提供するオープンソース プロジェクト
+  - [ai-exchange](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-exchange) ディレクトリ配下
 
 ## 上記以外で気になっているプロジェクト
 
