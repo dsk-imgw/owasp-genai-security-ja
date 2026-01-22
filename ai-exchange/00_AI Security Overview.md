@@ -368,7 +368,7 @@ AI Exchange では、AI 固有の脅威とそれに対応する管理策に焦�
 			- [DISCRETE（技術的詳細へのアクセスの最小化）](https://owaspai.org/docs/1_general_controls/#discrete)
 		- 実行時: モデルの保存、モデルの利用、プラグイン、およびモデルの入出力:
 			- [RUNTIME MODEL INTEGRITY （実行時のモデルの完全性）](https://owaspai.org/goto/runtimemodelintegrity/)
-			- [RUNTIME MODEL IO INTEGRITY（実行時のモデル入出力の完全性）](https://owaspai.org/goto/runtimemodeliointegrity/)
+			- [RUNTIME MODEL IO INTEGRITY（実行時のモデル I/O の完全性）](https://owaspai.org/goto/runtimemodeliointegrity/)
 			- [RUNTIME MODEL CONFIDENTIALITY（実行時のモデルの機密性）](https://owaspai.org/goto/runtimemodelconfidentiality/)
 			- [MODEL INPUT CONFIDENTIALITY（モデル入力の機密性）](https://owaspai.org/goto/modelinputconfidentiality/)
 			- [ENCODE MODEL OUTPUT（モデル出力のエンコード）](https://owaspai.org/goto/encodemodeloutput/)
