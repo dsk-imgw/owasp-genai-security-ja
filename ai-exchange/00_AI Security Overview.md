@@ -477,6 +477,115 @@ OWASP AI Exchange が作成した以下の表は、AI に対するさまざま�
 
 なお、[一般的なガバナンス管理策](https://owaspai.org/goto/governancecontrols/)は、すべての脅威に適用されます。
 
+<div align="center">
+<table>
+<tr>
+	<th width="25%">資産と影響</th>
+	<th width="25%">攻撃対象領域とライフサイクル</th>
+	<th width="25%">脅威/リスクのカテゴリ</th>
+	<th width="25%">管理策</th>
+</tr>
+<tr>
+	<td rowspan="7">モデルの動作の完全性</td>
+	<td rowspan="3">実行時 - モデルの利用（入力の提供/出力の読み取り）</td>
+	<td><a href="https://owaspai.org/goto/directpromptinjection/">直接プロンプト インジェクション</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a><li><a href="https://owaspai.org/goto/monitoruse/">監視</a><li><a href="https://owaspai.org/goto/ratelimit/">レート制限</a><li><a href="https://owaspai.org/goto/modelaccesscontrol/">モデルへのアクセス制御</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/promptinjectioniohandling/">プロンプト インジェクション I/O の処理</a><li><a href="https://owaspai.org/goto/modelalignment/">モデルのアライメント（整合）</a></ul></td>
+</tr>
+<tr>
+	<td><a href="https://owaspai.org/goto/indirectpromptinjection/">間接プロンプト インジェクション</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a><li><a href="https://owaspai.org/goto/promptinjectioniohandling/">プロンプト インジェクション I/O の処理</a><li><a href="https://owaspai.org/goto/inputsegregation/">入力の分離</a></ul></td>
+</tr>
+<tr>
+	<td><a href="https://owaspai.org/goto/evasion/">回避</a>（例: 敵対的サンプル）</td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a><li><a href="https://owaspai.org/goto/monitoruse/">監視</a><li><a href="https://owaspai.org/goto/ratelimit/">レート制限</a><li><a href="https://owaspai.org/goto/modelaccesscontrol/">モデルへのアクセス制御</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/anomalousinputhandling">異常な入力の処理</a><li><a href="https://owaspai.org/goto/evasioninputhandling/">回避目的の入力の処理</a><li><a href="https://owaspai.org/goto/unwantedinputserieshandling/">望ましくない入力系列の処理</a><li><a href="https://owaspai.org/goto/evasionrobustmodel/">回避堅牢型のモデル</a><li><a href="https://owaspai.org/goto/trainadversarial/">敵対的学習</a><li><a href="https://owaspai.org/goto/inputdistortion/">入力の歪み</a><li><a href="https://owaspai.org/goto/adversarialrobustdistillation/">敵対的堅牢型の蒸留</a</ul></td>
+</tr>
+<tr>
+	<td>実行時 - デプロイ済みモデルへの侵入</td>
+	<td><a href="https://owaspai.org/goto/runtimemodelpoison/">実行時のモデル汚染</a>（再プログラミング）</td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a><li><a href="https://owaspai.org/goto/runtimemodelintegrity/">実行時のモデルの完全性</a><li><a href="https://owaspai.org/goto/runtimemodeliointegrity/">実行時のモデル I/O の完全性</a></ul></td>
+</tr>
+<tr>
+	<td rowspan="2">開発 - 開発環境</td>
+	<td><a href="https://owaspai.org/goto/devmodelpoison/">開発時のモデル汚染</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a><li><a href="https://owaspai.org/goto/devsecurity/">開発環境のセキュリティ</a><li><a href="https://owaspai.org/goto/segregatedata/">データの分離</a><li><a href="https://owaspai.org/goto/federatedlearning/">連合学習</a><li><a href="https://owaspai.org/goto/supplychainmanage/">サプライチェーン管理</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/modelensemble/">モデル アンサンブル</a></ul></td>
+</tr>
+<tr>
+	<td><a href="https://owaspai.org/goto/datapoison/">学習/微調整データのデータ汚染</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a><li><a href="https://owaspai.org/goto/devsecurity/">開発環境のセキュリティ</a><li><a href="https://owaspai.org/goto/segregatedata/">データの分離</a><li><a href="https://owaspai.org/goto/federatedlearning/">連合学習</a><li><a href="https://owaspai.org/goto/supplychainmanage/">サプライチェーン管理</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/modelensemble/">モデル アンサンブル</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/moretraindata/">学習データの増加</a><li><a href="https://owaspai.org/goto/dataqualitycontrol//">データの品質の制御</a><li><a href="https://owaspai.org/goto/traindatadistortion/">学習データの歪み</a><li><a href="https://owaspai.org/goto/poisonrobustmodel/">汚染堅牢型のモデル</a><li><a href="https://owaspai.org/goto/trainadversarial//">敵対的学習</a></ul></td>
+</tr>
+<tr>
+	<td>開発 - サプライチェーン</td>
+	<td><a href="https://owaspai.org/goto/supplymodelpoison/">サプライチェーン内でのモデル汚染</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a></ul>サプライヤー:<ul><li><a href="https://owaspai.org/goto/devsecurity/">開発環境のセキュリティ</a><li><a href="https://owaspai.org/goto/segregatedata/">データの分離</a><li><a href="https://owaspai.org/goto/federatedlearning/">連合学習</a></ul><br>製造者<ul><li><a href="https://owaspai.org/goto/supplychainmanage/">サプライチェーン管理</a></ul>&nbsp;&nbsp;&nbsp;&nbsp;上記に加えて<ul><li><a href="https://owaspai.org/goto/modelensemble/">モデル アンサンブル</a></ul></td>
+</tr>
+</tr>
+<tr>
+	<td rowspan="3">学習データの機密性</td>
+	<td rowspan="2">実行時 - モデルの利用</td>
+	<td><a href="https://owaspai.org/goto/disclosureuseoutput/">モデルによる機密情報の出力</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/datalimit/">機密データの制限</a>（データの最小化、短期間の保持、学習データの難読化）</ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/monitoruse/">監視</a><li><a href="https://owaspai.org/goto/ratelimit/">レート制限</a><li><a href="https://owaspai.org/goto/modelaccesscontrol/">モデルへのアクセス制御</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/sensitiveoutputhandling/">機微な出力の処理</a></ul></td>
+</tr>
+<tr>
+	<td><a href="https://owaspai.org/goto/modelinversionandmembership/">モデル反転/メンバーシップ推論</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/datalimit/">機密データの制限</a>（データの最小化、短期間の保持、学習データの難読化）</ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/monitoruse/">監視</a><li><a href="https://owaspai.org/goto/ratelimit/">レート制限</a><li><a href="https://owaspai.org/goto/modelaccesscontrol/">モデルへのアクセス制御</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/unwantedinputserieshandling/">望ましくない入力系列の処理</a><li><a href="https://owaspai.org/goto/obscureconfidence/">信頼度の隠蔽</a><li><a href="https://owaspai.org/goto/smallmodel/">小型のモデル</a></ul></td>
+</tr>
+<tr>
+	<td>開発 - 開発環境</td>
+	<td><a href="https://owaspai.org/goto/devmodelleak/">学習データの漏洩</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/datalimit/">機密データの制限</a>（データの最小化、短期間の保持、学習データの難読化）</ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/devsecurity/">開発環境のセキュリティ</a><li><a href="https://owaspai.org/goto/segregatedata/">データの分離</a><li><a href="https://owaspai.org/goto/federatedlearning/">連合学習</a></ul></td>
+</tr>
+<tr>
+	<td rowspan="3">モデルの機密性</td>
+	<td>実行時 - モデルの利用</td>
+	<td><a href="https://owaspai.org/goto/modeltheftuse/">利用時のモデル盗難</a>（入力・出力のハーベスティング）
+	<td><ul><li><a href="https://owaspai.org/goto/monitoruse/">監視</a><li><a href="https://owaspai.org/goto/ratelimit/">レート制限</a><li><a href="https://owaspai.org/goto/modelaccesscontrol/">モデルへのアクセス制御</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/unwantedinputserieshandling/">望ましくない入力系列の処理</a></ul></td>
+</tr>
+<tr>
+	<td>デプロイ済みモデルへの侵入</td>
+	<td><a href="https://owaspai.org/goto/runtimemodeltheft/">実行時の直接モデル盗難</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/runtimemodelconfidentiality/">実行時のモデルの機密性</a><li><a href="https://owaspai.org/goto/modelobfuscation/">モデルの難読化</a></ul></td>
+</tr>
+<tr>
+	<td>開発 - 開発環境</td>
+	<td><a href="https://owaspai.org/goto/devmodelleak/">開発時のモデル盗難</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/devsecurity/">開発環境のセキュリティ</a><li><a href="https://owaspai.org/goto/segregatedata/">データの分離</a><li><a href="https://owaspai.org/goto/federatedlearning/">連合学習</a></ul></td>
+</tr>
+<tr>
+	<td>モデルの動作の可用性</td>
+	<td>モデルの利用</td>
+	<td><a href="https://owaspai.org/goto/airesourceexhaustion/">AI リソースの枯渇</a></td>
+	<td><ul><li><a href="https://owaspai.org/goto/limitunwanted/">望ましくない動作の制限</a><li><a href="https://owaspai.org/goto/monitoruse/">監視</a><li><a href="https://owaspai.org/goto/ratelimit/">レート制限</a><li><a href="https://owaspai.org/goto/modelaccesscontrol/">モデルへのアクセス制御</a></ul>上記に加えて<ul><li><a href="https://owaspai.org/goto/dosinputvalidation/">サービス運用妨害を目的とした入力の検証</a><li><a href="https://owaspai.org/goto/limitresources/">リソースの制限</a></ul></td>
+</tr>
+<tr>
+	<td>モデルの入力データの機密性</td>
+	<td>実行時 - すべての IT</td>
+	<td><a href="https://owaspai.org/goto/leakinput/">機密入力データの漏洩</a></td>
+	<td><a href="https://owaspai.org/goto/modelinputconfidentiality/">モデル入力の機密性</a></td>
+</tr>
+<tr>
+	<td>すべての資産、機密性・完全性・可用性</td>
+	<td>実行時 - すべての IT</td>
+	<td><a href="https://owaspai.org/goto/insecureoutput/">インジェクションを含むモデル出力</a></td>
+	<td><a href="https://owaspai.org/goto/encodemodeloutput/">モデル出力のエンコード</a></td>
+</tr>
+<tr>
+	<td>すべての資産、機密性・完全性・可用性</td>
+	<td>実行時 - すべての IT</td>
+	<td>従来の資産に対する従来の実行時セキュリティ攻撃</td>
+	<td>従来の実行時セキュリティ管理策</td>
+</tr>
+<tr>
+	<td>すべての資産、機密性・完全性・可用性</td>
+	<td>実行時 - すべての IT</td>
+	<td>従来のサプライチェーンに対する従来の攻撃</td>
+	<td>従来のサプライチェーン管理に関する管理策</td>
+</tr>
+</table>
+</div>
+
+
+
+
 
 
 
