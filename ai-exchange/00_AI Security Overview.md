@@ -363,7 +363,7 @@ AI Exchange では、AI 固有の脅威とそれに対応する管理策に焦�
 - AI システムが IT システムであることによる従来の**技術的セキュリティ管理策** (2) の適用:
 	- 標準的な従来のセキュリティ管理策（例：15408、ASVS、OpenCRE、ISO 27001 附属書 A、NIST SP800-53）を AI システム全体に適用し、AI 固有の新しい資産にも適用します。
 		- 開発時: モデルとデータの保存、モデルとデータのサプライチェーン、データ サイエンスの文書化:
-			- [DEV SECURITY （開発時のセキュリティ）](https://owaspai.org/docs/3_development_time_threats/#devsecurity)
+			- [DEV SECURITY （開発環境のセキュリティ）](https://owaspai.org/docs/3_development_time_threats/#devsecurity)
 			- [SEGREGATE DATA（データの分離）](https://owaspai.org/docs/3_development_time_threats/#segregatedata)
 			- [DISCRETE（技術的詳細へのアクセスの最小化）](https://owaspai.org/docs/1_general_controls/#discrete)
 		- 実行時: モデルの保存、モデルの利用、プラグイン、およびモデルの入出力:
