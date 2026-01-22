@@ -399,7 +399,7 @@ AI Exchange では、AI 固有の脅威とそれに対応する管理策に焦�
 	- 攻撃をフィルターし検出することを目的とした実行時のモデル I/O 処理 (3b):
 		- [ANOMALOUS INPUT HANDLING （異常な入力の処理）](https://owaspai.org/goto/anomalousinputhandling/)
 		- [EVASION INPUT HANDLING （回避目的の入力の処理）](https://owaspai.org/goto/evasioninputhandling/)
-		- [UNWANTED INPUT SERIES HANDLING （望ましくない入力の処理）](https://owaspai.org/goto/unwantedinputserieshandling/)
+		- [UNWANTED INPUT SERIES HANDLING （望ましくない入力系列の処理）](https://owaspai.org/goto/unwantedinputserieshandling/)
 		- [PROMPT INJECTION I/O HANDLING （プロンプト インジェクション I/O の処理）](https://owaspai.org/goto/promptinjectioniohandling/)
 		- [DOS INPUT VALIDATION （サービス運用妨害を目的とした入力の検証）](https://owaspai.org/goto/dosinputvalidation/)
 		- [INPUT DISTORTION （入力の歪み）](https://owaspai.org/goto/inputdistortion/)
