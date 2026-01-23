@@ -230,7 +230,7 @@ OWASP Exchange では、AI において、攻撃者の 3 つの目的（開示�
 - エージェント型 AI の脅威に関する詳細については、[GenAI Security Project の「エージェント型 AI の脅威と軽減策」](https://genai.owasp.org/resource/agentic-ai-threats-and-mitigations/)を参照してください。
 - エージェント型 AI に関するより一般的な議論については、[Chip Huyen 氏によるこの記事](https://huyenchip.com/2025/01/07/agents.html)を参照してください。
 - [テストのセクション](https://owaspai.org/goto/testing/)では、エージェント型 AI レッドチーム演習について詳しく説明し、CSA と Exchange の共同作業である「エージェント型 AI レッドチーム演習ガイド」へのリンクを提供しています。
-- [OWASP Agentic AI security top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/)と [Rock 氏のブログ](https://www.rockcybermusings.com/p/owasp-top-10-agentic-applications-security-guide)
+- [OWASP Agentic AI security top 10](https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/) と [Rock 氏のブログ](https://www.rockcybermusings.com/p/owasp-top-10-agentic-applications-security-guide)
 
 
 ### AI セキュリティ マトリックス
