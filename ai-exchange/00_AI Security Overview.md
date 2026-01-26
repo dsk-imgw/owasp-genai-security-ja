@@ -737,6 +737,8 @@ AI の原則を分解し、それぞれがセキュリティとどのように�
 	- [開発時](https://owaspai.org/goto/devleak/)または実行時における、学習データ、モデルの入力、出力、またはモデル自体などの AI 資産の盗難（下記参照）
 	- その他、[実行時における従来のセキュリティ攻撃](https://owaspai.org/goto/generalappsecthreats/)
 
+![](./assets/aiwayfinder.png)
+
 ## 生成 AI （例: LLM）について
 
 ## NCSC/CISA ガイドラインについて
