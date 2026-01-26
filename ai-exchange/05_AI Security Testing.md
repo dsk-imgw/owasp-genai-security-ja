@@ -66,3 +66,100 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 
 ![testtoolstoattacks.png](./assets/testtoolstoattacks.png)
 
+以下のセクションでは、予測 AI 用のツールについて説明し、その後に生成 AI 用のセクションに進みます。
+
+## 予測 AI レッド チーム演習のためのオープン ソース ツール
+
+このサブセクションでは、予測 AI のセキュリティ テストに使用できるツール Adversarial Robustness Toolbox (ART)、Armory、Foolbox、DeepSec、TextAttack について説明します。
+
+### ツール名: Adversarial Robustness Toolbox (ART)
+
+<div align="center">
+<table>
+<tr>
+	<th width="30%">要素</th>
+	<th width="70%">詳細</th>
+</tr>
+<tr>
+	<td>開発者/ソース</td>
+	<td>IBM Research / the Linux Foundation AI & Data Foundation (LF AI & Data)</td>
+</tr>
+<tr>
+	<td>GitHub リンク</td>
+	<td><a href="https://github.com/Trusted-AI/adversarial-robustness-toolbox">https://github.com/Trusted-AI/adversarial-robustness-toolbox</a></td>
+</tr>
+<tr>
+	<td>言語</td>
+	<td>Python</td>
+</tr>
+<tr>
+	<td>ライセンス</td>
+	<td>MIT ライセンス下のオープン ソース</td>
+</tr>
+<tr>
+	<td>軽減策の提供</td>
+	<td>防止: なし、検出: あり</td>
+</tr>
+<tr>
+	<td>API の利用</td>
+	<td>可能</td>
+</tr>
+<tr>
+	<td>人気</td>
+	<td><ul><li>GitHub スター: 約 4,900 スター （2024 年現在）<li>GitHub フォーク: 約 1,200 フォーク<li>Issue 数: 約 131 件の未解決、761 件の解決済み<li>トレンド: 敵対的堅牢性のための継続的なアップデートと業界での採用により、着実に成長しています。</ul></td>
+</tr>
+<tr>
+	<td>コミュニティ サポート</td>
+	<td><ul><li>アクティブな問題: 対応力の高いチームで、通常は 1 週間以内に問題に対処します。<li>文書化: IBM の Web サイトに包括的なガイドと API 文書が用意されており、詳細かつ定期的に更新されます。<li>ディスカッション フォーラム: 主に学術的な環境で議論され、Stack Overflow や GitHub でも一部議論されています。<li>貢献者: IBM の研究者や外部の協力者を含む 100 人を超えます。</ul></td>
+</tr>
+<tr>
+	<td>スケーラビリティ</td>
+	<td><ul><li>フレームワーク サポート:すぐに使用できるサポートにより、TensorFlow、Keras、PyTorch に拡張できます。<li>大規模なデプロイメント: 医療、金融、防衛などの業界における大規模なエンタープライズ レベルのデプロイメントに対応できることが実証されています。</ul></td>
+</tr>
+<tr>
+	<td>統合</td>
+	<td><ul><li>互換性: TensorFlow、PyTorch、Keras、MXNet、Scikit-learn で動作します。</ul></td>
+</tr>
+</table>
+</div>
+
+#### ツールの評価
+
+| 基準 | 評価 |
+| ----- | ----- |
+| 人気 | 高 |
+| コミュニティ サポート | 高 |
+| スケーラビリティ | 高 |
+| 統合の容易さ | 高 |
+
+#### データのモダリティ
+
+| データのモダリティ | サポート有無 |
+| ----- | ----- |
+| 文章 | あり |
+| 画像 | あり |
+| 音声 | あり |
+| 映像 | あり |
+| 表形式のデータ | あり |
+
+#### 機械学習タスク
+
+| タスクの種類 | データのモダリティ | サポート有無 |
+| ----- | ----- | ----- |
+| 分類 | すべて（「データのモダリティ」セクションを参照） | あり |
+| 物体検出 | コンピューター ビジョン | あり |
+| 音声認識 | 音声 | あり |
+
+#### フレームワークの適用性
+
+| フレームワーク/ツール | カテゴリ | サポート有無 |
+| ----- | ----- | ----- |
+| Tensorflow | 深層学習、生成 AI | あり |
+| Keras	| 深層学習、生成 AI | あり |
+| PyTorch	| 深層学習、生成 AI | あり |
+| MxNet	| 深層学習 | あり |
+| Scikit-learn | 機械学習 | あり |
+| XGBoost | 機械学習 | あり |
+| LightGBM | 機械学習 | あり |
+| CatBoost | 機械学習 | あり |
+| GPy | 機械学習 | あり |
