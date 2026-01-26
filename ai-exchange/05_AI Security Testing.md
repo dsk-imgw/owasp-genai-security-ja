@@ -51,7 +51,7 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 
 各 AI パラダイムにおける主要な脅威について説明しましたが、AI レッド チーム演習の目的と範囲の定義フェーズの結果に基づき、AI Exchange ですべての脅威を参照することを強くお勧めします。
 
-## AI セキュリティ テストに関する参考資料
+## AI セキュリティ テストに関する参考情報
 
 - エージェント型 AI システムのテストの詳細については、CSA と AI Exchange が共同で作成した [Agentic AI red teaming guide](https://cloudsecurityalliance.org/download/artifacts/agentic-ai-red-teaming-guide) を参照してください。
 - [OWASP AI Testing Guide](https://github.com/OWASP/www-project-ai-testing-guide)
