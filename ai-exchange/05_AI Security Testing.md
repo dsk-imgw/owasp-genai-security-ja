@@ -55,3 +55,14 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 
 - エージェント型 AI システムのテストの詳細については、CSA と AI Exchange が共同で作成した [Agentic AI red teaming guide](https://cloudsecurityalliance.org/download/artifacts/agentic-ai-red-teaming-guide) を参照してください。
 - [OWASP AI Testing Guide](https://github.com/OWASP/www-project-ai-testing-guide)
+
+# AI および 生成 AI 向けのレッド  チーム演習ツール
+
+以下のマインド マップは、AI レッド チーム演習のためのオープン ソース ツールの概要を示しています。予測 AI 向けのレッド チーム演習と生成 AI 向けのレッド チーム演習の 2 つに分類し、ART、Armory、TextAttack、Promptfoo などの例を取り上げています。これらのツールは現時点で利用可能な機能を示したものですが、網羅的ではなく、重要度順にランク付けされているわけでもありません。今後、新たなツールや手法が登場し、この分野に統合される可能性があります。
+
+![attackstotesttools.png](./assets/attackstotesttools.png)
+
+以下の図は、AI システムにおける脅威を分類し、それらの脅威に対処するために設計された関連するオープン ソース  ツールにマッピングしています。
+
+![testtoolstoattacks.png](./assets/testtoolstoattacks.png)
+
