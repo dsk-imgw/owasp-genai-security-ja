@@ -755,7 +755,7 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 | Cohere | 生成 AI | ✅ |
 | Replicate テキスト モデル | 生成 AI | ✅ |
 | OpenAI API | 生成 AI | ✅ |
-| GGUF (Llama.cpp) | 生成 AI,軽量推論 | ✅ |
+| GGUF (Llama.cpp) | 生成 AI、軽量推論 | ✅ |
 
 #### OWASP AI Exchange の脅威の網羅性
 
@@ -874,7 +874,7 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 | Cohere | 生成 AI | ✅ |
 | Replicate テキスト モデル | 生成 AI | ✅ |
 | OpenAI API | 生成 AI | ✅ |
-| GGUF (Llama.cpp) | 生成 AI,軽量推論 | ✅ |
+| GGUF (Llama.cpp) | 生成 AI、軽量推論 | ✅ |
 | OctoAI | 生成 AI | ✅ |
 
 #### OWASP AI Exchange の脅威の網羅性
@@ -939,7 +939,7 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 </tr>
 <tr>
 	<td>コミュニティ サポート</td>
-	<td><ul><li>アクティブな問題: 2024 年 7 月以降、更新もバグの解決も行われていません。。<li>文書化: 中程度の文書といくつかの例が用意されています。<li>ディスカッション フォーラム: アクティブな GitHub ディスカッションと Discord。<li>貢献者:  10 名以上の貢献者。</ul></td>
+	<td><ul><li>アクティブな問題: 2024 年 7 月以降、更新もバグの解決も行われていません。<li>文書化: 中程度の文書といくつかの例が用意されています。<li>ディスカッション フォーラム: GitHub の Issue フォーラム。<li>貢献者:  10 名以上の貢献者。</ul></td>
 </tr>
 <tr>
 	<td>スケーラビリティ</td>
@@ -976,7 +976,7 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 | タスクの種類 | データのモダリティ | サポート有無 |
 | ----- | ----- | ----- |
 | 分類 | すべて（「データのモダリティ」セクションを参照） | ✅ |
-| 物体検出 | コンピューター ビジョン | ✅ |
+| 物体検出 | コンピューター ビジョン |  |
 | 音声認識 | 音声 |  |
 
 #### フレームワークの適用性
@@ -991,7 +991,7 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 | Cohere | 生成 AI |  |
 | Replicate テキスト モデル | 生成 AI |  |
 | OpenAI API | 生成 AI | ✅ |
-| GGUF (Llama.cpp) | 生成 AI,軽量推論 |  |
+| GGUF (Llama.cpp) | 生成 AI、軽量推論 |  |
 | OctoAI | 生成 AI |  |
 
 #### OWASP AI Exchange の脅威の網羅性
@@ -1018,6 +1018,120 @@ AI セキュリティテストの詳細については、[OWASP AI Testing Guide
 - [プロンプト インジェクション](https://owaspai.org/goto/promptinjection/): プロンプト設計の弱点を悪用して、望ましくない出力を生成したり、モデルの安全策を回避したりすることで、生成 AI モデルの堅牢性を評価します。
 
 ### ツール名: Guardrail
+
+<div align="center">
+<table>
+<tr>
+	<th width="30%">要素</th>
+	<th width="70%">詳細</th>
+</tr>
+<tr>
+	<td>開発者/ソース</td>
+	<td>Guardrails AI</td>
+</tr>
+<tr>
+	<td>GitHub リンク</td>
+	<td><a href=”https://github.com/guardrails-ai/guardrails">https://github.com/guardrails-ai/guardrails</a></td>
+</tr>
+	<tr>
+	<td>言語</td>
+	<td>Python</td>
+</tr>
+<tr>
+	<td>ライセンス</td>
+	<td>Apache License 2.0 下のオープン ソース</td>
+</tr>
+<tr>
+	<td>軽減策の提供</td>
+	<td>防止: あり、検出: あり</td>
+</tr>
+<tr>
+	<td>API の利用</td>
+	<td>可能</td>
+</tr>
+<tr>
+	<td>人気</td>
+	<td><ul><li>GitHub スター: 約 4,300 スター （2024 年現在）<li>GitHub フォーク: 約 326 フォーク<li>Issue 数: 約 296 件の未解決、40 件の解決済み<li>トレンド: 一貫性とタイムリーなアップデートにより着実に成長しています。</ul></td>
+</tr>
+<tr>
+	<td>コミュニティ サポート</td>
+	<td><ul><li>アクティブな問題: 問題のほとんどは数週間以内に解決されます。<li>文書化: とユーザーガイドを含む詳細な文書が用意されています。<li>ディスカッション フォーラム: 主に GitHub の Issue ですが、discord サーバーおよび twitter でもサポートが利用できます。<li>貢献者: 60 名以上の貢献者。</ul></td>
+</tr>
+<tr>
+	<td>スケーラビリティ</td>
+	<td><ul><li>フレームワーク サポート: Pytorchをサポート。言語は、Python と Javascript。今後、サポートの追加を進めています。<li>大規模なデプロイメント: Azure、langchain に拡張できます。</ul></td>
+</tr>
+<tr>
+	<td>統合</td>
+	<td><ul><li>互換性: OpenAI、Gemini、Anthropic などのさまざまなオープンソース LLM と互換性があります。</ul></td>
+</tr>
+</table>
+</div>
+
+#### ツールの評価
+
+| 基準 | 評価 |
+| ----- | ----- |
+| 人気 | 高 |
+| コミュニティ サポート | 高 |
+| スケーラビリティ | 中 |
+| 統合の容易さ | 高 |
+
+#### データのモダリティ
+
+| データのモダリティ | サポート有無 |
+| ----- | ----- |
+| 文章 | ✅ |
+| 画像 |  |
+| 音声 |  |
+| 映像 |  |
+| 表形式のデータ |  |
+
+#### 機械学習タスク
+
+| タスクの種類 | データのモダリティ | サポート有無 |
+| ----- | ----- | ----- |
+| 分類 | すべて（「データのモダリティ」セクションを参照） | ✅ |
+| 物体検出 | コンピューター ビジョン |  |
+| 音声認識 | 音声 |  |
+
+#### フレームワークの適用性
+
+| フレームワーク/ツール | カテゴリ | サポート有無 |
+| ----- | ----- | ----- |
+| Tensorflow | 深層学習、生成 AI |  |
+| PyTorch	| 深層学習、生成 AI | ✅ |
+| Azure OpenAI	| 生成 AI | ✅ |
+| Huggingface	| 深層学習、生成 AI | ✅ |
+| Azure Managed Endpoints | 機械学習デプロイメント |  |
+| Cohere | 生成 AI | ✅ |
+| Replicate テキスト モデル | 生成 AI |  |
+| OpenAI API | 生成 AI | ✅ |
+| GGUF (Llama.cpp) | 生成 AI、軽量推論 |  |
+| OctoAI | 生成 AI |  |
+
+#### OWASP AI Exchange の脅威の網羅性
+
+| 脅威 | 対応有無 |
+| ----- | ----- |
+| 開発時のモデル汚染 |  |
+| 実行時のモデル汚染 |  |
+| 利用時のモデル盗難 |  |
+| 学習データの汚染 |  |
+| 学習データの漏洩 |  |
+| 実行時のモデル盗難 |  |
+| 回避（敵対的な入力に対するモデルのパフォーマンスのテスト）| ✅ |
+| モデル反転/メンバーシップ推論 |  |
+| モデルのサービス運用妨害 |  |
+| 直接プロンプト インジェクション | ✅ |
+| データの開示 |  |
+| モデル入力の漏洩 |  |
+| 間接プロンプト インジェクション |  |
+| 開発時のモデル盗難 |  |
+| インジェクション攻撃を含む出力 |  |
+
+- [回避](https://owaspai.org/goto/evasion/): 敵対的な入力に対するモデルのパフォーマンスをテストします。
+- [プロンプト インジェクション](https://owaspai.org/goto/promptinjection/): プロンプト設計の弱点を悪用して、望ましくない出力を生成したり、モデルの安全策を回避したりすることで、生成 AI モデルの堅牢性を評価します。
 
 ### ツール名: Promptfoo
 
