@@ -25,7 +25,7 @@ AI システムに対する脅威を体系的に特定・分析するために�
 以下は、AI 脅威モデリングに用いられる主要な方法論の概観です。
 
 - **PASTA<sup>[9]</sup> (Process for Attack Simulation and Threat Analysis)**: 技術分析とビジネスへの影響を整合させる、7 段階のリスク中心のフレームワーク。
-- **STRIDE<sup>[10]</sup>**: Microsoftの STRIDE モデルで、脅威をなりすまし (spoofing)、改ざん (Tampering)、否認 (Repudiation)、情報漏洩 (Information disclosure)、サービス拒否 (Denial of service)、権限昇格 (Elevation of Privilege) に分類します。
+- **STRIDE<sup>[10]</sup>**: Microsoft の STRIDE モデルで、脅威をなりすまし (spoofing)、改ざん (Tampering)、否認 (Repudiation)、情報漏洩 (Information disclosure)、サービス拒否 (Denial of service)、権限昇格 (Elevation of Privilege) に分類します。
 - **MITRE ATLAS<sup>[11]</sup>**: 敵対的機械学習手法（回避、汚染、モデル抽出）とそれに対応する軽減策をマッピングします。
 - **LINDDUN<sup>[12]</sup>**: データの機密性とコンプライアンスに対する脅威（メンバーシップ推論、データ漏洩など）をモデル化するための、プライバシー重視のフレームワーク。
 - **MAESTRO<sup>[24]</sup>**: エージェント型 AI の脅威モデリング向けに特別に設計された、新しいモデル駆動型アプローチ。MAESTRO は、Multi-Agent Environment（マルチ エージェント環境）、Security（セキュリティ）、Threat（脅威）、Risk（リスク）、Outcome（結果）の頭文字をとったものです。
