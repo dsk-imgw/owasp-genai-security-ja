@@ -10,7 +10,7 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - [a-guide-to-preparing-and-responding-to-deepfake-events](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/a-guide-to-preparing-and-responding-to-deepfake-events) ディレクトリ配下
 - [【原典へのリンク】 AIMA - AI Maturity Assessment](https://github.com/OWASP/www-project-ai-maturity-assessment) ... AI 成熟度モデル評価 v1.0（2025/8/11 リリース）
   - [ai-maturity-assessment](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-maturity-assessment) ディレクトリ配下（Excel ファイルは、[OWASP SAMM v2 のツールキットにある評価シート](https://github.com/OWASP/samm/blob/master/Supporting%20Resources/v2.0/toolbox/SAMM_Assessment_Toolbox_v2.0.xlsx)をもとに独自に制作。2025/8/11 リリースの公式版 v1.0 に対応）
-- [【原典へのリンク】 AI Testing Guide](https://github.com/OWASP/www-project-ai-testing-guide) ... AI に対するテスト（セキュリティに関するテストも含まれる）を実施するためのガイド（2026/1/29 時点で DRAFT 版状態）
+- [【原典へのリンク】 AI Testing Guide](https://github.com/OWASP/www-project-ai-testing-guide) ... AI に対するテスト（セキュリティに関するテストも含まれる）を実施するためのガイド v1.0。
   - [ai-testing-guide](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-testing-guide) ディレクトリ配下（とりあえず、項目とペイロードを Excel ファイルに抽出中。具体的なペイロードがわからない/記載がないものは独自に調べて記載。併せて、対応する日本語ペイロードも独自作成中）
 - [【原典へのリンク】 A Practical Guide for Securely Using Third-Party MCP Servers](https://genai.owasp.org/resource/cheatsheet-a-practical-guide-for-securely-using-third-party-mcp-servers-1-0/) ... サードパーティ製 MCP サーバーのセキュアな使用に関する実践ガイド v1.0
   - [a-practical-guide-for-securely-using-third-party-mcp-server](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/a-practical-guide-for-securely-using-third-party-mcp-servers) ディレクトリ配下
