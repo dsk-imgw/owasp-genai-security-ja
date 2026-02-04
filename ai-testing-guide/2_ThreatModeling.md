@@ -415,6 +415,23 @@ AI アーキテクチャをデータ、インフラストラクチャ、モデ�
 | T01-DPIJ | プロンプト インジェクション | LLM01 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | プロンプト インジェクションのテスト (T-PJ) |
 | T01-IPIJ | 間接プロンプト インジェクション | LLM01 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm01-prompt-injection/) | 間接プロンプト インジェクションのテスト (T-IPJ) |
 | T01-AIE | 敵対的入力（回避） | 脅威 2.1 | OWASP Exchange | [リンク](https://owaspai.org/docs/2_threats_through_use/#21-evasion) | 回避攻撃のテスト (T-EA) |
+| T01-RMP  | 実行時のモデル汚染 | LLM04 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/) | 実行時のモデル汚染のテスト (T-RMP) |
+| T01-DMP | モデル汚染 | LLM04 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/) | 汚染された学習データセットのテスト (T-PTS) |
+| T01-DPFT  | 微調整時のデータ汚染 | LLM04 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm042025-data-and-model-poisoning/) | 微調整時の汚染のテスト (T-FTP) |
+| T01-SCMP | サプライチェーン モデル汚染 | LLM03 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm032025-supply-chain/) | サプライチェーン改ざんのテスト (T-SPT) |
+| T01-SID | 機密情報の開示 | LLM02 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/) | 機密データの漏洩のテスト (T-SDL) |
+| T01-MIMI  | モデル反転＆メンバーシップ推論 | 脅威 2.3.2 | OWASP AI Exchange | [リンク](https://owaspai.org/docs/2_threats_through_use/#24-training-set-membership-inference) | メンバーシップ推論 (T-MI) |
+| T01-TDL  | 学習データの漏洩 | 脅威 3.2 | OWASP AI Exchange | [リンク](https://owaspai.org/docs/2_threats_through_use/#25-training-data-leakage) | 学習データの意図せぬ公開のテスト (T-TDE) |
+| T01-MTU  | 利用時のモデル盗難 | 脅威 2.4 | OWASP AI Exchange | [リンク](https://owaspai.org/docs/2_threats_through_use/#23-model-reversal) | モデル抽出のテスト (T-ME) |
+| T01-MTR  | 実行時の直接モデル盗難 | 脅威 4.3 | OWASP AI Exchange | [リンク](https://owaspai.org/docs/2_threats_through_use/#22-model-exfiltration) | 実行時の持ち出しのテスト (T-REF) |
+| T01-MTDD | 開発時のモデル盗難 | 脅威 3.2.2 | OWASP AI Exchange | [リンク](https://owaspai.org/docs/2_threats_through_use/#22-model-exfiltration) | 開発時のモデル盗難のテスト (T-DMT) |
+| T01-DoSM | モデルのサービス運用妨害/無制限の消費 | LLM10 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm102025-unbounded-consumption/) | リソース枯渇のテスト (T-RE) |
+| T01-LSID | 機密性の高い入力データの漏洩 | LLM02 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm022025-sensitive-information-disclosure/) | 入力の漏洩のテスト (T-IL) |
+| T01-IOH | 不適切な出力制御 | LLM05 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm052025-improper-output-handling/) | 安全でない出力のテスト (T-UO) |
+| T01-EA | 過剰な主体性 | LLM06 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm062025-excessive-agency/) | エージェント的な動作制限のテスト (T-ABL) |
+| T01-SPL | システム プロンプトの漏洩 | LLM07 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm072025-system-prompt-leakage/) | システム プロンプトの漏洩のテスト (T-SPL) |
+| T01-VEW | ベクトル＆エンベディングの弱点 | LLM08 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm082025-vector-and-embedding-weaknesses/) | エンベディングの操作のテスト (T-EMA) |
+| T01-MIS | 誤情報 | LLM09 | OWASP Top 10 LLM 2025 | [リンク](https://genai.owasp.org/llmrisk/llm092025-misinformation/) | 有害なコンテンツ バイアスのテスト (T-HCB) |
 
 </div>
 
