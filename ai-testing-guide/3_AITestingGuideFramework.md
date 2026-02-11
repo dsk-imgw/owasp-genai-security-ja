@@ -283,7 +283,7 @@ AI アプリケーションはユーザーや外部環境に直接公開され�
 - 機密データの漏洩を防ぐための**情報境界**を維持しているか否か。
 	- →  [AITG-APP-03: 機密データの漏洩のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-03_Testing_for_Sensitive_Data_Leak.md)
 	- →  [AITG-APP-04: 入力の漏洩のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-04_Testing_for_Input_Leakage.md)
-	- →  [AITG-APP-07: プロンプト開示のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-07_Testing_for_Prompt_Disclosure.md)
+	- →  [AITG-APP-07: プロンプトの開示のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-07_Testing_for_Prompt_Disclosure.md)
 
 - **安全で、偏りがなく、適切に調整された出力**を生成しているか否か
 	- →  [AITG-APP-05: 安全でない出力のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-05_Testing_for_Unsafe_Outputs.md)
@@ -296,10 +296,10 @@ AI アプリケーションはユーザーや外部環境に直接公開され�
 	- →  [AITG-APP-13: AI への過度な依存のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-13_Testing_for_Over-Reliance_on_AI.md)
 
 - AI の意思決定に**説明可能性と解釈可能性**を提供しているか否か
-	- →  [AITG-APP-14: 説明可能性と解釈可能性のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-14_Testing_for_Explainability_and_Interpretability.md)
+	- →  [AITG-APP-14: 説明可能性および解釈可能性のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-14_Testing_for_Explainability_and_Interpretability.md)
 
 - **エンベディング ベースの攻撃やモデル抽出の試み**から保護されているか否か
-	- →  [AITG-APP-08: エンベディング操作のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-08_Testing_for_Embedding_Manipulation.md)
+	- →  [AITG-APP-08: エンベディングの操作のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-08_Testing_for_Embedding_Manipulation.md)
 	- →  [AITG-APP-09: モデル抽出のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-APP-09_Testing_for_Model_Extraction.md)
 
 AI アプリケーション テストのカテゴリ内の各テストは、アプリケーション レベルのリスクに体系的に対処し、実環境における堅牢な運用を確保し、組織が倫理基準や規制を遵守できるようにすることで、AI システムの包括的なセキュリティ態勢の構築に貢献します。
@@ -328,7 +328,7 @@ AI アプリケーション テストのカテゴリ内の各テストは、ア�
 	- →  [AITG-MOD-05: 反転攻撃のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-MOD-05_Testing_for_Inversion_Attacks.md)
 
 - **新規データまたは敵対的なデータが提示された場合でも堅牢性**を維持できるか否か
-	- → [AITG-MOD-06: 新規データに対する堅牢性のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-MOD-06_Testing_for_Robustness_to_New_Data.md)
+	- → [AITG-MOD-06: 新規データへの堅牢性のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-MOD-06_Testing_for_Robustness_to_New_Data.md)
 
 - **事前に定義された目標および制約と**一貫して**整合**しているか
 	- →  [AITG-MOD-07: 目標との整合のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-MOD-07_Testing_for_Goal_Alignment.md)
@@ -346,10 +346,10 @@ AI モデルのテスト カテゴリ内の各テストは、AI モデルの基�
 このカテゴリでは、AI インフラストラクチャの以下の点を評価します。
 
 - **サプライチェーンの改ざんと不正な改変**を防止しているか否か
-	- →  [AITG-INF-01: サプライチェーンの改ざんに対するテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-INF-01_Testing_for_Supply_Chain_Tampering.md)
+	- →  [AITG-INF-01: サプライチェーン改ざんのテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-INF-01_Testing_for_Supply_Chain_Tampering.md)
 
 - **リソース枯渇とサービス拒否状態**に対する耐性があるか否か
-	- →  [AITG-INF-02: リソース枯渇に対するテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-INF-02_Testing_for_Resource_Exhaustion.md)
+	- →  [AITG-INF-02: リソース枯渇のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-INF-02_Testing_for_Resource_Exhaustion.md)
 
 - プラグイン ベースのインタラクションに対してセキュアな境界とアクセス制御を維持しているか否か
 	- →  [AITG-INF-03: プラグインの境界違反のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-INF-03_Testing_for_Plugin_Boundary_Violations.md)
@@ -382,12 +382,12 @@ AI データのテストのカテゴリは、学習データセット、推論�
 	- →  [AITG-DAT-02: 実行時の持ち出しのテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-DAT-02_Testing_for_Runtime_Exfiltration.md)
 
 - バイアスやパフォーマンス ギャップを回避するために、**十分な多様性、表現、包括的なカバレッジ**を提供しているか否か
-	- →  [AITG-DAT-03: データセットの多様性とカバレッジに関するテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-DAT-03_Testing_for_Dataset_Diversity_and_Coverage.md)
+	- →  [AITG-DAT-03: データセットの多様性と網羅性のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-DAT-03_Testing_for_Dataset_Diversity_and_Coverage.md)
 
 - 危害を及ぼす、有害な、またはバイアスのあるコンテンツが含まれていないか否か
-	- →  [AITG-DAT-04: データ内の危害を及ぼすコンテンツに関するテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-DAT-04_Testing_for_Harmful_Content_in_Data.md)
+	- →  [AITG-DAT-04: データ内の危害を及ぼすコンテンツのテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-DAT-04_Testing_for_Harmful_Content_in_Data.md)
 
 - 規制やプライバシーのベスト プラクティスで義務付けられている**データ最小化の原則と同意要件**と整合しているか否か
-	- →  [AITG-DAT-05: データの最小化と同意のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-DAT-05_Testing_for_Data_Minimization_and_Consent.md)
+	- →  [AITG-DAT-05: データの最小化および同意のテスト](https://github.com/OWASP/www-project-ai-testing-guide/blob/main/Document/content/tests/AITG-DAT-05_Testing_for_Data_Minimization_and_Consent.md)
 
 AI データのテストのカテゴリ内の各テストでは、AI モデルを強化するデータセットが重要な品質、倫理、セキュリティ、コンプライアンスの標準を満たしていることを確認し、最終的にはより安全で責任ある AI システムの実現に貢献します。
