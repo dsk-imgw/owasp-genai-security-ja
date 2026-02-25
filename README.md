@@ -18,6 +18,8 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - [top10-for-agentic-applications](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/top10-for-agentic-applications) ディレクトリ配下
 - [【原典へのリンク】 OWASP AI Exchange](https://owaspai.org/) ... AI システムおよびデータ中心システムのセキュリティとプライバシーを守るための包括的で実用的なガイドを提供するオープンソース プロジェクト
   - [ai-exchange](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-exchange) ディレクトリ配下
+- [【原典へのリンク】 OWASP Vendor Evaluation Criteria for AI Red Teaming Providers & Tooling v1.0](https://genai.owasp.org/resource/owasp-vendor-evaluation-criteria-for-ai-red-teaming-providers-tooling-v1-0/) ... AI レッド チーミングのサービスやツールを提供する事業者を評価するための基準 v1.0
+  - [vendor-evaluation-criteria-for-ai-red-teaming](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/vendor-evaluation-criteria-for-ai-red-teaming) ディレクトリ配下
 
 ## 上記以外で気になっているプロジェクト
 
