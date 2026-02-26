@@ -21,8 +21,8 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
 - **(9) OWASP Vendor Evaluation Criteria for AI Red Teaming Providers & Tooling v1.0** [👉️原典](https://genai.owasp.org/resource/owasp-vendor-evaluation-criteria-for-ai-red-teaming-providers-tooling-v1-0/) ... AI レッド チーミングのサービスやツールを提供する事業者を評価するための基準 v1.0
   - 日本語訳は、[vendor-evaluation-criteria-for-ai-red-teaming](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/vendor-evaluation-criteria-for-ai-red-teaming) ディレクトリ配下
 
-## 上記以外で気になっているプロジェクト
+## 上記以外で気になっているプロジェクト（OWASP 以外も含む）
 
-- [【原典へのリンク】 Artificial Intelligence Vulnerability Scoring System (AIVSS)](https://github.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system) ... AI の脆弱性によるリスクを定量化するためのフレームワーク。CVSS の AI 版という感じ（個人的には、「CVSS v3 を意識して設計されているが v4 ベースにした方ががよいのでは？」「パラメーターが多すぎるので、もう少し減らしたほうが良いのでは？」と感じている）。
-- [【原典へのリンク】 OWASP Artificial Intelligence Security Verification Standard (AISVS)](https://github.com/OWASP/AISVS) ... AI セキュリティの検証基準（検証要件）。ASVS (Application Security Verification Standard) の AI 版という感じ。ASVS と同じく、要件（＝何を検証するか？）のみ記載され、検証方法（＝どうやって検証するか）は記載されていません。
-- [【原典へのリンク】 MITRE ATLAS](https://atlas.mitre.org/) ... MITRE ATT&CK の AI システム向け版という感じ。一応、適宜更新状況は追っていて、[必要に応じて日本語化中](https://github.com/dsk-imgw/mitre-atlas-ja)。
+- **Artificial Intelligence Vulnerability Scoring System (AIVSS)** [👉️原典](https://github.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system) ... AI の脆弱性によるリスクを定量化するためのフレームワーク。CVSS の AI 版という感じ（個人的には、「CVSS v3 を意識して設計されているが v4 ベースにした方ががよいのでは？」「パラメーターが多すぎるので、もう少し減らしたほうが良いのでは？」と感じている）。
+- **OWASP Artificial Intelligence Security Verification Standard (AISVS)** [👉️原典](https://github.com/OWASP/AISVS) ... AI セキュリティの検証基準（検証要件）。ASVS (Application Security Verification Standard) の AI 版という感じ。ASVS と同じく、要件（＝何を検証するか？）のみ記載され、検証方法（＝どうやって検証するか）は記載されていません。
+- **MITRE ATLAS** [👉️原典](https://atlas.mitre.org/) ... MITRE ATT&CK の AI システム向け版という感じ。一応、適宜更新状況は追っていて、[必要に応じて日本語化中](https://github.com/dsk-imgw/mitre-atlas-ja)。
