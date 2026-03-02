@@ -687,6 +687,242 @@ SAIF アーキテクチャに整合した AI システムにおける DIE と CI
 
 ### ステップ 3 - 根本原因と修復のための AI 脅威と CWE のマッピング
 
+最後に推奨されるステップは、AI 脅威の列挙とCWE エクスプロイト経路のマッピングを実施し、脆弱性中心のテストを設計レベルの保証へと転換することです。この付録では、脅威と SAIF コンポーネントから CWE へのマッピングを提供し、このガイドで前述した脅威とテスト ケースのマッピング（AITG テスト）を補完します。これらを組み合わせることで、テスターは、プロンプト インジェクション、データ漏洩、モデル汚染といった AI 固有の脆弱性を、その根本原因（セキュアでない設計、実装上の脆弱性、構成ミスなど）に結び付けることができます。発見事項を CWE カテゴリに分類することで、テスターはペネトレーション テストの結果を、認識されているソフトウェアの脆弱性パターンと関連付けることができます。このアプローチは、パッチ管理とセキュア アーキテクチャのギャップを埋め、個々のコンポーネントではなくシステム層全体を強化する修正を導きます。例えば、CWE-20（不適切な入力検証）は、脆弱な解析ロジックを明らかにします。 CWE-276（不適切なデフォルト権限）は、クラウド ストレージのデフォルト設定のセキュリティを低下させ、CWE-345（不十分なデータ真正性検証）は、RAG 取り込みパイプラインにおける信頼関係の脆弱性を露呈させます。
+
+対象範囲の SAIF コンポーネント全体にわたる AITG テストでは、不合格となった各テストにおいて、直近の問題を特定し、対応する CWE の根本原因まで追跡する必要があります。レポートには、脆弱性と、入力検証の実施や公知のデフォルト状態の無効化、データセットの真正性の検証、機密データの暗号化など、実行可能な推奨事項の両方を含める必要があります。これにより、テスターのメッセージは「どのように破壊したか」から「どのように修正し、再設計するか」へと変化します。システムの進化に伴い、テスターは CVE と CWE のマッピングを更新して新たな脆弱性を反映させ、「AI 脅威」列を将来のレッド チーム演習のためのリアルタイム チェックリストとして活用できます。この進化するマトリックスは、AI 対応システムにおける継続的な検証とレジリエンス（回復力）をサポートします。修正が適用されたら、対応する AITG テストを再実行して完了を検証する必要があります。発見事項はリスクの重大度（重大、高、中、低）に基づいて優先順位付けされ、SLA 目標に従って解決されます。この構造化された CWE 主導のアプローチにより、AI テストの結果は単なる診断ではなく、実用的なものとなり、ソフトウェアのレジリエンスと長期的な AI システムのリスク態勢の両方を向上させます。
+
+### AI 脅威の列挙と CVE エクスプロイト経路のマッピング
+
+このセクションでは、SAIF コンポーネントと AI 脅威のマッピング、およびコンポーネントに依存する技術スタックの CVE の例を示します。
+
+<div align="center">
+<table>
+<tr>
+	<th width="12%">SAIF コンポーネント (#)</th>
+	<th width="13%">サブ コンポーネント</th>
+	<th width="25%">技術スタック（チャットボット + RAG）</th>
+	<th width="25%">対応する脅威</th>
+	<th width="25%">技術スタックにおける CVE 例</th>
+</tr>
+<tr>
+	<td>(2) ユーザーの入力</td>
+	<td>テキスト、音声、マルチ モーダル パーサー</td>
+	<td>React/Next.js、Slack SDK、Teams Bot、Twilio, Whisper/ASR、FastAPI/Pydantic</td>
+	<td>T01-DPIJ、T01-IPI J、T01-SID、T01-DoSM、T01-IOH、T01-MTU</td>
+	<td>React XSS (CVE-2021-24033)、FastAPI vuln (CVE-2023-27533)、Twilio SDK (CVE-2022-36449)</td>
+</tr>
+<tr>
+	<td>(3) ユーザーへの出力</td>
+	<td>レンダラー、整形（フォーマッター）、TTS/ビジュアル出力</td>
+	<td>React chat widgets、Slack/Teams cards、Polly/ElevenLabs、Markdown renderers</td>
+	<td>T01-EA、T01-SPL、T01-MIS、T01-IOH</td>
+	<td>Slack API auth bypass (CVE-2020-10753)、Markdown injection (CVE-2022-21681)</td>
+</tr>
+<tr>
+	<td>(4) アプリケーション</td>
+	<td>オーケストレーション、セッション管理、API、ビジネス ロジック</td>
+	<td>LangChain、LlamaIndex、Semantic Kernel、FastAPI/Flask、Redis sessions、GraphQL API</td>
+	<td>T01-DPIJ、T01-IPIJ、T01-SID、T01-DoSM、T01-MTU、T01-IOH、T01-EA、T01-SPL、T01-MIS</td>
+	<td>Flask template injection (CVE-2019-8341)、Redis RCE (CVE-2022-0543)、GraphQL DoS (CVE-2020-15159)</td>
+</tr>
+<tr>
+	<td>(5) エージェント/プラグイン</td>
+	<td>コネクター、プラグイン レジストリ、ツール アダプター</td>
+	<td>LangGraph Agents、OpenAI Functions、Zapier/n8n、custom OpenAPI tools</td>
+	<td>T01-IPIJ、T01-SID, T01-MTD、T01-EA、T01-VEW</td>
+	<td>n8n RCE (CVE-2023-37925)、OpenAPI tooling parser injection (CVE-2021-32640)</td>
+</tr>
+<tr>
+	<td>(6) 外部ソース（アプリ）</td>
+	<td>API、SaaS サービス、エンタープライズ コネクター</td>
+	<td>Salesforce、ServiceNow、Confluence、SharePoint APIs</td>
+	<td>T01-IPIJ、T01-MTD、T01-SID、T01-EA、T01-VEW、T01-DMP</td>
+	<td>Confluence RCE (CVE-2023-22515)、SharePoint RCE (CVE-2023-29357)</td>
+</tr>
+<tr>
+	<td>(7) 入力の処理</td>
+	<td>妥当性検証、無害化、PII 検出、スキャニング</td>
+	<td>Pydantic、JSON Schema、Presidio、ClamAV</td>
+	<td>T01-DPIJ、T01-AIE、T01-SID、T01-LSID、T01-DoSM、T01-SPL、T01-VEW</td>
+	<td>ClamAV RCE (CVE-2023-20032)、JSON Schema validator injection (GitHub advisories)</td>
+</tr>
+<tr>
+	<td>(8) 出力の処理</td>
+	<td>フィルター、モデレーション、編集、根拠チェック</td>
+	<td>Guardrails.ai、OpenAI Moderation、NeMo Guardrails、RAGAS</td>
+	<td>T01-LSID、T01-SID、T01-DoSM、T01-SPL、T01-IOH、T01-TDL、T01-MTU、T01-EA、T01-MIS</td>
+	<td>NeMo Guardrails Python deps RCE (PyTorch CVE 経由)</td>
+</tr>
+<tr>
+	<td>(9) モデル</td>
+	<td>LLM の重み、エンベディング、再ランク付け</td>
+	<td>GPT-4o、Claude、Llama-3, Mistral、Cohere reranker、BGE embeddings</td>
+	<td>T01-DPIJ、T01-IPI J、T01-SCMP、T01-AIE、T01-DPFT、T01-RMP、T01-DMP、T01-SID、T01-MIMI、T01-TDL、T01-DoSM、T01-LSID、T01-SPL、T01-VEW、T01-MTU、T01-IOH、 T01-MTR、T01-EA、T01-MIS</td>
+	<td>PyTorch vuln (CVE-2022-45907)、TensorFlow overflow (CVE-2021-37678)、Hugging Face sandbox escape (CVE-2023-6730)</td>
+</tr>
+<tr>
+	<td>(10) モデル ストレージ インフラストラクチャ</td>
+	<td>レジストリ、暗号化されたアーティファクト</td>
+	<td>MLflow、S3/GCS、Azure Blob、Vertex AI Registry</td>
+	<td>T01-DPFT、T01-SCMP、T01-MTR、T01-MTD</td>
+	<td>MLflow path traversal (CVE-2023-6836)、AWS S3 bucket takeover misconfigs (CWE-based)</td>
+</tr>
+<tr>
+	<td>(11) モデル サービング インフラストラクチャ</td>
+	<td>GPU ランタイム、推論サーバー、自動スケーリング</td>
+	<td>vLLM、NVIDIA Triton、TensorRT-LLM、Kubernetes GPU nodes</td>
+	<td>T01-SCMP、T01-MTU、T01-MTR、T01-DoSM</td>
+	<td>NVIDIA Triton RCE (CVE-2023-31036)、Kubernetes privilege escalation (CVE-2023-3676)、NVIDIA GPU DoS (CVE-2024-0146)</td>
+</tr>
+<tr>
+	<td>(12) 評価</td>
+	<td>ゴールデン セット、ドリフト/バイアス評価、安全ハーネス</td>
+	<td>RAGAS、DeepEval、W&B、Evidently AI、Great Expectations</td>
+	<td>T01-AIE、T01-DMP、T01-LSID、T01-SID、T01-TDL、T01-DoSM、T01-MTU、T01-IOH、T01-MIS</td>
+	<td>Weights & Biases CLI vuln (GitHub advisories)、Great Expectations YAML injection (potential CWE-74)</td>
+</tr>
+<tr>
+	<td>(13) 学習と微調整</td>
+	<td>パイプライン、微調整、HPO</td>
+	<td>Kubeflow、SageMaker、Hugging Face PEFT、Optuna</td>
+	<td>T01-AIE、T01-MIS、T01-DPFT、T01-SCMP、T01-MTD</td>
+	<td>Kubeflow dashboard RCE (CVE-2021-31812)、SageMaker Jupyter RCE (AWS advisory)、Hugging Face PEFT vuln (CVE-2023-6730)</td>
+</tr>
+<tr>
+	<td>(14) モデル フレームワークとコード</td>
+	<td>フレームワーク、トークナイザー、コンパイラー</td>
+	<td>PyTorch、TensorFlow、Hugging Face、ONNX Runtime</td>
+	<td>T01-SCMP、T01-MTD、T01-VEW</td>
+	<td>TensorFlow buffer overflow (CVE-2021-37678)、PyTorch vulnerability (CVE-2022-45907)、ONNX Runtime DoS (CVE-2022-25883)</td>
+</tr>
+<tr>
+	<td>(15) データ ストレージ インフラストラクチャ</td>
+	<td>ベクトル データ、RDBMS、オブジェクト ストア</td>
+	<td>Weaviate、Pinecone、Milvus、Redis、Postgres、S3</td>
+	<td>T01-RMP、T01-DMP、T01-DPFT、T01-SCMP、T01-SID、T01-MTD、T01-LSID</td>
+	<td>Redis RCE (CVE-2022-0543)、PostgreSQL escalation (CVE-2023-2454)、Milvus injection (CVE-2023-48022)</td>
+</tr>
+<tr>
+	<td>(16) 学習データ</td>
+	<td>生のコーパス、ラベル付き、合成</td>
+	<td>Chat logs、FAQs、Label Studio、synthetic Q&A</td>
+	<td>T01-MIMI、T01-TDL、T01-SID</td>
+	<td>Label Studio auth bypass (CVE-2021-36701)</td>
+</tr>
+<tr>
+	<td>(17) データのフィルタリングと処理</td>
+	<td>ETL、クリーニング、チャンク化、タグ付け</td>
+	<td>Airflow、dbt、Unstructured.io、spaCy、NLTK</td>
+	<td>T01-RMP、T01-DMP、T01-DPFT、T01-SID、T01-MIMI、T01-TDL、T01-VEW、T01-MIS</td>
+	<td>Apache Airflow RCE (CVE-2023-42793)、dbt adapter injection (GitHub advisories)</td>
+</tr>
+<tr>
+	<td>(18) データ ソース</td>
+	<td>内部 KB、CRM、テレメトリ</td>
+	<td>Confluence、Jira、Elastic、Splunk</td>
+	<td>T01-SID、T01-DMP、T01-VEW、T01-MIS</td>
+	<td>Confluence RCE (CVE-2023-22515)、Jira auth bypass (CVE-2020-14181)、ElasticSearch RCE (CVE-2015-1427)、Splunk RCE (CVE-2022-32158)</td>
+</tr>
+<tr>
+	<td>(19) 外部ソース</td>
+	<td>公開データセット、サードパーティ API/フィード</td>
+	<td>Wikipedia、Common Crawl、arXiv、News APIs</td>
+	<td>T01-MIMI、T01-SID、T01-DMP、T01-MIS</td>
+	<td>Dataset poisoning risks (no CVEs, CWE-driven)、API poisoning (CWE-345: Insufficient Verification of Data Authenticity)</td>
+</tr>
+</table>
+</div>
+
+### AI 脅威の列挙と標的を絞った CWE
+
+このセクションでは、SAIF コンポーネントと AI 脅威のマッピングと、悪用される可能性のある脆弱性の種類/CWE の例を示します。
+
+（表）
+
+### AI 脅威からコンポーネント、CWE へのマッピングと修復ガイダンス
+
+このセクションでは、AI システム コンポーネント、関連する AI 脅威（本ガイドの脅威モデルで定義）、対応する CWE カテゴリ、および修復の推奨事項のマッピングを示します。各マッピングには、特定の CWE がこれらの AI 脅威によってどのように悪用または露出されるかを説明する根拠が含まれており、特定された脆弱性と実用的な修正を直接結び付けています。
+
+AI システムのアーキテクチャ コンポーネントとデータ（注）。
+
+- [(2) ユーザーの入力]()
+- [(3) ユーザーへの出力]()
+- [(4) アプリケーション]()
+- [(5) エージェント/プラグイン]()
+- [(6) 外部ソース]()
+- [(7) 入力の処理]()
+- [(8) 出力の処理]()
+- [(9) モデル]()
+- [(10) モデル ストレージ インフラストラクチャ]()
+- [(11) モデル サービング インフラストラクチャ]()
+- [(12) 評価]()
+- [(13) 学習と調整]()
+- [(14) モデル フレームワークとコード]()
+- [(15) データ ストレージ インフラストラクチャ]()
+- [(16) 学習データ]()
+- [(17) データのフィルタリングと処理]()
+- [(18) データ ソース]()
+- [(19) 外部データ ソース]()
+
+注: コンポーネント識別子は、このガイド内の脅威モデル図に示されている SAIF 番号体系に対応しています。
+
+#### (2) ユーザーの入力
+
+
+
+#### (3) ユーザーへの出力
+
+
+#### (4) アプリケーション
+
+
+#### (5) エージェント/プラグイン
+
+
+#### (6) 外部ソース
+
+
+#### (7) 入力の処理
+
+
+#### (8) 出力の処理
+
+
+#### (9) モデル
+
+
+#### (10) モデル ストレージ インフラストラクチャ
+
+
+#### (11) モデル サービング インフラストラクチャ
+
+
+#### (12) 評価
+
+
+#### (13) 学習と調整
+
+
+#### (14) モデル フレームワークとコード
+
+
+#### (15) データ ストレージ インフラストラクチャ
+
+
+#### (16) 学習データ
+
+
+#### (17) データのフィルタリングと処理
+
+
+#### (18) データ ソース
+
+
+#### (19) 外部データ ソース
+
+
+
+
 ## 4.6 参考情報
 
 - [1] National Institute of Standards and Technology (NIST). Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST Special Publication 1270\. Gaithersburg, MD: U.S. Department of Commerce, January 2023.Available from [https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.1270.pdf)  
