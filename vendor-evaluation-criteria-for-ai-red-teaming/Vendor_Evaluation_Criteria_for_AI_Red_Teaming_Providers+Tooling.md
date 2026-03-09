@@ -399,7 +399,7 @@ ${toc}
 
 #### ✅ グリーン フラグ
 
-- ベンダーは、ツール呼び出しのリプレイ、MCP<span style="font-size: small">（訳者注: 原文では instrumentation）</span>、エージェント トレース ログ、そして堅牢な可観測性を提供しています。
+- ベンダーは、ツール呼び出しのリプレイ、MCP 測定<span style="font-size: small">（訳者注: 原文では instrumentation）</span>、エージェント トレース ログ、そして堅牢な可観測性を提供しています。
 
 ## 3.7. データ ガバナンスとセキュリティ
 
