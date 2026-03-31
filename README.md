@@ -22,8 +22,10 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - 日本語訳は、[vendor-evaluation-criteria-for-ai-red-teaming](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/vendor-evaluation-criteria-for-ai-red-teaming) ディレクトリ配下
 - **(10) A Practical Guide for Secure MCP Server Development** [👉️原典](https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/) ... MCP サーバーのセキュアな開発に関する実践ガイド v1.0
   - 日本語訳は、[a-practical-guide-for-securely-using-third-party-mcp-server](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/a-practical-guide-for-secure-mcp-server-development) ディレクトリ配下
-- **(11) AI Security Solution Langscape for LLM & GenAI Apps, 2026 Q2** [👉️原典]((https://genai.owasp.org/resource/al-security-solutions-landscape-for-llm-and-gen-al-apps-q2-2026/) ... AI セキュリティ ソリューション（LLM アプリおよび生成 AI アプリ向け）2026 Q2 版
-  - 日本語訳は、[a-practical-guide-for-securely-using-third-party-mcp-server](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/a-practical-guide-for-secure-mcp-server-development) ディレクトリ配下
+- **(11) AI Security Solution Langscape for LLM & GenAI Apps, 2026 Q2** [👉️原典](https://genai.owasp.org/resource/al-security-solutions-landscape-for-llm-and-gen-al-apps-q2-2026/) ... AI セキュリティ ソリューション（LLM アプリおよび生成 AI アプリ向け）2026 Q2 版
+  - 日本語訳は、[security-solutions-landscape-for-llm-and-genaiapps](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/security-solutions-landscape-for-llm-and-genaiapps) ディレクトリ配下
+- **(12) AI Security Solution Langscape for Agentic AI, 2026 Q2** [👉️原典](https://genai.owasp.org/resource/ai-security-solutions-landscape-for-agentic-ai-q2-2026/) ... AI セキュリティ ソリューション（LLM アプリおよび生成 AI アプリ向け）2026 Q2 版
+  - 日本語訳は、[ai-security-solutions-landscape-for-agentic-ai-q2-2026/](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-security-solutions-landscape-for-agentic-ai) ディレクトリ配下
   
 ## 上記以外で気になっているプロジェクト（OWASP 以外も含む）
 
