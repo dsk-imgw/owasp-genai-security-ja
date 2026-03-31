@@ -22,7 +22,9 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - 日本語訳は、[vendor-evaluation-criteria-for-ai-red-teaming](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/vendor-evaluation-criteria-for-ai-red-teaming) ディレクトリ配下
 - **(10) A Practical Guide for Secure MCP Server Development** [👉️原典](https://genai.owasp.org/resource/a-practical-guide-for-secure-mcp-server-development/) ... MCP サーバーのセキュアな開発に関する実践ガイド v1.0
   - 日本語訳は、[a-practical-guide-for-securely-using-third-party-mcp-server](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/a-practical-guide-for-secure-mcp-server-development) ディレクトリ配下
-
+- **(11) AI Security Solution Langscape for LLM & GenAI Apps, 2026 Q2** [👉️原典]((https://genai.owasp.org/resource/al-security-solutions-landscape-for-llm-and-gen-al-apps-q2-2026/) ... AI セキュリティ ソリューション（LLM アプリおよび生成 AI アプリ向け）2026 Q2 版
+  - 日本語訳は、[a-practical-guide-for-securely-using-third-party-mcp-server](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/a-practical-guide-for-secure-mcp-server-development) ディレクトリ配下
+  
 ## 上記以外で気になっているプロジェクト（OWASP 以外も含む）
 
 - **Artificial Intelligence Vulnerability Scoring System (AIVSS)** [👉️原典](https://github.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system) ... AI の脆弱性によるリスクを定量化するためのフレームワーク。CVSS の AI 版という感じ（個人的には、「CVSS v3 を意識して設計されているが v4 ベースにした方ががよいのでは？」「パラメーターが多すぎるので、もう少し減らしたほうが良いのでは？」と感じている）。
