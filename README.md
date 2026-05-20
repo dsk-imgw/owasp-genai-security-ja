@@ -26,7 +26,7 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - 日本語訳は、[security-solutions-landscape-for-llm-and-genaiapps](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/security-solutions-landscape-for-llm-and-genaiapps) ディレクトリ配下
 - **(12) AI Security Solution Langscape for Agentic AI, 2026 Q2** [👉️原典](https://genai.owasp.org/resource/ai-security-solutions-landscape-for-agentic-ai-q2-2026/) ... AI セキュリティ ソリューション（LLM アプリおよび生成 AI アプリ向け）2026 Q2 版
   - 日本語訳は、[security-solutions-landscape-for-agentic-ai/](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/security-solutions-landscape-for-agentic-ai) ディレクトリ配下
-- **(13) GenAI Data Security – Threats and Mitigations 2026** [👉️原典](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) ... 生成 AI におけるデータ セキュリティの脅威と軽減策に関するガイダンス 2026 版（**作成中**）
+- **(13) GenAI Data Security – Threats and Mitigations 2026** [👉️原典](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) ... 生成 AI におけるデータ セキュリティの脅威と軽減策に関するガイダンス 2026 版
   - 日本語訳は、[genai-data-security_threat-and-mitigations](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/genai-data-security_threat-and-mitigations) ディレクトリ配下
 
 ## 上記以外で気になっているプロジェクト（OWASP 以外も含む）
