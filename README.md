@@ -30,9 +30,11 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - 日本語訳は、[genai-data-security_threat-and-mitigations](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/genai-data-security_threat-and-mitigations) ディレクトリ配下
 - **(14) Top 10 for LLM and GenAI Apps 2026** [👉️原典](ZZZ) ... LLM/生成 AI アプリのセキュリティ リスク/脆弱性/攻撃手法の Top 10 2026 年版。本家では、2026/6/15 目標に策定が進んでいる。
   - 日本語訳は、[top10-for-llm-and-genai-apps-2026](top10-for-llm-and-genai-apps-2026) ディレクトリ配下
+- **(15) Artificial Intelligence Security Verification Standard (AISVS) v1.0** [👉️原典](https://github.com/OWASP/AISVS) ... AI セキュリティ検証標準 v1.0
+  - 日本語訳は、[ai-security-verification-standard](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-security-verification-standard) ディレクトリ配下
 
 ## 上記以外で気になっているプロジェクト（OWASP 以外も含む）
 
 - **Artificial Intelligence Vulnerability Scoring System (AIVSS)** [👉️原典](https://github.com/OWASP/www-project-artificial-intelligence-vulnerability-scoring-system) ... AI の脆弱性によるリスクを定量化するためのフレームワーク。CVSS の AI 版という感じ（個人的には、「CVSS v3 を意識して設計されているが v4 ベースにした方ががよいのでは？」「パラメーターが多すぎるので、もう少し減らしたほうが良いのでは？」と感じている）。
-- **OWASP Artificial Intelligence Security Verification Standard (AISVS)** [👉️原典](https://github.com/OWASP/AISVS) ... AI セキュリティの検証基準（検証要件）。ASVS (Application Security Verification Standard) の AI 版という感じ。ASVS と同じく、要件（＝何を検証するか？）のみ記載され、検証方法（＝どうやって検証するか）は記載されていません。
+
 - **MITRE ATLAS** [👉️原典](https://atlas.mitre.org/) ... MITRE ATT&CK の AI システム向け版という感じ。一応、適宜更新状況は追っていて、[必要に応じて日本語化中](https://github.com/dsk-imgw/mitre-atlas-ja)。
