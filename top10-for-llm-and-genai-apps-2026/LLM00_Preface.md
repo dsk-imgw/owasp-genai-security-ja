@@ -18,7 +18,7 @@
 
 <div align="center">
 
-![OWASP LLM Top10 2025-2026 Bump Chart.png](:/583b4fc32043441f8367b20b41e5b8f2)
+![OWASP LLM Top10 2025-2026 Bump Chart.png](./assets/OWASP LLM Top10 2025-2026 Bump Chart.png)
 
 *図 1: 2025 年版から 2026 年版 OWASP GenAI/LLM Top 10 への順位変動。変動状況（横ばい、順位上昇、順位低下、名称変更/範囲変更）に応じて色分けされています。*
 </div>
