@@ -28,7 +28,7 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - 日本語訳は、[security-solutions-landscape-for-agentic-ai/](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/security-solutions-landscape-for-agentic-ai) ディレクトリ配下
 - **(13) GenAI Data Security – Threats and Mitigations 2026** [👉️原典](https://genai.owasp.org/resource/owasp-genai-data-security-risks-mitigations-2026/) ... 生成 AI におけるデータ セキュリティの脅威と軽減策に関するガイダンス 2026 版
   - 日本語訳は、[genai-data-security_threat-and-mitigations](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/genai-data-security_threat-and-mitigations) ディレクトリ配下
-- **(14) Top 10 for LLM and GenAI Apps 2026** [👉️原典](ZZZ) ... LLM/生成 AI アプリのセキュリティ リスク/脆弱性/攻撃手法の Top 10 2026 年版。本家では、2026/6/15 目標に策定が進んでいる。
+- **(14) Top 10 for LLM and GenAI Apps 2026** [👉️原典](https://genai.owasp.org/resource/owasp-genai-llm-top-10-2026/) ... LLM/生成 AI アプリのセキュリティ リスク/脆弱性/攻撃手法の Top 10 2026 年版。
   - 日本語訳は、[top10-for-llm-and-genai-apps-2026](top10-for-llm-and-genai-apps-2026) ディレクトリ配下
 - **(15) Artificial Intelligence Security Verification Standard (AISVS) v1.0** [👉️原典](https://github.com/OWASP/AISVS) ... AI セキュリティ検証標準 v1.0
   - 日本語訳は、[ai-security-verification-standard](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-security-verification-standard) ディレクトリ配下
