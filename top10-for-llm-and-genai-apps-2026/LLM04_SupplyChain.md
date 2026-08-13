@@ -8,11 +8,11 @@ LLM の作成は専門的な作業であり、LoRA などのパラメータ効�
 
 ここで取り上げたリスクの一部は、LLM05:2026「データおよびモデルの汚染」でも議論されています。本書では、サプライチェーンの側面について重点的に解説します。エージェント型アプリケーション特有のサプライチェーンリスク（MCP サーバーやツール レジストリなど）については、OWASP Top 10 for Agentic Applications（OWASP GenAI Security Project、2026 年）の "ASI04: Agentic Supply Chain Vulnerabilities" で取り上げられており、MITRE ATLAS では、対応する攻撃手法が "AML.T0010: AI Supply Chain Compromise" （MITRE、n.d.）としてカタログ化されています。
 
-これらのリスク領域は、[シンプルな LLM サプライチェーン脅威モデル](report/images/LLM%20Supply%20Chain%20Threat%20Model.png)で示されています。
+これらのリスク領域は、[シンプルな LLM サプライチェーン脅威モデル](./assets/LLM%20Supply%20Chain%20Threat%20Model.png)で示されています。
 
 <div align="center">
 
-![53233bef97d0582635513e6cefb0e340.png](:/188a042581c34500ac249709e1382775)
+![53233bef97d0582635513e6cefb0e340.png](./assets/LLM%20Supply%20Chain%20Threat%20Model.png)
 
 </div>
 
