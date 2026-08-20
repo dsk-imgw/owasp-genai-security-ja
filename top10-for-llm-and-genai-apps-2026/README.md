@@ -17,3 +17,5 @@
   - [Appendix_A_Related_Framework_Mappings.md](./Appendix_A_Related_Framework_Mappings.md)
   - [Appendix_B_LLM_Application_Architecture_and_Threat_Modeling.md](./Appendix_B_LLM_Application_Architecture_and_Threat_Modeling.md)
   - [references.md](./references.md)
+- 以下のファイルについては、**Top 10 for LLM 2026 正式版の PDF ファイルには含まれていないものの、GenAI Security Project の GitHub リポジトリの Top 10 for LLM 2026 ```final``` ディレクトリ内に本付録のファイルが残置したったため、参考までに紹介しています。**
+  - [LLMZZ_Appendix_AISVS_Mapping.md](./LLMZZ_Appendix_AISVS_Mapping.md)
