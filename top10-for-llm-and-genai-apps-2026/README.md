@@ -1,8 +1,7 @@
 # OWASP Top 10 for LLM Applications 2026
 
-- 2026/6/15 リリース計画だったものが、長い熟成期間を経て 2026/8/4 にようやくリリース。
-- <s>本ディレクトリ内のコンテンツは、正式版リリースに対応していません。</s>
-- 目次に沿ったファイル順は以下のとおり。
+- 2026/6/15 リリース計画だったものが、長い熟成期間を経て 2026/8/4 にようやくリリース。個人的に日本語化したものをココで公開しています。
+- Top 10 for LLM 2026 正式版の PDF ファイルの目次に沿ったファイル順は以下のとおり。
   - [LLM00_Preface.md](./LLM00_Preface.md)
   - [LLM01_PromptInjection.md](./LLM01_PromptInjection.md)
   - [LLM02_SensitiveInformationDisclosure.md](./LLM02_SensitiveInformationDisclosure.md)
