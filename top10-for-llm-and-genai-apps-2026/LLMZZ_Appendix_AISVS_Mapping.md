@@ -1,7 +1,7 @@
 # 付録: Top 10 と OWASP AISVS 1.0 の対応関係
 
 - **訳者注**:
-	- **本付録は、Top 10 for LLM 2026 正式版の PDF ファイルには含まれていません。しかしながら、GenAI Security Project の GitHub リポジトリの Top 10 for LLM 2026 ```final``` ディレクトリ内に本付録のファイルが残置したったため、参考までに紹介します。**
+	- **本付録は、Top 10 for LLM 2026 正式版の PDF ファイルには含まれていません。しかしながら、GenAI Security Project の GitHub リポジトリの Top 10 for LLM 2026 ```final``` ディレクトリ内に本付録のファイルが残置してあったため、参考までに紹介します。**
 
 ## 目的
 
