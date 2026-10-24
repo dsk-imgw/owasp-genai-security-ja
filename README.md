@@ -32,6 +32,8 @@ OWASP が発行した生成 AI セキュリティに関するホワイト ペー
   - 日本語訳は、[top10-for-llm-and-genai-apps-2026](top10-for-llm-and-genai-apps-2026) ディレクトリ配下
 - **(15) Artificial Intelligence Security Verification Standard (AISVS) v1.0** [👉️原典](https://github.com/OWASP/AISVS) ... AI セキュリティ検証標準 v1.0
   - 日本語訳は、[ai-security-verification-standard](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-security-verification-standard) ディレクトリ配下
+- **(16) GenAI Red Teaming Manual v1.0** [👉️原典](https://genai.owasp.org/resource/genai-red-teaming-manual-version-1-0/) ... 生成 AI レッド チーミング マニュアル v1.0
+  - 日本語訳は、[ai-red-teaming-manual](https://github.com/dsk-imgw/owasp-genai-security-ja/tree/main/ai-red-teaming-manual) ディレクトリ配下
 
 ## 上記以外で気になっているプロジェクト（OWASP 以外も含む）
 
