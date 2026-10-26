@@ -7,7 +7,7 @@
 <div align="center">
 <table>
 	<tr>
-		<td><b>目的</b></td>
+		<td><b>目的（goal）</b></td>
 		<td>脅威モデル、悪用シナリオ、およびレッド チーミングの目標（objectives）を定義します。</td>
 	</tr>
 	<tr>
@@ -33,7 +33,7 @@
 <div align="center">
 <table>
 	<tr>
-		<td><b>目的</b></td>
+		<td><b>目的（goal）</b></td>
 		<td>基本モデルの選択肢について、固有の脆弱性や適合性を評価します。</td>
 	</tr>
 	<tr>
@@ -58,7 +58,7 @@
 <div align="center">
 <table>
 	<tr>
-		<td><b>目的</b></td>
+		<td><b>目的（goal）</b></td>
 		<td>微調整や強化のプロセスによって新たなリスクが生じないことを確実にします。</td>
 	</tr>
 	<tr>
@@ -83,7 +83,7 @@
 <div align="center">
 <table>
 	<tr>
-		<td><b>目的</b></td>
+		<td><b>目的（goal）</b></td>
 		<td>レッド チームングを、アプリケーション層およびモデルを取り巻くエコ システムに組み込みます。</td>
 	</tr>
 	<tr>
@@ -108,7 +108,7 @@
 <div align="center">
 <table>
 	<tr>
-		<td><b>目的</b></td>
+		<td><b>目的（goal）</b></td>
 		<td>本番環境への移行準備状況を確認し、リリース前の敵対的評価を実施します。</td>
 	</tr>
 	<tr>
@@ -133,7 +133,7 @@
 <div align="center">
 <table>
 	<tr>
-		<td><b>目的</b></td>
+		<td><b>目的（goal）</b></td>
 		<td>レッド チーミングを、安全性とセキュリティの継続的な向上に向けたフィードバックの仕組みとして扱います。</td>
 	</tr>
 	<tr>
