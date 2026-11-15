@@ -6,7 +6,7 @@
   - [0x03_When-to-Use-AI-Red-Team-Exercise.md](./0x03_When-to-Use-AI-Red-Team-Exercise.md)
   - [0x04_Mapping-Testing-to-Generative-AI-Systems-Lifecycle.md](./0x04_Mapping-Testing-to-Generative-AI-Systems-Lifecycle.md)
   - [0x05_Adversarial-Testing-Advisory.md](./0x05_Adversarial-Testing-Advisory.md)
-  - [0x06_AI-Red-Teaming-Testing-Methodology.md](./0x06_AI-Red-Teaming-Testing-Methodology.md)
+  - 0x06_AI-Red-Teaming-Testing-Methodology
     - [0x06.01_Planning-and-Scoping.md](./0x06.01_Planning-and-Scoping.md)
     - [0x06.02_Reconnaissance-and-Fingerprinting.md](./0x06.02_Reconnaissance-and-Fingerprinting.md)
     - [0x06.03_Surface-Mapping.md](./0x06.03_Surface-Mapping.md)
