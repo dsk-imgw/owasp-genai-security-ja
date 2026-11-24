@@ -1,2 +1,13 @@
-# AI レッド チーミングの例
+# 付録 B: AI レッド チーミングの例
 
+## 手動によるレッド チーミングの例
+
+- Microsoft の Crescendo<sup>[5]</sup> によるマルチ ターン ジェイルブレイク（脱獄）攻撃は、無害な初期プロンプトで LLM を欺き、モデル自身の応答を利用して会話を徐々にエスカレートさせ、最終的に脱獄に成功します。Google Gemini で作成された [Microsoft Crescendo Smallpox CBRNE](https://docs.google.com/document/d/1jHgAnrrFk8mkHX9alWgOENhclScR_V9Pah2ld2eODqA)（化学兵器、生物兵器、放射性物質、核兵器、爆発物）シナリオの例です。この例は、[MITRE ATLAS Technique: LLM Jailbreak AML.T0054](https://atlas.mitre.org/techniques/AML.T0054) と[NIST AI RMF：CBRN Information](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) に焦点を当てています。
+- [NeuralTrust の Echo Chamber](https://neuraltrust.ai/blog/echo-chamber-context-poisoning-jailbreak) マルチ ターン ジェイルブレイク（脱獄）の技法は、会話のコンテキストを汚染します。この攻撃は、一見無害な対話から始まりますが、潜在的に有害な概念を導入します。そして、モデルに自身の過去の応答を参照するように促し、有害な考えを強化し、議論を正常化する「エコー」を作り出し、安全性フィルターの侵食につながります。[Grok-4](https://neuraltrust.ai/blog/grok-4-jailbreak-echo-chamber-and-crescendo) に対する使用例と、[GPT-5](https://neuraltrust.ai/blog/gpt-5-jailbreak-with-echo-chamber-and-storytelling) に対する使用例を示します。この手法は、[公開されているコード](https://github.com/NeuralTrust/echo-chamber)を使用して実装できます。
+- キャラクター ロールプレイ<sup>[6]</sup>とは、AI が特定の人物やキャラクターを演じることを指します。攻撃者は、有害なシナリオを架空または仮説として提示することで、AI の安全機能やモデレーション機能を回避しようと試みることがあります。以下は、[ChatGPT で作成された、サリン CBRNE 事件を題材としたキャラクター ロールプレイのシナリオ](https://docs.google.com/document/d/1YbMQq-8xlsQgBlhXgqzpa6k3LA3_nDZKQA9bnB0X_Ew)です。この例は、[MITRE ATLAS Technique: LLM Jailbreak AML.T0054](https://atlas.mitre.org/techniques/AML.T0054) と[NIST AI RMF：CBRN Information](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) に焦点を当てています。
+- 少数ショットの攻撃は、慎重に選択された少数の例を使用して、大規模言語モデル（LLM）をだまして有害なコンテンツを生成させます。研究論文 "Jailbreak and Guard Aligned Language Models with Only a Few In-Context Demonstrations"<sup>[7]</sup> では、慎重に作成された少数のプロンプトを使用して大規模言語モデル（LLM）をだます方法を探求しています。この研究では、少数の例でもモデルの組み込みの安全対策を回避し、有害なコンテンツを生成させることができることを示しています。著者らはこの方法をコンテキスト内攻撃（In-Context Attack, ICA）と呼んでいます。ChatGPT を使用して作成された[炭疽菌 CBRNE に関する少数ショット コンテキスト内攻撃（ICA）シナリオの例](https://docs.google.com/document/d/1e8Qz7XvliaSV9W6nUH-HhiLcOM137Yab1bu6fRM6ZXk)です。この例は、[MITRE ATLAS Technique: LLM Jailbreak AML.T0054](https://atlas.mitre.org/techniques/AML.T0054) と[NIST AI RMF：CBRN Information](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.600-1.pdf) に焦点を当てています。
+
+## 自動レッド チーミングの例
+
+- AI リクルーターのレッド チーム デモ: [https://github.com/KutalVolkan/ai_recruiter](https://github.com/KutalVolkan/ai_recruiter)。[PyRIT pull 842](https://github.com/Azure/PyRIT/pull/842) の攻撃手法を使用しています。AI リクルーターはセキュリティ対策が施されていない「エージェント」です。履歴書をスクリーニングし、デフォルトの求人情報/ポジションと照合します。応募者は 1～10 のスコアで評価され、10 が最も適合度が高いことを示します。攻撃者は、キーワード スタッフィング、プロンプト インジェクション、および関連する手法を用いて AI リクルーターを欺くことができます。このデモは、履歴書に隠された指示が AI リクルーターにどのように影響を与えるかを示しています。
+- 偵察活動がリモート コード実行（RCE）につながる例: [https://medium.com/@PipelineAI_25/how-we-found-an-unauthenticated-ai-endpoint-allowing-remote-code-execution-1236a3bff99d](https://medium.com/@PipelineAI_25/how-we-found-an-unauthenticated-ai-endpoint-allowing-remote-code-execution-1236a3bff99d)
