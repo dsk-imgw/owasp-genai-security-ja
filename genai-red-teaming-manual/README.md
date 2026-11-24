@@ -13,8 +13,8 @@
     - [0x06.04_Exploitation-and-Impact.md](./0x06.04_Exploitation-and-Impact.md)
     - [0x06.05_Persistence-and-Escalation.md](./0x06.05_Persistence-and-Escalation.md)
     - [0x06.06_Post-Exploitation.md](./0x06.06_Post-Exploitation.md)
-    - [0x06.07_Evaluation-and-Reporting](./0x06.07_Evaluation-and-Reporting)
-    - 0x06.08_Post-Engagement-and-Remediation
+    - [0x06.07_Evaluation-and-Reporting.md](./0x06.07_Evaluation-and-Reporting.md)
+    - [0x06.08_Post-Engagement-and-Remediation.md](./0x06.08_Post-Engagement-and-Remediation.md)
   - [0x91_Appendix-A_Glossary-of-Terms.md](./0x91_Appendix-A_Glossary-of-Terms.md)
   - [0x92_Appendix-B_AI-Red-Teaming-Examples.md](./0x92_Appendix-B_AI-Red-Teaming-Examples.md)
   - [0x93_References.md](./0x93_References.md)
