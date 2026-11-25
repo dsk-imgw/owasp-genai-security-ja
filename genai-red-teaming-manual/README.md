@@ -22,3 +22,4 @@
   - [0x94_Acknowledgements.md](./0x94_Acknowledgements.md)
   - [0x95_OWASP-GenAI-Security-Project-Sponsors.md](./0x95_OWASP-GenAI-Security-Project-Sponsors.md)
   - [0x96_Project-Supporters.md](./0x96_Project-Supporters.md)
+- **上記ファイルをまとめて目次付き PDF にしたものは、[ココ](./GenAI-Red-Teaming-Manual_v1.0_Japanese.pdf) にあります。**
