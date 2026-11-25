@@ -1,6 +1,7 @@
 # OWASP GenAI Red Teaming Manual v1.0
 
 - 正式版の PDF ファイルの目次に沿ったファイル順は以下のとおり。
+  - [0x00_License-and-Usage.md](./0x00_License-and-Usage.md)
   - [0x01_Intruduction.md](./0x01_Intruduction.md)
   - [0x02_AI-Red-Teaming-Posture.md](./0x02_AI-Red-Teaming-Posture.md)
   - [0x03_When-to-Use-AI-Red-Team-Exercise.md](./0x03_When-to-Use-AI-Red-Team-Exercise.md)
